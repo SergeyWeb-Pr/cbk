@@ -1,0 +1,15 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Arial", sans-serif;
+  --content-width: 1420px;
+  --container-offset: 26px;
+  --content-width-head: 1760px;
+  --container-offset-head: 26px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-head: calc(var(--content-width-head) + (var(--container-offset-head) * 2));
+
+  // colors
+  --light-color: #fff;
+}

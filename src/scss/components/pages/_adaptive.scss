@@ -1,0 +1,33 @@
+.burger {
+  display: none;
+}
+
+.graph-modal {
+  z-index: 1 !important;
+}
+
+@media screen and (max-width: 930px) {
+  .container_head {
+    padding: 0 16px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .burger {
+    background-image: url(../img/svg/burger_open.svg);
+    @include bg-cover;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    &.burger--active {
+      background-image: url(../img/svg/burger_close.svg);
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}

@@ -1,0 +1,16 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+//templates
+@import "./components/templates/header";
+@import "./components/templates/footer";
+
+@import "./components/pages/global";
+
+//pages
+@import "./components/pages/hero";
+@import "./components/pages/adaptive";
+
