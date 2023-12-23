@@ -4,13 +4,29 @@
 @import "fonts";
 @import "settings";
 
+//general
+@import "./general/_breakpoints";
+@import "./general/_colors";
+@import "./general/_mixins";
+@import "./general/_texts";
+@import "./general/_transitions";
+
 //templates
-@import "./components/templates/header";
-@import "./components/templates/footer";
+@import "./templates/header";
+@import "./templates/footer";
+@import "./templates/menu";
+@import "./pages/global";
 
-@import "./components/pages/global";
+//elements
+@import "./elements/nav";
+@import "./elements/buttons";
+@import "./elements/content";
+@import "./elements/buttons-link";
+@import "./elements/breadcrumbs";
 
+@import "./pages/adaptive";
 //pages
-@import "./components/pages/hero";
-@import "./components/pages/adaptive";
+@import "./pages/main/index";
+@import "./pages/company/index";
+
 

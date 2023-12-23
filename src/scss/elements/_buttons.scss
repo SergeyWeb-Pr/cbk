@@ -1,0 +1,95 @@
+.button1 {
+  color: var(--181818, #181818);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 14px 60px 14px 32px;
+  border-radius: 55px;
+  background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
+  box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  height: fit-content;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/svg/arrow-right-dark.svg);
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    border-radius: 55px;
+    background: var(--FFC700, #FFC700);
+    box-shadow: none;
+  }
+}
+
+.button2 {
+  color: var(--181818, #181818);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 14px 60px 14px 32px;
+  border-radius: 55px;
+  background: #FFF;
+  box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+
+  span {
+    background: var(--Linear, linear-gradient(90deg, #004D43 1.97%, #02B45E 96.94%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/svg/arrow-right-green.svg);
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    border-radius: 55px;
+    background: var(--Linear, linear-gradient(90deg, #004D43 1.97%, #02B45E 96.94%));
+    box-shadow: none;
+
+    &::before {
+      background-image: url(../img/svg/arrow-right-light.svg);
+    }
+
+    span {
+      background: transparent;
+      background-clip: inherit;
+      -webkit-background-clip: inherit;
+      color: var(--FFFFFF, #FFF);
+      -webkit-text-fill-color: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .button2::before {
+    right: 15px;
+  }
+}

@@ -1,0 +1,136 @@
+%regular14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+%regular20 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+%regularMenu20 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @media screen and (max-width: $mob) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+%bold20 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+%bold24 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+%regular28 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+
+
+.h1 {
+  color: $dark;
+  font-family: 'Roboto';
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+
+.h2 {
+  color: var(--Brand, #004D43);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+
+  background: linear-gradient(-45deg, #e89a3e, #e89a3e, #004D43, #004D43, );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+  -webkit-animation: animated_text 5s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0px 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+
+.h4 {
+  color: var(--181818, #181818);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  .h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

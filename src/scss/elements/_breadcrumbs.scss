@@ -1,0 +1,41 @@
+.breadcrumbs {
+  @include flexCStart;
+  column-gap: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: relative;
+
+  &__separator {
+    background-image: url(../img/svg/arrows/arrow-right-grey2.svg);
+    @include bg-cover;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  span,
+  a {
+    @extend %regular14;
+  }
+
+  a {
+    color: $green;
+  }
+
+  span {
+    color: $grey;
+  }
+}
+
+.breadcrumbs-inv {
+  .breadcrumbs {
+    &__separator {
+      background-image: url(../img/svg/arrows/arrow-right-grey.svg);
+    }
+
+    span,
+    a {
+      color: $white;
+    }
+  }
+}

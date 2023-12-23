@@ -1,0 +1,31 @@
+.menu {
+  &-section {
+    background-color: $green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  &__list {
+    @include flexCBetween;
+  }
+
+  &__item {}
+
+  &__link {
+    @extend %regularMenu20;
+    color: $white;
+    @include transition(color);
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &__separator {
+    opacity: 0.1;
+    background-color: $white;
+    width: 1px;
+    height: 28px;
+  }
+}
