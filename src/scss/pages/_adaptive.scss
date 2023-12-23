@@ -17,7 +17,7 @@
 
   .burger {
     background-image: url(../img/svg/burger_open.svg);
-    @include bg-cover;
+    @include bgcover;
     width: 24px;
     height: 24px;
     flex-shrink: 0;

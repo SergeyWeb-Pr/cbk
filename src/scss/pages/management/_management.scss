@@ -1,0 +1,129 @@
+.management {
+  background: linear-gradient(110deg, #E8EEF2 3.93%, #FBFDFF 100%);
+  padding-bottom: 80px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 470px auto;
+  }
+
+  &__image {
+    height: 584px;
+    flex-shrink: 0;
+    @include imageCoverWidth;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: url(../img/png/image-line.png);
+      @include bgcover;
+      width: 96%;
+      height: 16px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__right {
+    padding-top: 40px;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url(../img/svg/icons/quote.svg);
+      @include bgcover;
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__bottom {
+    @include flexCBetween;
+  }
+
+  &__author {
+    @extend %regular18;
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  .button-video {
+    column-gap: 16px;
+
+    &__icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    &__name {
+      @extend %bold18;
+    }
+  }
+}
+
+.management-gallery {
+  &__items {
+    @include gridColumn(4);
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+
+  &__item {
+    width: 100%;
+
+    &-image {
+      border-radius: 20px;
+      border: 16px solid $white;
+      box-shadow: -8.784px -8.784px 17.568px 0px rgba(255, 255, 255, 0.20), 8.784px 8.784px 17.568px 0px rgba(170, 170, 204, 0.50), 4.392px 4.392px 8.784px 0px rgba(170, 170, 204, 0.25), -4.392px -4.392px 8.784px 0px rgba(255, 255, 255, 0.50);
+      margin-bottom: 24px;
+
+      img {
+        border-radius: 20px;
+      }
+    }
+
+    &-name {
+      @extend %bold24;
+      margin-bottom: 8px;
+    }
+
+    &-post {
+      @extend %regular14;
+      color: $grey;
+    }
+  }
+
+  &__button {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    border-radius: 20px;
+    padding: 24px 40px;
+    background-color: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    text-align: center;
+
+    span {
+      @extend %bold18;
+      color: $green;
+      border-bottom: 1px dotted $green;
+      display: inline-block;
+    }
+  }
+}

@@ -16,17 +16,21 @@
 @import "./templates/footer";
 @import "./templates/menu";
 @import "./pages/global";
+@import "./templates/breadcrumbs";
 
 //elements
 @import "./elements/nav";
 @import "./elements/buttons";
 @import "./elements/content";
 @import "./elements/buttons-link";
-@import "./elements/breadcrumbs";
+@import "./elements/preview";
+@import "./elements/documents";
 
 @import "./pages/adaptive";
 //pages
 @import "./pages/main/index";
 @import "./pages/company/index";
+@import "./pages/goal/index";
+@import "./pages/management/index";
 
 

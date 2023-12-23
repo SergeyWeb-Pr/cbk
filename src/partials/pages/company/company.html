@@ -1,17 +1,10 @@
-<section class="company-hero breadcrumbs-inv">
-  <div class="breadcrumbs__wrapper">
-    <div class="head-container">
-      <div class="breadcrumbs">
-        <a href="">Навигационная цепочка</a>
-        <div class="breadcrumbs__separator"></div>
-        <span>Название страницы</span>
-      </div>
-    </div>
-  </div>
+<section class="preview breadcrumbs-inv company-hero"
+  style=" background-image: url(img/jpg/backgr/company-backgr.jpg);">
+  @include('../../templates/breadcrumbs.html')
   <div class="container">
-    <div class="company-hero__content">
-      <h1 class="company-hero__title h1">НПАО «Светогорский ЦБК»</h1>
-      <div class="company-hero__text">
+    <div class="preview__content company-hero__content">
+      <h1 class="preview__title company-hero__title h1">НПАО «Светогорский ЦБК»</h1>
+      <div class="preview__text company-hero__text">
         <p>Системообразуещее предприятие России и Ленинградской области, на котором трудится около 2000 сотрудников</p>
       </div>
       <div class="company-hero__items">
@@ -25,7 +18,7 @@
         </button>
         <a href="#" class="company-hero__doc link-download" download="" target="_blank">
           <div class="link-download__icon">
-            <img loading="lazy" src="img/svg/icons/icon1.svg" class="image" width="" height="" alt="">
+            <img loading="lazy" src="img/svg/icons/doc.svg" class="image" width="" height="" alt="">
           </div>
           <div class="link-download__name">
             Буклет о НПАО «Светогорский ЦБК»
@@ -33,7 +26,7 @@
         </a>
         <a href="#" class="company-hero__info link-download" target="_blank">
           <div class="link-download__icon">
-            <img loading="lazy" src="img/svg/icons/icon2.svg" class="image" width="" height="" alt="">
+            <img loading="lazy" src="img/svg/icons/info.svg" class="image" width="" height="" alt="">
           </div>
           <div class="link-download__name">
             Материалы для СМИ
@@ -41,7 +34,7 @@
         </a>
         <a href="#" class="company-hero__news link-download" target="_blank">
           <div class="link-download__icon">
-            <img loading="lazy" src="img/svg/icons/icon3.svg" class="image" width="" height="" alt="">
+            <img loading="lazy" src="img/svg/icons/news.svg" class="image" width="" height="" alt="">
           </div>
           <div class="link-download__name">
             Новости
@@ -52,7 +45,7 @@
   </div>
 </section>
 
-<section class="section company-content">
+<section class="company-content">
   <div class="container">
     <div class="company-content__info content">
       <p>Светогорский ЦБК — одно из крупнейших и самых современных целлюлозно-бумажных предприятий в России.</p>
@@ -66,6 +59,110 @@
         среде,
         восстанавливаем и сохраняем лесные экосистемы, поддерживаем местные сообщества и вносим значительный вклад
         в социальную и экономическую сферы города Светогорска и Ленинградской области.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block_facts section-color">
+  <div class="container">
+    <h2 class="block_facts__title h2">
+      Интересные факты
+    </h2>
+    <div class="block_facts__icon_items">
+      <div class="block_facts__icon_item">
+        <div class="block_facts__icon_image shake">
+          <div class="block_facts__icon_image-inner shake_inner">
+            <img loading="lazy" src="img/svg/icon-case1.svg" class="image" width="" height="" alt="">
+          </div>
+        </div>
+        <div class="block_facts__icon_info text">
+          <p>Площадь комбината</p>
+          <strong style="color: #004d43;">200 гектаров.</strong>
+          <p>Это как <span style="color: #004d43;">280</span>
+            футбольных полей</p>
+          <p>или<span style="color: #004d43;">40</span> Дворцовых площадей
+          </p>
+        </div>
+      </div>
+      <div class="block_facts__icon_item">
+        <div class="block_facts__icon_image shake">
+          <div class="block_facts__icon_image-inner shake_inner">
+            <img loading="lazy" src="img/svg/icon-case2.svg" class="image" width="" height="" alt="">
+          </div>
+        </div>
+        <div class="block_facts__icon_info">
+          <p>Офисная бумага SvetoCopy —</p>
+          <strong style="color: #004d43;">бренд № 1 в России</strong>
+          <p>в категории «Бумага для офиса»</p>
+          <div class="icon_info">
+            <img loading="lazy" src="img/svg/tooltip_info.svg" class="image" width="" height="" alt="">
+            <div class="icon_info__tooltip">Источник: по знанию и потреблению согласно данным исследования
+              компании
+              Ипсос Комкон в городах Москва, Санкт-Петербург, Воронеж, Ростов-на-Дону, Самара, Екатеринбург,
+              Челябинск,
+              Нижний Новгород, Казань в период апрель–июнь 2023 год</div>
+          </div>
+        </div>
+      </div>
+      <div class="block_facts__icon_item">
+        <div class="block_facts__icon_image shake">
+          <div class="block_facts__icon_image-inner shake_inner">
+            <img loading="lazy" src="img/svg/icon-case3.svg" class="image" width="" height="" alt="">
+          </div>
+        </div>
+        <div class="block_facts__icon_info">
+          <p>Если выложить листами бумаги А4</p>
+          <strong style="color: #004d43;">200 гектаров,</strong>
+          <p>то потребуется <span style="color: #004d43;">32 миллиона</span> листов А4 — а это всего <span
+              style="color: #004d43;">3,5 часа</span> работы БДМ-4 </p>
+        </div>
+      </div>
+      <div class="block_facts__icon_item">
+        <div class="block_facts__icon_image shake">
+          <div class="block_facts__icon_image-inner shake_inner">
+            <img loading="lazy" src="img/svg/icon-case4.svg" class="image" width="" height="" alt="">
+          </div>
+        </div>
+        <div class="block_facts__icon_info">
+          <p>В день производим</p>
+          <strong style="color: #004d43;">200 млн</strong>
+          <p>листов бумаги А4 <span style="color: #004d43;">400 000 пачек</span> Если их выложить полосой шириной
+            в
+            <span style="color: #004d43;">1 м,</span> этого хватит, чтобы покрыть расстояние от СПб до Хабаровска
+            и
+            обратно </p>
+        </div>
+      </div>
+      <div class="block_facts__icon_item">
+        <div class="block_facts__icon_image shake">
+          <div class="block_facts__icon_image-inner shake_inner">
+            <img loading="lazy" src="img/svg/icon-case5.svg" class="image" width="" height="" alt="">
+          </div>
+        </div>
+        <div class="block_facts__icon_info">
+          <p>Входим</p>
+          <strong style="color: #004d43;">в ТОП-5</strong>
+          <p>налогоплательщиков Ленинградской области</p>
+        </div>
+      </div>
+      <div class="block_facts__icon_item">
+        <div class="block_facts__icon_image shake">
+          <div class="block_facts__icon_image-inner shake_inner">
+            <img loading="lazy" src="img/svg/icon-case6.svg" class="image" width="" height="" alt="">
+          </div>
+        </div>
+        <div class="block_facts__icon_info">
+          <p>Около</p>
+          <strong style="color: #004d43;">2 000 <p>сотрудников</p>
+            <div class="icon_info">
+              <img loading="lazy" src="img/svg/tooltip_info.svg" class="image" width="" height="" alt="">
+              <div class="icon_info__tooltip">Включая сотрудников ЗАО «Тихвинский КЛПХ» и партнеров-подрядчиков</div>
+            </div>
+          </strong>
+
+          <p> это более <span style="color: #004d43;">30 000</span> лет общего стажа</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

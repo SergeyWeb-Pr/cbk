@@ -1,70 +1,27 @@
 .company-hero {
-  background-color: $stub;
-  background-image: url(../img/jpg/backgr/company-backgr.jpg);
-  @include bg-cover;
-  min-height: 500px;
   padding-bottom: 68px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    background: linear-gradient(90deg, #181818 0%, rgba(24, 24, 24, 0.00) 100%);
-  }
 
   &__content {
     margin-top: 62px;
-    position: relative;
-    z-index: 1;
-  }
-
-  &__title {
-    color: $white;
-    margin-bottom: 24px;
   }
 
   &__text {
     max-width: 907px;
-    @extend %regular28;
-    color: $white;
-    margin-bottom: 62px;
   }
 
   &__items {
     @include flexCBetween;
-  }
-}
+    margin-top: 62px;
 
-.button-video {
-  @include flexCStart;
-  column-gap: 24px;
-
-  &__icon {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-
-    img {
-      width: 100%;
-      height: 100%;
+    .button-video__name {
+      color: $white;
     }
-  }
-
-  &__name {
-    @extend %bold24;
-    color: $white;
   }
 }
 
 .company-content {
   background: linear-gradient(180deg, #EFF2F7 0%, #FFF 99.96%);
+  padding-top: 100px;
 
   &__info {
     max-width: 1068px;

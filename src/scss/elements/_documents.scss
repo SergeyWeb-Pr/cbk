@@ -1,0 +1,27 @@
+.doc {
+  @include flexFsStart;
+  column-gap: 16px;
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    @extend %regular18;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  &__line {
+    @include flexCenter;
+    column-gap: 40px;
+  }
+
+  &__date,
+  &__size {
+    @extend %regular14;
+    color: $grey;
+  }
+}
