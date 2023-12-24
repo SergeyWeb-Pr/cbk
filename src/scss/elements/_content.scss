@@ -7,6 +7,10 @@
   // }
 
   p {
+    b {
+      font-weight: 700;
+    }
+
     &:not(:first-child) {
       margin-top: 16px;
     }

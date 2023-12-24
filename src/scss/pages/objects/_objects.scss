@@ -1,0 +1,112 @@
+.objects-preview {
+  padding-bottom: 162px;
+
+  &::before {
+    opacity: 0.7;
+    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  }
+
+  &__content {
+    margin-top: 110px;
+  }
+
+  &__text {
+    max-width: 943px;
+  }
+}
+
+.objects {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 29.15%);
+
+  &__container {
+    @include flexColumn;
+    row-gap: 40px;
+  }
+
+  &__item {
+    padding: 60px 80px;
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    display: grid;
+    grid-template-columns: auto 420px;
+    column-gap: 60px;
+
+    &:nth-child(even) {
+      grid-template-columns: 420px auto;
+
+      .objects__item-content {
+        order: 2;
+      }
+
+      .objects__item-image {
+        order: 1;
+      }
+    }
+
+    &-image {
+      @include imageCoverWidth;
+      height: 492px;
+      flex-shrink: 0;
+    }
+
+    &-name {
+      @extend %bold32;
+      color: $green;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      @extend %regular16;
+      margin-bottom: 32px;
+
+      p {
+        @include mb(12px);
+      }
+    }
+
+    &-line {
+      background-color: $greyLine;
+      width: 100%;
+      height: 1px;
+    }
+
+    &-socials {
+      margin-top: 32px;
+
+      .social-link {
+        @include mb(12px);
+      }
+
+      .address {
+        column-gap: 8px;
+
+        .social-link__icon {
+          width: 24px;
+          height: 24px;
+          padding: 2px 3.5px;
+        }
+      }
+
+      .mail {
+        column-gap: 8px;
+
+        .social-link__icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        a {
+          color: $green;
+        }
+      }
+
+      .tel {
+        a {
+          @extend %regular16;
+        }
+      }
+
+    }
+  }
+}

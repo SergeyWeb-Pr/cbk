@@ -93,7 +93,7 @@
 
 //Transition
 @mixin transition($type) {
-  transition: color 0.3s ease-in-out;
+  transition: $type 0.3s ease-in-out;
 }
 
 // Image

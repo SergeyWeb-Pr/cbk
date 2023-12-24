@@ -1,0 +1,46 @@
+.social-link {
+  display: flex;
+  column-gap: 12px;
+  align-items: center;
+  @include mb(16px);
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  a,
+  span {
+    @extend %regular16;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .social-link a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.tel {
+  a {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  &__item {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+  }
+}

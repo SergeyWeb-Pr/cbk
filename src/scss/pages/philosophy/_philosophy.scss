@@ -1,0 +1,172 @@
+.philosophy-preview {
+  padding-bottom: 162px;
+
+  &::before {
+    display: none;
+  }
+
+  &__content {
+
+    margin-top: 110px;
+  }
+
+  &__title {
+    color: $dark;
+  }
+
+  &__text {
+    max-width: 943px;
+
+    p {
+      color: $dark;
+    }
+  }
+}
+
+.philosophy-info {
+  display: grid;
+  grid-template-columns: auto 472px;
+  column-gap: 40px;
+  align-items: center;
+  margin-bottom: 64px;
+
+  &__download {
+    @include flexCCenter;
+  }
+}
+
+.philosophy-banner {
+  @include gridColumn(3);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $white;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  margin-bottom: 60px;
+
+  &__images {
+    @include gridColumn(2);
+  }
+
+  &__image {
+    @include imageCoverWidth;
+
+    &-one {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    &-two {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    &-three {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+
+  &__content {
+    padding: 120px 60px;
+    @include flexFsCenter;
+
+    p {
+      @extend %regular18;
+
+      b {
+        font-weight: 700;
+      }
+    }
+
+    &-one {
+      background-color: $yellow;
+    }
+
+    &-two {
+      background-color: $green;
+
+      p {
+        color: $white;
+      }
+    }
+  }
+}
+
+.philosophy-logo {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__container {
+    @include gridColumn(2);
+    column-gap: 120px;
+  }
+
+  &__image {
+    @include flexCCenter;
+    border-radius: 20px;
+    background: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  }
+
+  &__logo {
+    width: 392px;
+    height: 64px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.philosophy-elem {
+  background-color: $green;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    column-gap: 120px;
+  }
+
+  &__title {
+    background: inherit;
+    -webkit-background-clip: inherit;
+    -webkit-text-fill-color: inherit;
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    p {
+      color: $white;
+    }
+  }
+
+  &__images {
+    @include gridColumn(2);
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+
+  &__item {
+
+    &-image {
+      @include imageCoverWidth;
+      height: 166px;
+      margin-bottom: 16px;
+    }
+
+    &-name {
+      @extend %regular16;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.history-hero {
+  background: linear-gradient(110deg, #E8EEF2 3.93%, #FBFDFF 100%);
+  padding-bottom: 90px;
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @extend %regular24;
+    max-width: 975px;
+  }
+}

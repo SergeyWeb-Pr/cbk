@@ -9,6 +9,17 @@
   }
 }
 
+%bold14 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 %regular16 {
   font-size: 16px;
   font-weight: 400;
@@ -111,6 +122,18 @@
   @media screen and (max-width: $mob) {
     font-size: 18px;
     line-height: 26px;
+  }
+}
+
+%bold32 {
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 
