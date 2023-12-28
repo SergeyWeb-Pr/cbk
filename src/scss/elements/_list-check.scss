@@ -1,0 +1,22 @@
+.list-check {
+  ul {
+    li {
+      @extend %regular24;
+      @include mb(12px);
+      padding-left: 40px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        background-color: transparent;
+        background-image: url(../img/svg/icons/check.svg);
+      }
+    }
+  }
+}

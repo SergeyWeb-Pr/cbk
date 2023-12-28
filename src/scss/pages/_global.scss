@@ -126,33 +126,7 @@ body, a, p {
 
 
 
-.swiper_style {
-  position: relative;
 
-  &__bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 30px;
-    margin-top: 32px;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: static;
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .swiper_style__bottom {
-    column-gap: 6px;
-  }
-
-  .swiper_style__bottom {
-    margin-top: 16px;
-  }
-}
 
 //Временно
 

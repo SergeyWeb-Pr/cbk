@@ -180,3 +180,33 @@
     background: $yellow;
   }
 }
+
+.button-doc {
+  @extend %bold14;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 14px 60px 14px 32px;
+  border-radius: 55px;
+  background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
+  box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/svg/arrow-right-dark.svg);
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: $yellow;
+  }
+}

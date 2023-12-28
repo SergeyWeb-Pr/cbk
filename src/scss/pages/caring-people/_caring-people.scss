@@ -1,0 +1,62 @@
+.caring-people {
+  padding-bottom: 100px;
+  @include bgcover;
+
+  &::before {
+    display: none;
+  }
+
+  &__content {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  &__block {
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    padding: 60px;
+    @include mb(60px);
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+
+    &:nth-child(even) {
+      grid-template-columns: 4fr 7fr;
+
+      .caring-people__block-content {
+        order: 2;
+        margin-right: 0;
+        margin-left: 60px;
+      }
+
+      .caring-people__block-image {
+        order: 1;
+      }
+    }
+
+    &-content {
+      margin-right: 60px;
+    }
+
+    &-name {
+      color: $green;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      @extend %regular18;
+
+      p {
+        @include mb(12px);
+      }
+    }
+
+    &-image {
+      @include imageCoverWidth;
+      height: 412px;
+      flex-shrink: 0;
+    }
+  }
+
+}

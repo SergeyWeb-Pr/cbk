@@ -35,3 +35,49 @@
     }
   }
 }
+
+.preview-image {
+  position: relative;
+  background-color: $stub;
+  min-height: 500px;
+
+  .breadcrumbs {
+    &__wrapper {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    @include imageCoverWidth;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__content {
+    @extend %regular24;
+
+    p {
+      color: $white;
+    }
+  }
+
+  &__info {
+    @include flexCenter;
+  }
+
+  &__link {
+    box-shadow: none;
+  }
+}

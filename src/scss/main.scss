@@ -1,3 +1,24 @@
+//библиотеки
+@import "./vendor/normalize";
+
+// стили для модального окна
+@import "../../node_modules/graph-modal/dist/graph-modal.min";
+
+// стили для табов
+@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+
+// стили для библиотеки aos
+// @import "../../node_modules/aos/dist/aos";
+
+// стили для свайпера
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+
+// стили для скролла simplebar
+// @import "../../node_modules/simplebar/dist/simplebar.min";
+
+
 // базовые подключения
 @import "vars";
 @import "mixins";
@@ -26,8 +47,13 @@
 @import "./elements/documents";
 @import "./elements/socials";
 @import "./elements/pagination";
+@import "./elements/card";
+@import "./elements/list-check";
+@import "./elements/swiper-style";
+
 
 @import "./pages/adaptive";
+
 //pages
 @import "./pages/main/index";
 @import "./pages/company/index";
@@ -37,5 +63,15 @@
 @import "./pages/objects/index";
 @import "./pages/documents/index";
 @import "./pages/philosophy/index";
+@import "./pages/development/index";
+@import "./pages/forestry/index";
+@import "./pages/protection/index";
+@import "./pages/safety/index";
+@import "./pages/responsibility/index";
+@import "./pages/caring-people/index";
+@import "./pages/caring-society/index";
+@import "./pages/products/index";
+@import "./pages/paper/index";
+@import "./pages/offset/index";
 
 

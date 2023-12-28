@@ -1,3 +1,14 @@
+%regular12 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 %regular14 {
   font-size: 14px;
   font-weight: 400;
@@ -29,6 +40,12 @@
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+%bold16 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 %regular18 {
@@ -102,6 +119,17 @@
   }
 }
 
+%boldArial24 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
 %bold24 {
   font-family: 'Roboto';
   font-size: 24px;
@@ -137,6 +165,17 @@
   }
 }
 
+%boldArial32 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 28px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
 %bold40 {
   font-family: 'Roboto';
   font-size: 40px;
@@ -151,11 +190,20 @@
 
 
 .h1 {
-  color: $dark;
   font-family: 'Roboto';
   font-size: 64px;
   font-weight: 700;
   line-height: 80px;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  @media screen and (max-width: $mob) {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 
@@ -164,7 +212,7 @@
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 56px;
 
   background: linear-gradient(-45deg, #e89a3e, #e89a3e, #004D43, #004D43, );
   background-size: 300%;
@@ -173,6 +221,11 @@
   animation: animated_text 5s ease-in-out infinite;
   -moz-animation: animated_text 5s ease-in-out infinite;
   -webkit-animation: animated_text 5s ease-in-out infinite;
+
+  @media screen and (max-width: $mob) {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 @keyframes animated_text {
@@ -189,25 +242,49 @@
   }
 }
 
-@media screen and (max-width: 576px) {
-  .h2 {
-    font-size: 28px;
-    line-height: 36px;
+.h3 {
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
-
 .h4 {
-  color: var(--181818, #181818);
-  text-align: center;
-  font-size: 24px;
-  font-style: normal;
+  font-family: 'Roboto';
+  font-size: 32px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 40px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+    line-height: 29px;
+  }
 }
 
-@media screen and (max-width: 1200px) {
-  .h4 {
+.h5 {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.h6 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media screen and (max-width: $mob) {
     font-size: 18px;
     line-height: 26px;
   }

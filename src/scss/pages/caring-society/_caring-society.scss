@@ -1,0 +1,83 @@
+.caring-society {
+  @include bgcover;
+  padding-bottom: 100px;
+
+  &::before {
+    display: none;
+  }
+
+  &__content {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  &__name {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__slide {
+    height: auto;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: $white;
+    height: 100%;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.20);
+    @include flexColumn;
+
+    &-image {
+      @include imageCoverWidth;
+      height: 300px;
+      flex-shrink: 0;
+    }
+
+    &-content {
+      padding: 24px 24px 32px 24px;
+      @include flexColumn;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    &-name {
+      display: inline-block;
+      color: $green;
+      @include transition(color);
+      margin-bottom: 8px;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+    &-text {
+      @extend %regular16;
+      margin-bottom: 32px;
+
+      p {
+        color: $text;
+        @include mb(8px);
+      }
+    }
+
+    &-date {
+      margin-top: auto;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+      color: $txtDate;
+    }
+  }
+
+}
+
+.responsibility-projects {
+  background-color: $blue;
+  box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50);
+}
