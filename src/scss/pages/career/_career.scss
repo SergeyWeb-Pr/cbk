@@ -1,0 +1,334 @@
+.career-preview {
+  min-height: 480px;
+  padding-bottom: 112px;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    @include flexCStart;
+    column-gap: 163px;
+    padding-top: 40px;
+  }
+
+  &__title {
+    color: $dark;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    max-width: 553px;
+    margin-bottom: 40px;
+
+    p {
+      color: $dark;
+      @include mb(12px);
+
+      strong,
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__link {
+    padding: 14px 70px 14px 32px;
+  }
+
+  &__control {
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: 10px 10px 20px 0px rgba(24, 24, 24, 0.30), -5px -5px 20px 0px rgba(24, 24, 24, 0.20);
+    padding: 40px;
+    max-width: 414px;
+
+    &-name {
+      color: $green;
+      margin-bottom: 24px;
+    }
+
+    .tel,
+    .mail {
+      column-gap: 10px;
+    }
+
+    .mail {
+      .social-link__icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      a {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 28px;
+        color: $green;
+      }
+    }
+  }
+}
+
+.career-work {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 71.32%);
+  box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
+
+  &__text {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    @include flexColumn;
+    row-gap: 40px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    padding: 40px;
+    @include flexFsStart;
+    column-gap: 40px;
+
+    &-image {
+      border-radius: 666px;
+      background-color: $greyCircle;
+      box-shadow: -10px -10px 20px 0px #FFF inset, 10px 10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, -5px -5px 10px 0px rgba(255, 255, 255, 0.50) inset;
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+      @include flexCCenter;
+
+      &-inner {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &-name {
+      color: $green;
+      margin-bottom: 16px;
+    }
+
+    &-text {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      @extend %regular20;
+      margin-bottom: 16px;
+    }
+
+    &-button {
+      color: $green;
+      @extend %regular20;
+    }
+
+    &-last {
+      background: linear-gradient(89deg, #004D43 0%, #02B45E 105.3%);
+      box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+      align-items: center;
+
+      .career-work__item {
+        &-image {
+          box-shadow: none;
+
+          &-inner {
+            width: 74px;
+            height: 68px;
+          }
+        }
+
+        &-name {
+          color: $white;
+        }
+
+        &-text {
+          margin-bottom: 0;
+          overflow: inherit;
+          -webkit-line-clamp: inherit;
+          @include flexCStart;
+          flex-wrap: wrap;
+          column-gap: 8px;
+
+          p {
+            color: $white;
+          }
+        }
+
+        &-info {
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.career-job {
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__content {
+    &-title {
+      margin-bottom: 32px;
+    }
+
+    &-text {
+      ul {
+        li {
+          @include mb(8px);
+        }
+      }
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 790px;
+    height: 436px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.career-section-light {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+}
+
+.career-action {
+
+  &__items {
+    @include gridColumn(2);
+    column-gap: 24px;
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    background-color: $white;
+    padding: 20px;
+    display: inline-block;
+
+    &:hover {
+      .career-action {
+        &__item {
+          &-image {
+            &::before {
+              background-image: url(../img/png/elem/subtract-hover.png);
+            }
+          }
+
+          &-name {
+            color: $white;
+            text-decoration-line: underline;
+            text-decoration-color: $white;
+          }
+        }
+      }
+    }
+
+    &-image {
+      @include imageCoverWidth;
+      height: 360px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/png/elem/subtract.png);
+        @include transition (background-image);
+        @include bgcover;
+      }
+    }
+
+    &-name {
+      color: $green;
+      position: absolute;
+      right: 30px;
+      bottom: 40px;
+      z-index: 1;
+      transition: color 0.3s ease-in-out, text-decoration-color 0.3s ease-in-out, text-decoration-line 0.3s ease-in-out;
+    }
+  }
+}
+
+.career-control {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 64px 60px;
+  @include flexCBetween;
+  column-gap: 60px;
+
+  &__name {
+    color: $green;
+  }
+
+  .tel,
+  .mail {
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+
+  .tel {
+    column-gap: 10px;
+  }
+
+  .mail {
+    .social-link__icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    a {
+      @extend %bold20;
+      color: $green;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.internship-preview {
+  min-height: 570px;
+  padding-bottom: 85px;
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &__title {
+    color: $dark;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    max-width: 757px;
+    margin-bottom: 16px;
+
+    p {
+      color: $dark;
+      @include mb(12px);
+
+      strong,
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__link {
+    padding: 14px 70px 14px 32px;
+  }
+}
+
+.internship-block-light {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 71.32%);
+
+  &__container {
+    @include flexColumn;
+    row-gap: 64px;
+  }
+}
+
+.internship-application {
+  display: grid;
+  grid-template-columns: auto 500px;
+  column-gap: 60px;
+
+  &__content {
+    &-name {
+      color: $green;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      p {
+        font-size: 18px;
+        line-height: 26px;
+
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include imageCoverWidth;
+    height: 360px;
+    flex-shrink: 0;
+  }
+}
+
+.internship-share {
+  border-radius: 20px;
+  background: linear-gradient(87deg, #004D43 -39.36%, #02B45E 95.64%);
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 64px 60px;
+  @include flexCBetween;
+  column-gap: 60px;
+
+  &__name {
+    color: $white;
+  }
+
+  &__button {
+    white-space: nowrap;
+    box-shadow: none;
+  }
+}
+
+.internship-join {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 40px;
+  @include flexCBetween;
+  column-gap: 60px;
+
+  &__name {
+    color: $green;
+  }
+
+  &__button {
+    white-space: nowrap;
+    box-shadow: none;
+  }
+
+  &__image-qr {
+    width: 162px;
+    height: 162px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

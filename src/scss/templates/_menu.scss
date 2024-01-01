@@ -1,9 +1,17 @@
 .menu {
+
   &-section {
     background-color: $green;
     padding-top: 20px;
     padding-bottom: 20px;
 
+    &.menu-products,
+    &.menu-career {
+      .menu__list {
+        justify-content: flex-start;
+        column-gap: 64px;
+      }
+    }
   }
 
   &__list {

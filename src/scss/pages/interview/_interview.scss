@@ -1,0 +1,140 @@
+.interview {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+  box-shadow: -10px -10px 20px 0px #FFF, 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
+  padding-bottom: 100px;
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 64px;
+
+    p {
+
+      strong,
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__swiper {
+    overflow: inherit;
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    padding: 60px;
+    box-sizing: border-box;
+    @include flexFsBetween;
+    column-gap: 40px;
+    width: 100%;
+
+    &-image {
+      background-color: $stub;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 330px;
+      height: 574px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-content {
+      @include flexColumn;
+      align-items: flex-start;
+    }
+
+    &-name {
+      margin-bottom: 12px;
+    }
+
+    &-post {
+      @extend %bold18;
+      margin-bottom: 20px;
+    }
+
+    &-exp {
+      @extend %bold16;
+      margin-bottom: 12px;
+    }
+
+    &-text {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        @include mb(12px);
+
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+      }
+    }
+
+    &-video {
+      column-gap: 16px;
+
+      .button-video__icon {
+        width: 48px;
+        height: 48px;
+        box-shadow: -8px -8px 32px 0px rgba(255, 255, 255, 0.20), 8px 8px 32px 0px rgba(170, 170, 204, 0.50), 4px 4px 16px 0px rgba(170, 170, 204, 0.25), -4px -4px 16px 0px rgba(255, 255, 255, 0.20);
+        border-radius: 50%;
+      }
+
+      .button-video__name {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.interview-join {
+  @include flexCBetween;
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 64px 60px;
+
+  &__name {
+    color: $green;
+  }
+
+  &__socials {
+    .social-link {
+      @include mb(12px);
+      white-space: nowrap;
+
+      &__icon {
+        width: 24px;
+        height: 24px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &.mail {
+        a {
+          font-size: 20px;
+          line-height: 28px;
+          color: $green;
+        }
+      }
+    }
+  }
+}

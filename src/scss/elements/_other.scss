@@ -1,0 +1,12 @@
+.other {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 29.15%);
+
+  &__title {
+    color: $green;
+    margin-bottom: 40px;
+  }
+
+  &__slide {
+    height: auto;
+  }
+}

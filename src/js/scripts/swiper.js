@@ -6,7 +6,7 @@ import Swiper, {
 } from 'swiper';
 Swiper.use([Autoplay, Navigation, Pagination]);
 
-const swiper = new Swiper('.hero__swiper', {
+const hero__swiper = new Swiper('.hero__swiper', {
   slidesPerView: 1,
   loop: true,
   autoplay: {
@@ -258,6 +258,106 @@ const offsetUseSwiper = new Swiper('.offset-use__swiper', {
     },
   }
 });
+
+const htmmUseSwiper = new Swiper('.htmm-use__swiper', {
+  slidesPerView: 4,
+  spaceBetween: 24,
+  navigation: {
+    prevEl: ".htmm-use__swiper-button-prev",
+    nextEl: ".htmm-use__swiper-button-next",
+  },
+  pagination: {
+    el: ".htmm-use__swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    1201: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    769: {
+      spaceBetween: 20,
+      slidesPerView: 4
+    },
+    577: {
+      spaceBetween: 20,
+      slidesPerView: 3
+    },
+    320: {
+      spaceBetween: 20,
+      slidesPerView: 1
+    },
+  }
+});
+
+const interviewSwiper = new Swiper('.interview__swiper', {
+  slidesPerView: 1.14,
+  loop: false,
+  spaceBetween: 24,
+  navigation: {
+    prevEl: ".interview__swiper-button-prev",
+    nextEl: ".interview__swiper-button-next",
+  },
+  pagination: {
+    el: ".interview__swiper-pagination",
+    clickable: true
+  },
+});
+
+var imagesGallerySwiper = new Swiper('.images-gallery__swiper', {
+  slidesPerView: 1,
+  loop: false,
+  spaceBetween: 16,
+
+});
+var imagesGallerySwiperThumbs = new Swiper('.images-gallery__swiper-thumbs', {
+  spaceBetween: 10,
+  slideToClickedSlide: true,
+  loop: false,
+  slidesPerView: 6,
+  navigation: {
+    prevEl: ".images-gallery__swiper-button-prev",
+    nextEl: ".images-gallery__swiper-button-next",
+  },
+  pagination: {
+    el: ".images-gallery__swiper-pagination",
+    clickable: true
+  },
+});
+// imagesGallerySwiper.controller.control = imagesGallerySwiperThumbs;
+// imagesGallerySwiperThumbs.controller.control = imagesGallerySwiper;
+
+const otherSwiper = new Swiper('.other__swiper', {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  navigation: {
+    prevEl: ".other__swiper-button-prev",
+    nextEl: ".other__swiper-button-next",
+  },
+  pagination: {
+    el: ".other__swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    1201: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    769: {
+      spaceBetween: 20,
+      slidesPerView: 4
+    },
+    577: {
+      spaceBetween: 20,
+      slidesPerView: 3
+    },
+    320: {
+      spaceBetween: 20,
+      slidesPerView: 1
+    },
+  }
+});
+
 
 $(document).ready(function () {
   $('.card-button-more').on('click', function () {
