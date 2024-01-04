@@ -2311,13 +2311,13 @@ a {
   }
 }
 
-.fraud__item-date, .contacts-line__tel span, .newspaper__item-size, .newspaper__item-open, .video-single__date, .photo-single__date, .media__item-date, .releases-single__date, .news-single__date, .news__item-date {
+.fraud-single__date, .fraud__item-date, .contacts-line__tel span, .newspaper__item-size, .newspaper__item-open, .video-single__date, .photo-single__date, .media__item-date, .releases-single__date, .news-single__date, .news__item-date {
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
 }
 @media screen and (max-width: 576px) {
-  .fraud__item-date, .contacts-line__tel span, .newspaper__item-size, .newspaper__item-open, .video-single__date, .photo-single__date, .media__item-date, .releases-single__date, .news-single__date, .news__item-date {
+  .fraud-single__date, .fraud__item-date, .contacts-line__tel span, .newspaper__item-size, .newspaper__item-open, .video-single__date, .photo-single__date, .media__item-date, .releases-single__date, .news-single__date, .news__item-date {
     font-size: 12px;
     line-height: 16px;
   }
@@ -10822,3 +10822,52 @@ body, a, p {
   grid-column-end: 4;
   margin-top: 16px;
 }
+
+.fraud-single {
+  background-color: #EFF2F7;
+  padding-bottom: 100px;
+  position: relative;
+}
+.fraud-single::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 600px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(99.96%, #EFF2F7));
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+}
+.fraud-single__container {
+  position: relative;
+  z-index: 1;
+}
+.fraud-single__head {
+  max-width: 1120px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.fraud-single__link-head {
+  margin-bottom: 16px;
+}
+.fraud-single__date {
+  color: #999;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.fraud-single__title {
+  color: #181818;
+  -webkit-animation: inherit;
+  animation: inherit;
+  background: inherit;
+  -webkit-text-fill-color: inherit;
+}
+.fraud-single__content {
+  max-width: 1120px;
+}
+
+.news-other .news__item {
+  height: 100%;
+}
+/*# sourceMappingURL=main.css.map */
