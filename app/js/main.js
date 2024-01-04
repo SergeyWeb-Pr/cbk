@@ -616,7 +616,7 @@ var imagesGallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.i
   spaceBetween: 16
 });
 var imagesGallerySwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.images-gallery__swiper-thumbs', {
-  spaceBetween: 10,
+  spaceBetween: 16,
   slideToClickedSlide: true,
   loop: false,
   slidesPerView: 6,
@@ -13976,8 +13976,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+$('.js-button-tab').on('click', function () {
+  // Удаляем класс у всех элементов
+  $('.js-button-tab').removeClass('active');
+
+  // Добавляем класс текущему элементу
+  $(this).addClass('active');
+});
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map

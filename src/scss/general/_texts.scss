@@ -130,6 +130,17 @@
   }
 }
 
+%regular24-32 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+
+  @media screen and (max-width: $mob) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
 %boldArial24 {
   font-size: 24px;
   font-weight: 700;

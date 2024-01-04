@@ -1,0 +1,101 @@
+.media {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+  box-shadow: -10px -10px 20px 0px #FFF, 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
+  padding-bottom: 100px;
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    @include gridColumn(3);
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    width: 100%;
+    @include flexColumn;
+
+    &-image {
+      display: inline-block;
+      @include imageCoverWidth;
+      height: 300px;
+      flex-shrink: 0;
+
+      &.video {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.40);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 80px;
+          height: 80px;
+          background-image: url(../img/svg/video/play.svg);
+          @include bgcover;
+        }
+      }
+    }
+
+    &-content {
+      padding: 24px 32px;
+      height: 100%;
+      @include flexColumn;
+    }
+
+    &-name {
+      display: inline-block;
+      @extend %boldArial24;
+      color: $green;
+      margin-bottom: 20px;
+    }
+
+    &-bottom {
+      @include flexCBetween;
+      margin-top: auto;
+    }
+
+    &-date {
+      @extend %bold12;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+      color: $txtDate;
+    }
+
+    &-link {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      display: inline-block;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__pagination {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 16px;
+  }
+}

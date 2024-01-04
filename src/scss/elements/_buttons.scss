@@ -108,6 +108,12 @@
     background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
     box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
   }
+
+  &.active {
+    border-radius: 55px;
+    background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
+    box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  }
 }
 
 .link-download {

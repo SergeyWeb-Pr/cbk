@@ -1,0 +1,162 @@
+.contacts-preview {
+  background: linear-gradient(110deg, #E8EEF2 3.93%, #FBFDFF 100%);
+  box-shadow: -10px -10px 20px 0px #FFF inset, -10px -10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, 5px 5px 10px 0px rgba(255, 255, 255, 0.50) inset;
+  padding-bottom: 100px;
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__anchors {
+    @include flexCStart;
+    column-gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    display: inline-block;
+  }
+}
+
+.contacts {
+  background-color: $blue;
+
+  &__container {
+    @include flexColumn;
+    row-gap: 40px;
+  }
+
+  &__items {
+    @include gridColumn(2);
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    padding: 40px;
+
+    &-name {
+      color: $green;
+      margin-bottom: 24px;
+    }
+
+    .social-link {
+      &.address {
+        .social-link__icon {
+          width: 24px;
+          height: 24px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+
+          img {
+            width: auto;
+          }
+        }
+
+        span {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+.contacts-write {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 40px;
+  @include flexCStart;
+  column-gap: 80px;
+
+  &__title {
+    color: $green;
+  }
+
+  .social-link {
+    &.mail {
+      .social-link__icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      a {
+        font-size: 24px;
+        line-height: 36px;
+        color: $green;
+      }
+    }
+  }
+}
+
+.contacts-buy {
+  border-radius: 20px;
+  background: linear-gradient(89deg, #004D43 0%, #02B45E 105.3%);
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 60px 64px;
+
+  &__title {
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  &__anchors {
+    @include flexCStart;
+    column-gap: 24px;
+  }
+}
+
+.contacts-line {
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  padding: 40px;
+  @include flexCBetween;
+  column-gap: 28px;
+
+  &__content {
+    @include flexFsStart;
+    column-gap: 40px;
+
+    &-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-title {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__tel {
+    span {
+      display: inline-block;
+      @extend %bold12;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+      color: $text;
+    }
+
+    a {
+      white-space: nowrap;
+    }
+  }
+
+  &__link {
+    white-space: nowrap;
+  }
+}

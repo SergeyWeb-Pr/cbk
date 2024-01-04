@@ -311,7 +311,7 @@ var imagesGallerySwiper = new Swiper('.images-gallery__swiper', {
 
 });
 var imagesGallerySwiperThumbs = new Swiper('.images-gallery__swiper-thumbs', {
-  spaceBetween: 10,
+  spaceBetween: 16,
   slideToClickedSlide: true,
   loop: false,
   slidesPerView: 6,

@@ -1,0 +1,90 @@
+.newspaper {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+  padding-bottom: 100px;
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    @include gridColumn(4);
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    width: 100%;
+    @include flexColumn;
+
+    &-head {
+      width: 100%;
+      padding: 20px 20px 0 20px;
+      box-sizing: border-box
+    }
+
+    &-image {
+      @include imageCoverWidth;
+      height: 380px;
+      flex-shrink: 0;
+    }
+
+    &-content {
+      padding: 24px;
+      @include flexColumn;
+      height: 100%;
+    }
+
+    &-name {
+      display: inline-block;
+      @extend %bold20;
+      color: $green;
+      margin-bottom: 12px;
+    }
+
+    &-bottom {
+      @include flexCStart;
+      column-gap: 24px;
+      margin-top: auto;
+    }
+
+    &-open {
+      display: inline-block;
+      @extend %bold12;
+      color: $green;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+    }
+
+    &-size {
+      @extend %bold12;
+      color: $txtDate;
+      letter-spacing: 0.24px;
+      text-transform: uppercase;
+    }
+
+    &-link {
+      display: inline-block;
+      margin-left: auto;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__pagination {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-top: 16px;
+  }
+
+}

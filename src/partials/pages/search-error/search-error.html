@@ -1,0 +1,19 @@
+<section class="search">
+  @include('../../templates/breadcrumbs.html')
+  <div class="container">
+    <div class="search__content">
+      <h1 class="search__title h1">Поиск по сайту</h1>
+      <div class="search__block">
+        <div class="search__block-name">Поисковый запрос</div>
+        <div class="form form-search">
+          <label class="form__label">
+            <input type="text" name="Имя" class="input-reset form__input" placeholder="Поиск">
+          </label>
+          <button class="btn-reset btn form__btn">Найти</button>
+        </div>
+        <div class="search__block-results">Найдено: 451 совпадений</div>
+      </div>
+      <div class="search__nothing">Ничего не найдено, попробуйте изменить запрос</div>
+    </div>
+  </div>
+</section>
