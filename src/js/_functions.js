@@ -47,12 +47,6 @@ const tabs = new GraphTabs('tab');
 // Подключение плагина кастом-скролла
 // import 'simplebar';
 
-// Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
-// });
-
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
 // AOS.init();

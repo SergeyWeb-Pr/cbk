@@ -39,3 +39,10 @@
     }
   }
 }
+
+@media screen and (max-width: $mob) {
+  .breadcrumbs {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}

@@ -1,9 +1,13 @@
 .internship-preview {
-  min-height: 570px;
-  padding-bottom: 85px;
 
-  &__content {
-    margin-top: 40px;
+  &__item {
+    padding-top: 90px;
+    padding-bottom: 85px;
+    min-height: 570px;
+
+    &::before {
+      display: none;
+    }
   }
 
   &__title {
@@ -28,6 +32,22 @@
 
   &__link {
     padding: 14px 70px 14px 32px;
+  }
+}
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+  .internship-preview {
+    &__item {
+      background: linear-gradient(89deg, #004D43 0%, #02B45E 105.3%);
+    }
+
+    &__image {
+      display: none;  
+    }
   }
 }
 

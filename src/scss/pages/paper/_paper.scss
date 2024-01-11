@@ -1,6 +1,11 @@
 .paper-preview {
-  &__content {
-    margin-top: 68px;
+  &__item {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &::before {
+      display: none;
+    }
   }
 
   &__title {
@@ -22,6 +27,7 @@
     .button-video__icon {
       width: 64px;
       height: 64px;
+      box-shadow: 10px 10px 20px 0px rgba(89, 77, 33, 0.25), 5px 5px 10px 0px rgba(89, 77, 33, 0.05);
     }
 
     .button-video__name {
@@ -36,6 +42,28 @@
     padding: 14px 70px 14px 32px;
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .paper-preview {
+    &__item {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      min-height: 314px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {}
 
 .paper-brand {
   background: linear-gradient(180deg, #FFF 11.97%, #EFF2F7 99.96%);

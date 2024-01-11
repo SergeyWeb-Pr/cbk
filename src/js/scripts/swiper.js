@@ -2,15 +2,25 @@
 import Swiper, {
   Autoplay,
   Navigation,
-  Pagination
+  Pagination,
+  Scrollbar,
 } from 'swiper';
-Swiper.use([Autoplay, Navigation, Pagination]);
+Swiper.use([Autoplay, Navigation, Pagination, Scrollbar]);
 
 const hero__swiper = new Swiper('.hero__swiper', {
   slidesPerView: 1,
   loop: true,
   autoplay: {
     delay: 2000,
+    disableOnInteraction: true,
+  },
+});
+
+const preview__swiper = new Swiper('.preview__swiper', {
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 3500,
     disableOnInteraction: true,
   },
 });
@@ -358,6 +368,21 @@ const otherSwiper = new Swiper('.other__swiper', {
   }
 });
 
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",
+  freeMode: true,
+  mousewheel: true,
+  mousewheelControl: true,
+  parallax: true,
+  speed: 600,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
+    draggable: true,
+    dragSize: 100,
+  },
+});
 
 $(document).ready(function () {
   $('.card-button-more').on('click', function () {

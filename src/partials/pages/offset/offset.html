@@ -1,26 +1,35 @@
-<section class="preview-image breadcrumbs-inv offset-preview">
+<section class="preview breadcrumbs-inv offset-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="preview-image__image offset-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/offset-backgr.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/offset-backgr-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container">
-    <div class="preview-image__content offset-preview__content">
-      <div class="offset-preview__logo">
-        <img loading="lazy" src="img/png/icons/svetoprint-logo.png" class="image" width="" height="" alt="">
-      </div>
-      <h1 class="preview-image__title offset-preview__title h1">Офсетная бумага</h1>
-      <div class="preview-image__text offset-preview__text">
-        <p>SvetoPrint — чистоцеллюлозная немелованная офсетная бумага в ролях</p>
-      </div>
-      <div class="preview-image__info offset-preview__info">
-        <a href="#" class="button-doc preview-image__link offset-preview__link" download="" target="_blank">Скачать
-          каталог</a>
-        <a href="#" class="button-doc preview-image__link offset-preview__link" download="" target="_blank">Где
-          купить</a>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item offset-preview__item">
+          <div class="preview__image offset-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/preview-bg-green-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/offset-bg-tablet.jpg">
+              <img src="img/jpg/backgr/offset-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview-image__content offset-preview__content">
+              <div class="offset-preview__logo">
+                <img loading="lazy" src="img/png/icons/svetoprint-logo.png" class="image" width="" height="" alt="">
+              </div>
+              <h1 class="preview-image__title offset-preview__title h1">Офсетная бумага</h1>
+              <div class="preview-image__text offset-preview__text">
+                <p>SvetoPrint — чистоцеллюлозная немелованная офсетная бумага в ролях</p>
+              </div>
+              <div class="preview-image__info offset-preview__info">
+                <a href="#" class="button-doc preview-image__link offset-preview__link" download=""
+                  target="_blank">Скачать
+                  каталог</a>
+                <a href="#" class="button-doc preview-image__link offset-preview__link" download="" target="_blank">Где
+                  купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

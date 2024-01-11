@@ -1,6 +1,14 @@
 .offset-preview {
-  min-height: 600px;
-  padding-bottom: 80px;
+
+  &__item {
+    padding-top: 83px;
+    padding-bottom: 80px;
+    min-height: 600px;
+
+    &::before {
+      display: none;
+    }
+  }
 
   &__content {
     margin-top: 30px;
@@ -35,6 +43,12 @@
     padding: 14px 70px 14px 32px;
   }
 }
+
+@media screen and (max-width: $laptop) {}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {}
 
 .offset-tech {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 10.93%);

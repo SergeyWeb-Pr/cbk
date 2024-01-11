@@ -1,16 +1,31 @@
-<section class="preview philosophy-preview" style=" background-image: url(img/jpg/backgr/philosophy-backgr.jpg);">
+<section class="preview philosophy-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="container">
-    <div class="preview__content philosophy-preview__content">
-      <h1 class="preview__title philosophy-preview__title h1">Философия бренда</h1>
-      <div class="preview__text philosophy-preview__text">
-        <p>В философии бренда отражены главные смысловые доминанты: развитие, рост, технологии и забота.</p>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item philosophy-preview__item">
+          <div class="preview__image philosophy-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/philosophy-bg-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/philosophy-bg-tablet.jpg">
+              <img src="img/jpg/backgr/philosophy-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview__content philosophy-preview__content">
+              <h1 class="preview__title philosophy-preview__title h1">Философия бренда</h1>
+              <div class="preview__text philosophy-preview__text">
+                <p>В философии бренда отражены главные смысловые доминанты: развитие, рост, технологии и забота.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-color philosophy">
+<section class="philosophy-top">
   <div class="container">
     <div class="philosophy-info">
       <div class="philosophy-info__content content">
@@ -47,6 +62,11 @@
           развитием и ростом.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="philosophy-bottom">
+  <div class="container">
     <div class="philosophy-logo">
       <h2 class="philosophy-logo__title h2">Логотип</h2>
       <div class="philosophy-logo__container">

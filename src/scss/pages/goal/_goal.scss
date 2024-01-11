@@ -1,13 +1,12 @@
 .goal {
-  padding-bottom: 162px;
+  &__item {
+    padding-top: 162px;
+    padding-bottom: 162px;
 
-  &::before {
-    opacity: 0.7;
-    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
-  }
-
-  &__content {
-    margin-top: 110px;
+    &::before {
+      opacity: 0.7;
+      background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
   }
 
   &__text {
@@ -15,11 +14,43 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .goal {
+    &__item {
+      min-height: 336px;
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+
+    &__text {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .goal {
+    &__item {
+      min-height: 360px;
+      padding-top: 72px;
+      padding-bottom: 132px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+}
+
 .our-missions {
   background: var(--6, linear-gradient(258deg, #FFF 18.23%, #EFF2F7 87.8%));
   box-shadow: 10px -10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px -5px 10px 0px rgba(170, 170, 204, 0.25) inset;
-  background-image: url(../img/jpg/backgr/bg.jpg);
   position: relative;
+  @include bgcover;
 
   &__container {
     display: grid;
@@ -32,7 +63,7 @@
     width: 100%;
     height: 330px;
     border-radius: 50%;
-    fill: #F5F5FA;
+    background-color: $greyCircle;
     box-shadow: -10px -10px 20px 0px #FFF inset, 10px 10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, -5px -5px 10px 0px rgba(255, 255, 255, 0.50) inset;
 
     img {
@@ -79,6 +110,53 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .our-missions {
+    &__container {
+      column-gap: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .our-missions {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .our-missions {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 24px;
+    }
+
+    &__image {
+      width: 140px;
+      height: 140px;
+
+      img {
+        width: 90px;
+        height: 78px;
+      }
+    }
+
+    &__name {
+      margin-bottom: 12px;
+    }
+
+    &__row {
+      @include mb(24px);
+
+      ul {
+        li {
+          padding-left: 36px;
+        }
+      }
+    }
+  }
+}
+
 .values {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
   box-shadow: -10px -10px 20px 0px #FFF, 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
@@ -119,7 +197,9 @@
     }
 
     &-info {
-      strong {
+
+      strong,
+      b {
         @extend %bold24;
         color: $green;
         display: inline-block;
@@ -129,6 +209,61 @@
       p {
         @extend %regular16;
         color: $grey;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .values {
+    &__item {
+      grid-template-columns: 130px auto;
+      column-gap: 20px;
+
+      &-icon {
+        height: 130px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .values {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+      row-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .values {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      grid-template-columns: 80px 1fr;
+      column-gap: 16px;
+
+      &-icon {
+        height: 80px;
+
+        &-inner {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &-info {
+
+        strong,
+        b {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 4px;
+        }
       }
     }
   }
@@ -155,5 +290,38 @@
     @include gridColumn(3);
     column-gap: 40px;
     row-gap: 40px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .docum {
+    &__block {
+      padding: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .docum {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .docum {
+    &__block {
+      padding: 16px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
   }
 }

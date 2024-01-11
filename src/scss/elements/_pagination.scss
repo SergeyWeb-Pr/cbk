@@ -76,3 +76,9 @@
     }
   }
 }
+
+@media screen and (max-width: $mob) {
+  .pagination {
+    column-gap: 18px;
+  }
+}

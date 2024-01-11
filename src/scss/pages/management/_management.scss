@@ -4,6 +4,7 @@
 
   &__title {
     margin-bottom: 16px;
+    margin-top: 8px;
   }
 
   &__container {
@@ -67,13 +68,137 @@
   .button-video {
     column-gap: 16px;
 
+    &:hover {
+      .button-video__icon {
+        background-image: url(../img/svg/video/play-green-active.svg);
+      }
+
+      .button-video__name {
+        color: $green;
+        text-decoration-line: inherit;
+      }
+    }
+
     &__icon {
       width: 64px;
       height: 64px;
+      border-radius: 50%;
+      box-shadow: -8px -8px 32px 0px rgba(255, 255, 255, 0.20), 8px 8px 32px 0px rgba(170, 170, 204, 0.50), 4px 4px 16px 0px rgba(170, 170, 204, 0.25), -4px -4px 16px 0px rgba(255, 255, 255, 0.20);
     }
 
     &__name {
       @extend %bold18;
+      @include transition(color);
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .management {
+    padding-bottom: 54px;
+
+    &__container {
+      grid-template-columns: 434px auto;
+    }
+
+    &__image {
+      height: 547px;
+    }
+
+    &__right {
+      padding-left: 20px;
+      padding-top: 0;
+
+      &::before {
+        left: -60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .management {
+
+    &__container {
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+    }
+
+    &__image {
+      width: 434px;
+    }
+
+    &__right {
+      padding-left: 0;
+
+      &::before {
+        left: -26px;
+      }
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .management {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__image {
+      width: fit-content;
+      height: 374px;
+
+      &::before {
+        height: 12px;
+        background-position: center right;
+      }
+    }
+
+    &__right {
+      &::before {
+        left: -16px;
+      }
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        @include mb(8px);
+
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 24px;
+    }
+
+    &__author {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -93,9 +218,13 @@
       border: 16px solid $white;
       box-shadow: -8.784px -8.784px 17.568px 0px rgba(255, 255, 255, 0.20), 8.784px 8.784px 17.568px 0px rgba(170, 170, 204, 0.50), 4.392px 4.392px 8.784px 0px rgba(170, 170, 204, 0.25), -4.392px -4.392px 8.784px 0px rgba(255, 255, 255, 0.50);
       margin-bottom: 24px;
+      height: 416px;
+      flex-shrink: 0;
 
       img {
         border-radius: 20px;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -124,6 +253,67 @@
       color: $green;
       border-bottom: 1px dotted $green;
       display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .management-gallery {
+    &__items {
+      column-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .management-gallery {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 16px;
+    }
+
+    &__item {
+      &-image {
+        height: auto;
+      }
+    }
+
+    &__button {
+      grid-column-end: 4;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .management-gallery {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      &-image {
+        margin-bottom: 16px;
+      }
+
+      &-name {
+        margin-bottom: 4px;
+      }
+
+      &-post {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__button {
+      grid-column-start: inherit;
+      grid-column-end: inherit;
+      padding: 24px 0px;
+
+      span {
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
   }
 }

@@ -2,16 +2,36 @@
   @include flexFsStart;
   column-gap: 16px;
 
+  &:hover {
+    .doc__icon {
+      background-image: url(../img/svg/icons/file-active.svg);
+    }
+
+    .doc__name {
+      color: $green;
+    }
+  }
+
   &__icon {
     width: 48px;
     height: 48px;
     flex-shrink: 0;
+    background-image: url(../img/svg/icons/file.svg);
+    @include bgcover;
+    background-size: contain;
+    @include transition(background-image);
+
+    img {
+      width: auto;
+      height: 100%;
+    }
   }
 
   &__name {
     @extend %regular18;
     display: inline-block;
     margin-bottom: 8px;
+    @include transition(color);
   }
 
   &__line {
@@ -23,6 +43,21 @@
   &__size {
     @extend %regular14;
     color: $grey;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .doc {
+    column-gap: 12px;
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__name {
+      margin-bottom: 4px;
+    }
   }
 }
 

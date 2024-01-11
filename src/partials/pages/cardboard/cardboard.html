@@ -1,22 +1,30 @@
-<section class="preview-image breadcrumbs-inv cardboard-preview">
+<section class="preview breadcrumbs-inv cardboard-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="preview-image__image cardboard-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/cardboard-backgr.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/cardboard-backgr-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container">
-    <div class="preview-image__content cardboard-preview__content">
-      <h1 class="preview-image__title cardboard-preview__title h1">Картон</h1>
-      <div class="preview-image__text cardboard-preview__text">
-        <p>Светогорский ЦБК производит четырехслойный картон с односторонним мелованием, из беленой и небелёной
-          целлюлозы с добавлением во внутренний слой БХТММ (беленой химико-термомеханической массы).</p>
-      </div>
-      <div class="preview-image__info cardboard-preview__info">
-        <a href="#" class="button-doc preview-image__link cardboard-preview__link" download="" target="_blank">Где
-          купить</a>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item cardboard-preview__item">
+          <div class="preview__image cardboard-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/preview-bg-green-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/cardboard-bg-tablet.jpg">
+              <img src="img/jpg/backgr/cardboard-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview-image__content cardboard-preview__content">
+              <h1 class="preview-image__title cardboard-preview__title h1">Картон</h1>
+              <div class="preview-image__text cardboard-preview__text">
+                <p>Светогорский ЦБК производит четырехслойный картон с односторонним мелованием, из беленой и небелёной
+                  целлюлозы с добавлением во внутренний слой БХТММ (беленой химико-термомеханической массы).</p>
+              </div>
+              <div class="preview-image__info cardboard-preview__info">
+                <a href="#" class="button-doc preview-image__link cardboard-preview__link" download=""
+                  target="_blank">Где купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

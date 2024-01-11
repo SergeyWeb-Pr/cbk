@@ -1,0 +1,92 @@
+.hotline {
+  background-color: $blue;
+  padding-bottom: 100px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__inner {
+    max-width: 1120px;
+  }
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @extend %regular24;
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    border-radius: 20px;
+    background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    padding: 32px 40px;
+    @include flexCStart;
+    column-gap: 80px;
+    margin-bottom: 40px;
+
+    .social-link {
+      column-gap: 10px;
+      margin-bottom: 0;
+
+      &.tel {
+        a {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+
+      &.mail {
+        .social-link__icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        a {
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    p {
+      @include mb(20px);
+    }
+
+    ul {
+      li {
+        padding-left: 17px;
+        @include mb(16px);
+      }
+    }
+
+    h4 {
+      @extend %bold32;
+      color: $green;
+
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+
+      margin-bottom: 24px;
+    }
+  }
+}

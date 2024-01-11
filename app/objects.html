@@ -90,7 +90,12 @@
       <section class="menu-section">
   <div class="head-container">
     <nav class="menu" title="">
-      <ul class="list-reset menu__list">
+      <div class="menu__title js-menu-button">
+        <!-- выводится текущее название страницы -->
+        <div class="menu__title-name">О компании</div>
+        <button class="btn-reset menu__title-button"></button>
+      </div>
+      <ul class="list-reset menu__list js-menu-list">
         <li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
         <div class="menu__separator"></div>
         <li class="menu__item"><a href="#" class="menu__link">Миссия и видение</a></li>
@@ -109,8 +114,7 @@
   </div>
 </section>
 
-<section class="preview breadcrumbs-inv objects-preview"
-  style=" background-image: url(img/jpg/backgr/goal-backgr.jpg);">
+<section class="preview breadcrumbs-inv objects-preview">
   <div class="breadcrumbs__wrapper">
   <div class="head-container">
     <div class="breadcrumbs">
@@ -121,11 +125,26 @@
   </div>
 </div>
 
-  <div class="container">
-    <div class="preview__content objects-preview__content">
-      <h1 class="preview__title objects-preview__title h1">Социальные объекты</h1>
-      <div class="preview__text objects-preview__text">
-        <p>НПАО «Светогорский ЦБК» располагает собственной развитой социальной инфраструктурой</p>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item objects-preview__item">
+          <div class="preview__image objects-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/goal-bg-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/goal-bg-tablet.jpg">
+              <img src="img/jpg/backgr/goal-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview__content objects-preview__content">
+              <h1 class="preview__title objects-preview__title h1">Социальные объекты</h1>
+              <div class="preview__text objects-preview__text">
+                <p>НПАО «Светогорский ЦБК» располагает собственной развитой социальной инфраструктурой</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -157,19 +176,19 @@
           </div>
           <div class="mail social-link">
             <div class="social-link__icon">
-              <img loading="lazy" src="img/svg/mail.svg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/svg/social/mail-filled.svg" class="image" width="" height="" alt="">
             </div>
             <a href="mailto:svehotel@svetopaper.com">svehotel@svetopaper.com</a>
           </div>
           <div class="tel social-link">
             <div class="social-link__icon">
-              <img loading="lazy" src="img/svg/tel.svg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
             </div>
             <a href="tel:+7 (81378) 4-35-42">+7 (813-78) 4-35-42</a>
           </div>
           <div class="tel social-link">
             <div class="social-link__icon">
-              <img loading="lazy" src="img/svg/tel.svg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
             </div>
             <a href="tel:+7 (921) 550-86-80">+7 921 550-86-80</a>
           </div>
@@ -201,7 +220,7 @@
           </div>
           <div class="tel social-link">
             <div class="social-link__icon">
-              <img loading="lazy" src="img/svg/tel.svg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
             </div>
             <a href="tel:+7 (81378) 4-38-55">+7 (813-78) 4-38-55</a>
           </div>
@@ -216,18 +235,24 @@
         <div class="objects__item-name">
           Медико-санитарная часть
         </div>
-        <div class="objects__item-text">
-          <p>Медико-санитарная часть (МСЧ) — это современный многопрофильный медицинский центр. Приём ведут
-            около 20 высококвалифицированных специалистов из различных областей медицины, которые проводят диагностику
-            и лечение многих заболеваний, включая УЗИ и обследования сердца врачом функциональной диагностики.
-            Также В МСЧ
-            есть собственная лаборатория, кабинеты физиотерапии и вакцинации. На помощь людям всегда готова прийти
-            дежурная служба фельдшеров. В штате работают как медицинские сестры, так и немедицинский персонал.</p>
-          <p>Основная деятельность МСЧ — оказание первичной медико-санитарной помощи сотрудникам НПАО «Светогорский
-            ЦБК»,
-            ветеранам и сотрудникам подрядных организаций, работающих на территории комбината.</p>
-          <p>Уже более 20 лет наши специалисты заботятся о здоровье пациентов!</p>
-        </div>
+        <no-typography>
+          <div class="objects__item-text">
+            <p>Медико-санитарная часть (МСЧ) – это современный многопрофильный медицинский центр. Приём ведут около 20
+              высококвалифицированных специалистов из различных областей медицины, которые проводят диагностику
+              и лечение многих заболеваний, включая УЗИ и обследования сердца врачом функциональной диагностики.
+              Также В МСЧ
+              есть собственная лаборатория, кабинеты физиотерапии и вакцинации. На помощь людям всегда готова прийти
+              дежурная служба фельдшеров. В штате работают как медицинские сестры, так и немедицинский персонал.</p>
+            <p>Основная деятельность МСЧ — оказание первичной медико-санитарной помощи сотрудникам НПАО «Светогорский
+              ЦБК»,
+              ветеранам и сотрудникам подрядных организаций, работающих на территории комбината.</p>
+
+            <p>
+              Уже более 20 лет наши специалисты заботятся о здоровье пациентов!
+            </p>
+
+          </div>
+        </no-typography>
         <div class="objects__item-line"></div>
         <div class="objects__item-socials">
           <div class="address social-link">
@@ -238,7 +263,7 @@
           </div>
           <div class="tel social-link">
             <div class="social-link__icon">
-              <img loading="lazy" src="img/svg/tel.svg" class="image" width="" height="" alt="">
+              <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
             </div>
             <a href="tel:+7 (81378) 4-38-55">+7 (813-78) 4-38-55</a>
           </div>
@@ -253,6 +278,137 @@
 
     </main>
     <div class="block_shadow"></div>
+
+<!-- <button class="btn-reset " data-graph-path="modal1">sdf</button>
+<br>
+<br>
+<button class="btn-reset " data-graph-path="modal2">sdf</button> -->
+
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content text">
+      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
+    </div>
+  </div>
+
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal2">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Отклик на вакансию</h5>
+        <div class="form__subtitle">
+          Слесарь по ремонту и обслуживанию перегрузочных машин
+        </div>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal3">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком по лесообеспечению</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal4">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком материалов и услуг</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__menu">
@@ -356,15 +512,6 @@
 
 <div class="pattern">
   <img loading="lazy" src="img/png/pattern.png" class="image" width="" height="" alt="">
-</div>
-
-<div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content text">
-      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
-    </div>
-  </div>
 </div>
 
   </div>

@@ -68,12 +68,6 @@ const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_3__["default"]('tab');
 // Подключение плагина кастом-скролла
 // import 'simplebar';
 
-// Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
-// });
-
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
 // AOS.init();
@@ -322,12 +316,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar]);
 const hero__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero__swiper', {
   slidesPerView: 1,
   loop: true,
   autoplay: {
     delay: 2000,
+    disableOnInteraction: true
+  }
+});
+const preview__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.preview__swiper', {
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 3500,
     disableOnInteraction: true
   }
 });
@@ -662,10 +664,50 @@ const otherSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other__
     }
   }
 });
+var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper", {
+  slidesPerView: "auto",
+  freeMode: true,
+  mousewheel: true,
+  mousewheelControl: true,
+  parallax: true,
+  speed: 600,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: false,
+    draggable: true,
+    dragSize: 100
+  }
+});
 $(document).ready(function () {
   $('.card-button-more').on('click', function () {
     $(this).toggleClass('active');
     $(this).siblings('.card-text-show').toggleClass('active');
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/scripts/tooltip.js":
+/*!***********************************!*\
+  !*** ./src/js/scripts/tooltip.js ***!
+  \***********************************/
+/***/ (() => {
+
+// // Подключение плагина для позиционирования тултипов
+// import { createPopper } from '@popperjs/core';
+
+// const el = document.querySelector('#sss');
+// const tooltip = document.querySelector('#ddd');
+
+// createPopper('#sss', '#ddd', {
+//   placement: 'right'
+// });
+
+$(document).ready(function () {
+  $('.js-menu-button').on('click', function () {
+    // Добавляем класс 'active' текущему элементу
+    $(this).toggleClass('active');
+    $(this).siblings('.js-menu-list').toggleClass('active');
   });
 });
 
@@ -13967,6 +14009,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_swiper_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/swiper.js */ "./src/js/scripts/swiper.js");
 /* harmony import */ var _scripts_fancy_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/fancy.js */ "./src/js/scripts/fancy.js");
 /* harmony import */ var _scripts_fancy_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scripts_fancy_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _scripts_tooltip_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/tooltip.js */ "./src/js/scripts/tooltip.js");
+/* harmony import */ var _scripts_tooltip_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scripts_tooltip_js__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -13976,12 +14020,99 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-$('.js-button-tab').on('click', function () {
-  // Удаляем класс у всех элементов
-  $('.js-button-tab').removeClass('active');
 
-  // Добавляем класс текущему элементу
+$('.js-button-tab').on('click', function () {
+  $('.js-button-tab').removeClass('active');
   $(this).addClass('active');
+});
+$('.js-company-info-item').on('click', function () {
+  $('.js-company-info-item').removeClass('active');
+  $(this).addClass('active');
+});
+class ItcAccordion {
+  constructor(target, config) {
+    this._el = typeof target === 'string' ? document.querySelector(target) : target;
+    const defaultConfig = {
+      alwaysOpen: true,
+      duration: 350
+    };
+    this._config = Object.assign(defaultConfig, config);
+    this.addEventListener();
+  }
+  addEventListener() {
+    if (this._el) {
+      this._el.addEventListener('click', e => {
+        const elHeader = e.target.closest('.accordion__header');
+        if (!elHeader) {
+          return;
+        }
+        if (!this._config.alwaysOpen) {
+          const elOpenItem = this._el.querySelector('.accordion__item_show');
+          if (elOpenItem) {
+            elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
+          }
+        }
+        this.toggle(elHeader.parentElement);
+      });
+    }
+  }
+  show(el) {
+    const elBody = el.querySelector('.accordion__body');
+    if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item_show')) {
+      return;
+    }
+    elBody.style['display'] = 'block';
+    const height = elBody.offsetHeight;
+    elBody.style['height'] = 0;
+    elBody.style['overflow'] = 'hidden';
+    elBody.style['transition'] = `height ${this._config.duration}ms ease`;
+    elBody.classList.add('collapsing');
+    el.classList.add('accordion__item_slidedown');
+    elBody.offsetHeight;
+    elBody.style['height'] = `${height}px`;
+    window.setTimeout(() => {
+      elBody.classList.remove('collapsing');
+      el.classList.remove('accordion__item_slidedown');
+      elBody.classList.add('collapse');
+      el.classList.add('accordion__item_show');
+      elBody.style['display'] = '';
+      elBody.style['height'] = '';
+      elBody.style['transition'] = '';
+      elBody.style['overflow'] = '';
+    }, this._config.duration);
+  }
+  hide(el) {
+    const elBody = el.querySelector('.accordion__body');
+    if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item_show')) {
+      return;
+    }
+    elBody.style['height'] = `${elBody.offsetHeight}px`;
+    elBody.offsetHeight;
+    elBody.style['display'] = 'block';
+    elBody.style['height'] = 0;
+    elBody.style['overflow'] = 'hidden';
+    elBody.style['transition'] = `height ${this._config.duration}ms ease`;
+    elBody.classList.remove('collapse');
+    el.classList.remove('accordion__item_show');
+    elBody.classList.add('collapsing');
+    window.setTimeout(() => {
+      elBody.classList.remove('collapsing');
+      elBody.classList.add('collapse');
+      elBody.style['display'] = '';
+      elBody.style['height'] = '';
+      elBody.style['transition'] = '';
+      elBody.style['overflow'] = '';
+    }, this._config.duration);
+  }
+  toggle(el) {
+    el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
+  }
+}
+const accordions = document.querySelectorAll('.accordion');
+accordions.forEach(accordion => {
+  new ItcAccordion(accordion, {
+    alwaysOpen: false
+  });
 });
 })();
 

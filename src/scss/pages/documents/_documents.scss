@@ -10,9 +10,47 @@
 
   &__nav {
     column-gap: 16px;
+    row-gap: 16px;
     flex-wrap: wrap;
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .documents-head {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    &__nav {
+      column-gap: 16px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .documents-head {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    &__nav {
+      column-gap: 16px;
+      row-gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {}
+
 
 .documents {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 29.15%);
@@ -33,5 +71,49 @@
   &__pagination {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .documents {
+    &__items {
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .documents {
+    &__item {
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .documents {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 12px;
+    }
+
+    &__item {
+      padding: 16px;
+
+      .doc {
+        column-gap: 8px;
+
+        &__icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    &__pagination {
+      grid-column-start: inherit;
+      grid-column-end: inherit;
+    }
   }
 }

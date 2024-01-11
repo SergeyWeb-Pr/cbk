@@ -1,11 +1,25 @@
-<section class="preview breadcrumbs-inv safety-preview"
-  style=" background-image: url(img/jpg/backgr/safety-backgr.jpg);">
+<section class="preview breadcrumbs-inv safety-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="container">
-    <div class="preview__content safety-preview__content">
-      <h1 class="preview__title safety-preview__title h1">Безопасность труда</h1>
-      <div class="preview__text safety-preview__text">
-        <p>Безопасность — один из главных приоритетов нашей компании.</p>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item safety-preview__item">
+          <div class="preview__image safety-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/safety-bg-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/safety-bg-tablet.jpg">
+              <img src="img/jpg/backgr/safety-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview__content safety-preview__content">
+              <h1 class="preview__title safety-preview__title h1">Безопасность труда</h1>
+              <div class="preview__text safety-preview__text">
+                <p>Безопасность — один из главных приоритетов нашей компании.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,17 +1,45 @@
 .objects-preview {
-  padding-bottom: 162px;
-
-  &::before {
-    opacity: 0.7;
-    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
-  }
-
-  &__content {
-    margin-top: 110px;
+  &__item {
+    &::before {
+      opacity: 0.7;
+      background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
   }
 
   &__text {
     max-width: 943px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .objects-preview {
+    &__item {
+      padding-top: 92px;
+      padding-bottom: 80px;
+      min-height: 324px;
+    }
+
+    &__text {
+      max-width: 943px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .objects-preview {
+    &__item {
+      padding-top: 72px;
+      padding-bottom: 96px;
+      min-height: 360px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      max-width: 943px;
+    }
   }
 }
 
@@ -107,6 +135,97 @@
         }
       }
 
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .objects {
+    &__container {
+      row-gap: 24px;
+    }
+
+    &__item {
+      padding: 40px;
+      column-gap: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .objects {
+    &__item {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+
+      &:nth-child(even) {
+
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &-content {
+        order: 2;
+      }
+
+      &-image {
+        order: 1;
+        width: 420px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .objects {
+
+    &__container {
+      row-gap: 16px;
+    }
+
+    &__item {
+      padding: 16px;
+
+      &-name {
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+
+        p {
+          @include mb(8px);
+        }
+
+        margin-bottom: 8px;
+      }
+
+      &-content {
+        order: 2;
+      }
+
+      &-image {
+        width: 100%;
+        height: 180px;
+      }
+
+      &-socials {
+        margin-top: 8px;
+      }
+
+      .social-link {
+        column-gap: 8px;
+
+        span,
+        a {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .objects__item-socials .social-link:not(:last-child) {
+        margin-bottom: 8px;
+      }
     }
   }
 }

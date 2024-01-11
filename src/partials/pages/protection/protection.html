@@ -1,12 +1,26 @@
-<section class="preview breadcrumbs-inv protection-preview"
-  style=" background-image: url(img/jpg/backgr/protection-backgr.jpg);">
+<section class="preview breadcrumbs-inv protection-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="container">
-    <div class="preview__content protection-preview__content">
-      <h1 class="preview__title protection-preview__title h1">Охрана окружающей среды </h1>
-      <div class="preview__text protection-preview__text">
-        <p>На протяжении многих лет мы непрерывно ведем работу в сфере защиты окружающей среды, ответственного
-          использования природных ресурсов и минимизации экологического следа от своей деятельности.</p>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item protection-preview__item">
+          <div class="preview__image protection-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/protection-bg-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/protection-bg-tablet.jpg">
+              <img src="img/jpg/backgr/protection-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview__content protection-preview__content">
+              <h1 class="preview__title protection-preview__title h1">Охрана окружающей среды </h1>
+              <div class="preview__text protection-preview__text">
+                <p>На протяжении многих лет мы непрерывно ведем работу в сфере защиты окружающей среды, ответственного
+                  использования природных ресурсов и минимизации экологического следа от своей деятельности.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

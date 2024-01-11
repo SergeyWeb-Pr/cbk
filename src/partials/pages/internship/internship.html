@@ -1,26 +1,34 @@
-<section class="preview-image internship-preview">
+<section class="preview internship-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="preview-image__image internship-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/internship-backgr.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/internship-backgr-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container">
-    <div class="preview-image__content internship-preview__content">
-      <h1 class="preview-image__title internship-preview__title h1">Стажировка</h1>
-      <div class="preview-image__text internship-preview__text">
-        <p><strong>Преемственность поколений, привлечение молодых талантливых сотрудников, свежий взгляд и инновационный
-            подход – наши приоритеты.</strong></p>
-        <p>Мы предлагаем программы стажировок для выпускников и старшекурсников. Мы создаем в атмосферу доверия и
-          уважения,
-          где молодые таланты работают как равноправные члены команды и приобретают ценные навыки для развития карьеры.
-        </p>
-      </div>
-      <div class="preview-image__info internship-preview__info">
-        <a href="#" class="button-doc preview-image__link internship-preview__link" download=""
-          target="_blank">Заполнить заявку на участие</a>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item internship-preview__item">
+          <div class="preview__image internship-preview__image">
+            <picture>
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/internship-bg-tablet.jpg">
+              <img src="img/jpg/backgr/internship-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview-image__content internship-preview__content">
+              <h1 class="preview-image__title internship-preview__title h1">Стажировка</h1>
+              <div class="preview-image__text internship-preview__text">
+                <p><strong>Преемственность поколений, привлечение молодых талантливых сотрудников, свежий взгляд и
+                    инновационный подход – наши приоритеты.</strong></p>
+                <p>Мы предлагаем программы стажировок для выпускников и старшекурсников. Мы создаем в атмосферу доверия
+                  и уважения, где молодые таланты работают как равноправные члены команды и приобретают ценные навыки
+                  для развития
+                  карьеры.
+                </p>
+              </div>
+              <div class="preview-image__info internship-preview__info">
+                <a href="#" class="button-doc preview-image__link internship-preview__link" download=""
+                  target="_blank">Заполнить заявку на участие</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

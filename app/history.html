@@ -90,7 +90,12 @@
       <section class="menu-section">
   <div class="head-container">
     <nav class="menu" title="">
-      <ul class="list-reset menu__list">
+      <div class="menu__title js-menu-button">
+        <!-- выводится текущее название страницы -->
+        <div class="menu__title-name">О компании</div>
+        <button class="btn-reset menu__title-button"></button>
+      </div>
+      <ul class="list-reset menu__list js-menu-list">
         <li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
         <div class="menu__separator"></div>
         <li class="menu__item"><a href="#" class="menu__link">Миссия и видение</a></li>
@@ -131,8 +136,216 @@
   </div>
 </section>
 
+<section class="section-color history" style="background-image: url(img/jpg/backgr/history-backgr.jpg);">
+  <div class="container">
+    <h3 class="history__title h3">Исторические вехи <span>«Светогорский ЦБК»</span></h3>
+    <div class="swiper swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="history__item-line"></div>
+          <div class="history__item">
+            <div class="history__item-image">
+              <img loading="lazy" src="img/png/history/history1.png" class="image" width="" height="" alt="">
+            </div>
+            <div class="history__item-content">
+              <div class="history__item-date h4">1887 г.</div>
+              <div class="history__item-text">
+                <p>Шведский барон Ади Стандершкольд купил 16 гектар земли на берегу реки Вуоксы. В этом же году началось
+                  строительство древесно-массного завода, предшественника картонно-бумажной фабрики, а также
+                  строительство
+                  посёлка. Барон дал заводу и местности название Enso («Первенец»)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history__item-line"></div>
+          <div class="history__item">
+            <div class="history__item-image">
+              <img loading="lazy" src="img/png/history/history2.png" class="image" width="" height="" alt="">
+            </div>
+            <div class="history__item-content">
+              <div class="history__item-date h4">1889 г.</div>
+              <div class="history__item-text">
+                <p>В феврале 1889 г. завод уже выпустил первую продукцию, которая гужевым транспортом доставлялась
+                  в Выборг
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history__item-line"></div>
+          <div class="history__item">
+            <div class="history__item-image">
+              <img loading="lazy" src="img/png/history/history3.png" class="image" width="" height="" alt="">
+            </div>
+            <div class="history__item-content">
+              <div class="history__item-date h4">1949 г.</div>
+              <div class="history__item-text">
+                <p>Город Enso (Энсо) был переименован в город Светогорск</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="history__item-line"></div>
+          <div class="history__item">
+            <div class="history__item-image">
+              <img loading="lazy" src="img/png/history/history4.png" class="image" width="" height="" alt="">
+            </div>
+            <div class="history__item-content">
+              <div class="history__item-date h4">1972–1990 гг.</div>
+              <div class="history__item-text">
+                <p>Поэтапная реконструкция Светогорского ЦБК</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper__scrollbar-bottom">
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper__scrollbar-text">
+          Передвиньте ползунок, чтобы увидеть больше
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
     <div class="block_shadow"></div>
+
+<!-- <button class="btn-reset " data-graph-path="modal1">sdf</button>
+<br>
+<br>
+<button class="btn-reset " data-graph-path="modal2">sdf</button> -->
+
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content text">
+      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
+    </div>
+  </div>
+
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal2">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Отклик на вакансию</h5>
+        <div class="form__subtitle">
+          Слесарь по ремонту и обслуживанию перегрузочных машин
+        </div>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal3">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком по лесообеспечению</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal4">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком материалов и услуг</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__menu">
@@ -236,15 +449,6 @@
 
 <div class="pattern">
   <img loading="lazy" src="img/png/pattern.png" class="image" width="" height="" alt="">
-</div>
-
-<div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content text">
-      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
-    </div>
-  </div>
 </div>
 
   </div>

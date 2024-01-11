@@ -1,12 +1,27 @@
-<section class="preview breadcrumbs-inv forestry-preview"
-  style=" background-image: url(img/jpg/backgr/forestry-backgr.jpg);">
+<section class="preview breadcrumbs-inv forestry-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="container">
-    <div class="preview__content forestry-preview__content">
-      <h1 class="preview__title forestry-preview__title h1">Устойчивое лесопользование</h1>
-      <div class="preview__text forestry-preview__text">
-        <p>Нам, как ответственному производителю, важно, чтобы лес был здоровым и сильным, поэтому мы активно занимаемся
-          восстановлением и сохранением лесов для будущих поколений.</p>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item forestry-preview__item">
+          <div class="preview__image forestry-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/forestry-bg-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/forestry-bg-tablet.jpg">
+              <img src="img/jpg/backgr/forestry-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview__content forestry-preview__content">
+              <h1 class="preview__title forestry-preview__title h1">Устойчивое лесопользование</h1>
+              <div class="preview__text forestry-preview__text">
+                <p>Нам, как ответственному производителю, важно, чтобы лес был здоровым и сильным, поэтому мы активно
+                  занимаемся
+                  восстановлением и сохранением лесов для будущих поколений.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

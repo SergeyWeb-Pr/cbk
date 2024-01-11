@@ -36,4 +36,96 @@
     width: 1px;
     height: 28px;
   }
+
+  &__title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .menu-section {
+    padding: 0;
+
+    .head-container {
+      padding: 0;
+    }
+
+    .menu {
+      position: relative;
+
+      &__list {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        @include transition(opacity);
+        position: absolute;
+        left: 0;
+        top: 49px;
+        z-index: 2;
+        width: 100%;
+
+        &.active {
+          height: 100%;
+          opacity: 1;
+          overflow: inherit;
+        }
+      }
+
+      &__item {
+        padding: 12px 16px;
+        width: 100%;
+        background-color: $green;
+        border-bottom: 1px solid $green-border;
+
+        &:hover {
+          background-color: $yellow;
+
+          .menu__link {
+            color: $green;
+          }
+        }
+      }
+
+      &__link {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__title {
+        @include flexFsBetween;
+        column-gap: 10px;
+        box-shadow: 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+        width: 100%;
+        padding: 12px 16px;
+        border-bottom: 1px solid $green-border;
+
+        &.active {
+          .menu__title-button {
+            background-image: url(../img/svg/arrows/arrow-light-up.svg);
+          }
+        }
+
+        &-name {
+          font-size: 16px;
+          line-height: 24px;
+          color: $white;
+        }
+
+        &-button {
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+          background-image: url(../img/svg/arrows/arrow-light-down.svg);
+          @include transition(background-image);
+          @include bgcover;
+        }
+      }
+
+      &__separator {
+        display: none;
+      }
+    }
+  }
 }

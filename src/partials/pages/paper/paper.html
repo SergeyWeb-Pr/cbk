@@ -1,27 +1,34 @@
-<section class="preview-image breadcrumbs-inv paper-preview">
+<section class="preview breadcrumbs-inv paper-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="preview-image__image paper-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/paper.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/paper-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container">
-    <div class="preview-image__content paper-preview__content">
-      <h1 class="preview-image__title paper-preview__title h1">Офисная бумага</h1>
-      <div class="preview-image__text paper-preview__text">
-        <p>Качественная бумага ответственного производителя</p>
-      </div>
-      <div class="preview-image__info paper-preview__info">
-        <button class="btn-reset button-video paper-preview__video">
-          <div class="button-video__icon">
-            <img loading="lazy" src="img/svg/video/play.svg" class="image" width="" height="" alt="">
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item paper-preview__item">
+          <div class="preview__image paper-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/preview-bg-green-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/paper-bg-tablet.jpg">
+              <img src="img/jpg/backgr/paper-bg.jpg" alt="">
+            </picture>
           </div>
-          <div class="button-video__name">Смотреть видеоинтервью</div>
-        </button>
-        <a href="#" class="button-doc preview-image__link paper-preview__link" download="" target="_blank">Где купить
-          бумагу?</a>
+          <div class="container">
+            <div class="preview-image__content paper-preview__content">
+              <h1 class="preview-image__title paper-preview__title h1">Офисная бумага</h1>
+              <div class="preview-image__text paper-preview__text">
+                <p>Качественная бумага ответственного производителя</p>
+              </div>
+              <div class="preview-image__info paper-preview__info">
+                <button class="btn-reset button-video paper-preview__video">
+                  <div class="button-video__icon"></div>
+                  <div class="button-video__name">Смотреть видеоинтервью</div>
+                </button>
+                <a href="#" class="button-doc preview-image__link paper-preview__link" download="" target="_blank">Где
+                  купить
+                  бумагу?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

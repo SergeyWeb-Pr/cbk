@@ -135,16 +135,80 @@
     @extend %regular20;
     color: $white;
   }
+
+  &.doc {
+    .link-download__icon {
+      background-image: url(../img/svg/icons/doc.svg);
+      @include bgcover;
+      @include transition(background-image);
+    }
+
+    &:hover {
+      .link-download__icon {
+
+        background-image: url(../img/svg/icons/doc-active.svg);
+      }
+    }
+  }
+
+  &.info {
+    .link-download__icon {
+      background-image: url(../img/svg/icons/info.svg);
+      @include bgcover;
+      @include transition(background-image);
+    }
+
+    &:hover {
+      .link-download__icon {
+        background-image: url(../img/svg/icons/info-active.svg);
+      }
+    }
+  }
+
+  &.elem-news {
+    .link-download__icon {
+      background-image: url(../img/svg/icons/news.svg);
+      @include bgcover;
+      @include transition(background-image);
+    }
+
+    &:hover {
+      .link-download__icon {
+        background-image: url(../img/svg/icons/news-active.svg);
+      }
+    }
+  }
+
+  &:hover {
+    .link-download__name {
+      text-decoration-line: underline;
+    }
+  }
 }
 
 .button-video {
   @include flexCStart;
   column-gap: 24px;
 
+  &:hover {
+    .button-video__icon {
+      background-image: url(../img/svg/video/play-active.svg);
+    }
+
+    .button-video__name {
+      text-decoration-line: underline;
+    }
+  }
+
   &__icon {
     width: 80px;
     height: 80px;
     flex-shrink: 0;
+    background-image: url(../img/svg/video/play.svg);
+    @include bgcover;
+    box-shadow: 10px 10px 20px 0px rgba(24, 24, 24, 0.50), -5px -5px 10px 0px rgba(24, 24, 24, 0.50);
+    @include transition(background-image);
+    border-radius: 50%;
 
     img {
       width: 100%;
@@ -154,6 +218,19 @@
 
   &__name {
     @extend %bold24;
+    @include transition(text-decoration-line);
+    text-decoration-line: inherit;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .button-video {
+    column-gap: 12px;
+
+    &__icon {
+      width: 56px;
+      height: 56px;
+    }
   }
 }
 
@@ -215,4 +292,15 @@
   &:hover {
     background: $yellow;
   }
+}
+
+.button-attach {
+  @extend %bold16;
+  color: $green;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid $green;
+  width: fit-content;
+  display: inline-block;
+  cursor: pointer;
 }

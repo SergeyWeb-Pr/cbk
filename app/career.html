@@ -103,7 +103,7 @@
   </div>
 </section>
 
-<section class="preview-image career-preview">
+<section class="preview career-preview">
   <div class="breadcrumbs__wrapper">
   <div class="head-container">
     <div class="breadcrumbs">
@@ -114,42 +114,50 @@
   </div>
 </div>
 
-  <div class="preview-image__image career-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/career-backgr.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/career-backgr-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container career-preview__container">
-    <div class="preview-image__content career-preview__content">
-      <h1 class="preview-image__title career-preview__title h1">Карьера</h1>
-      <div class="preview-image__text career-preview__text">
-        <p><strong>Дерзайте! Мы поддержим</strong></p>
-        <p>Прочный фундамент для идей и развития</p>
-      </div>
-      <div class="preview-image__info career-preview__info">
-        <a href="#" class="button-doc preview-image__link career-preview__link" download="" target="_blank">Смотреть
-          вакансии</a>
-      </div>
-    </div>
-    <div class="career-preview__control">
-      <no-typography>
-        <h5 class="career-preview__control-name h5">
-          Департамент по управлению персоналом
-        </h5>
-      </no-typography>
-      <div class="social-link tel">
-        <div class="social-link__icon">
-          <img loading="lazy" src="img/svg/social/phone-green.svg" class="image" width="" height="" alt="">
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item career-preview__item">
+          <div class="preview__image career-preview__image">
+            <picture>
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/career-bg-tablet.jpg">
+              <img src="img/jpg/backgr/career-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container career-preview__container">
+            <div class="preview-image__content career-preview__content">
+              <h1 class="preview-image__title career-preview__title h1">Карьера</h1>
+              <div class="preview-image__text career-preview__text">
+                <p><strong>Дерзайте! Мы поддержим</strong></p>
+                <p>Прочный фундамент для идей и развития</p>
+              </div>
+              <div class="preview-image__info career-preview__info">
+                <a href="#" class="button-doc preview-image__link career-preview__link" download=""
+                  target="_blank">Смотреть
+                  вакансии</a>
+              </div>
+            </div>
+            <div class="career-preview__control">
+              <no-typography>
+                <h5 class="career-preview__control-name h5">
+                  Департамент по управлению персоналом
+                </h5>
+              </no-typography>
+              <div class="social-link tel">
+                <div class="social-link__icon">
+                  <img loading="lazy" src="img/svg/social/phone-green.svg" class="image" width="" height="" alt="">
+                </div>
+                <a href="mailto:+7 812 334-57-30">+7 (812) 334-57-30</a>
+              </div>
+              <div class="social-link mail">
+                <div class="social-link__icon">
+                  <img loading="lazy" src="img/svg/social/mail-green.svg" class="image" width="" height="" alt="">
+                </div>
+                <a href="mailto:HRrussia@svetopaper.com">HRrussia@svetopaper.com</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="mailto:+7 812 334-57-30">+7 (812) 334-57-30</a>
-      </div>
-      <div class="social-link mail">
-        <div class="social-link__icon">
-          <img loading="lazy" src="img/svg/social/mail-green.svg" class="image" width="" height="" alt="">
-        </div>
-        <a href="mailto:HRrussia@svetopaper.com">HRrussia@svetopaper.com</a>
       </div>
     </div>
   </div>
@@ -331,6 +339,137 @@
 
     </main>
     <div class="block_shadow"></div>
+
+<!-- <button class="btn-reset " data-graph-path="modal1">sdf</button>
+<br>
+<br>
+<button class="btn-reset " data-graph-path="modal2">sdf</button> -->
+
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content text">
+      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
+    </div>
+  </div>
+
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal2">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Отклик на вакансию</h5>
+        <div class="form__subtitle">
+          Слесарь по ремонту и обслуживанию перегрузочных машин
+        </div>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal3">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком по лесообеспечению</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal4">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком материалов и услуг</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__menu">
@@ -434,15 +573,6 @@
 
 <div class="pattern">
   <img loading="lazy" src="img/png/pattern.png" class="image" width="" height="" alt="">
-</div>
-
-<div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content text">
-      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
-    </div>
-  </div>
 </div>
 
   </div>

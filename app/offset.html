@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/svg/favicon.svg" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Офисная бумага</title>
+  <title>Офсетная бумага</title>
   <link rel="preload" href="fonts/ArialMT.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Arial-BoldMT.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -105,7 +105,7 @@
   </div>
 </section>
 
-<section class="preview-image breadcrumbs-inv offset-preview">
+<section class="preview breadcrumbs-inv offset-preview">
   <div class="breadcrumbs__wrapper">
   <div class="head-container">
     <div class="breadcrumbs">
@@ -116,27 +116,36 @@
   </div>
 </div>
 
-  <div class="preview-image__image offset-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/offset-backgr.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/offset-backgr-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container">
-    <div class="preview-image__content offset-preview__content">
-      <div class="offset-preview__logo">
-        <img loading="lazy" src="img/png/icons/svetoprint-logo.png" class="image" width="" height="" alt="">
-      </div>
-      <h1 class="preview-image__title offset-preview__title h1">Офсетная бумага</h1>
-      <div class="preview-image__text offset-preview__text">
-        <p>SvetoPrint — чистоцеллюлозная немелованная офсетная бумага в ролях</p>
-      </div>
-      <div class="preview-image__info offset-preview__info">
-        <a href="#" class="button-doc preview-image__link offset-preview__link" download="" target="_blank">Скачать
-          каталог</a>
-        <a href="#" class="button-doc preview-image__link offset-preview__link" download="" target="_blank">Где
-          купить</a>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item offset-preview__item">
+          <div class="preview__image offset-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/preview-bg-green-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/offset-bg-tablet.jpg">
+              <img src="img/jpg/backgr/offset-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview-image__content offset-preview__content">
+              <div class="offset-preview__logo">
+                <img loading="lazy" src="img/png/icons/svetoprint-logo.png" class="image" width="" height="" alt="">
+              </div>
+              <h1 class="preview-image__title offset-preview__title h1">Офсетная бумага</h1>
+              <div class="preview-image__text offset-preview__text">
+                <p>SvetoPrint — чистоцеллюлозная немелованная офсетная бумага в ролях</p>
+              </div>
+              <div class="preview-image__info offset-preview__info">
+                <a href="#" class="button-doc preview-image__link offset-preview__link" download=""
+                  target="_blank">Скачать
+                  каталог</a>
+                <a href="#" class="button-doc preview-image__link offset-preview__link" download="" target="_blank">Где
+                  купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -502,6 +511,137 @@
 
     </main>
     <div class="block_shadow"></div>
+
+<!-- <button class="btn-reset " data-graph-path="modal1">sdf</button>
+<br>
+<br>
+<button class="btn-reset " data-graph-path="modal2">sdf</button> -->
+
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content text">
+      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
+    </div>
+  </div>
+
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal2">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Отклик на вакансию</h5>
+        <div class="form__subtitle">
+          Слесарь по ремонту и обслуживанию перегрузочных машин
+        </div>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal3">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком по лесообеспечению</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container modal-container1" role="dialog" aria-modal="true" data-graph-target="modal4">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="form">
+        <h5 class="form__title h5">Стать поставщиком материалов и услуг</h5>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ИНН огранизации">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="ФИО контактного лица">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="Email">
+        </label>
+        <label class="form__label">
+          <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (     )        -      -      ">
+        </label>
+        <div class="form__attach">
+          <button class="btn-reset button-attach form__button-file">Приложить файлы</button>
+          <div class="form__attach-info">Файлы не выбраны</div>
+        </div>
+        <label class="form__label">
+          <textarea class="form__textarea" name="" id="" cols="" rows=""
+            placeholder="Текст сопроводительного письма"></textarea>
+        </label>
+        <div class="form__descr">
+          <div class="checkbox">
+            <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1" value="indigo">
+            <label for="color-1"></label>
+          </div>
+          <span>Я предоставляю своё согласие на обработку персональных данных на условиях, указанных в <a
+              href="#">Политике
+              обработки персональных данных</a></span>
+        </div>
+        <button class="btn-reset button-doc form__btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__menu">
@@ -605,15 +745,6 @@
 
 <div class="pattern">
   <img loading="lazy" src="img/png/pattern.png" class="image" width="" height="" alt="">
-</div>
-
-<div class="graph-modal">
-  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal1">
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-    <div class="graph-modal__content text">
-      Сайт находится в стадии разработки. <br>Выбранный раздел временно не доступен
-    </div>
-  </div>
 </div>
 
   </div>

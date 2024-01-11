@@ -1,9 +1,11 @@
 .cardboard-preview {
-  min-height: 500px;
-  padding-bottom: 80px;
+  &__item {
+    padding-top: 83px;
+    padding-bottom: 82px;
 
-  &__content {
-    margin-top: 30px;
+    &::before {
+      display: none;
+    }
   }
 
   &__title {

@@ -1,12 +1,26 @@
-<section class="preview breadcrumbs-inv development-preview"
-  style=" background-image: url(img/jpg/backgr/development-backgr.jpg);">
+<section class="preview breadcrumbs-inv development-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="container">
-    <div class="preview__content development-preview__content">
-      <h1 class="preview__title development-preview__title h1">Устойчивое развитие</h1>
-      <div class="preview__text development-preview__text">
-        <p>На всех этапах своей деятельности мы следуем принципам устойчивого развития, которые основаны на
-          ответственном отношении к сотрудникам, партнерам, обществу и окружающей среде.</p>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item development-preview__item">
+          <div class="preview__image development-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/development-bg-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/development-bg-tablet.jpg">
+              <img src="img/jpg/backgr/development-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview__content development-preview__content">
+              <h1 class="preview__title development-preview__title h1">Устойчивое развитие</h1>
+              <div class="preview__text development-preview__text">
+                <p>На всех этапах своей деятельности мы следуем принципам устойчивого развития, которые основаны на
+                  ответственном отношении к сотрудникам, партнерам, обществу и окружающей среде.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

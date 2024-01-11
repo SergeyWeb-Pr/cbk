@@ -13,6 +13,7 @@
 // стили для свайпера
 @import "../../node_modules/swiper/swiper-bundle.min";
 
+// стили для фанси
 @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
 
 // стили для скролла simplebar
@@ -40,6 +41,7 @@
 @import "./templates/breadcrumbs";
 
 //elements
+@import "./elements/global";
 @import "./elements/nav";
 @import "./elements/buttons";
 @import "./elements/content";
@@ -54,6 +56,7 @@
 @import "./elements/backgr-circle";
 @import "./elements/link-head";
 @import "./elements/other";
+@import "./elements/form";
 
 
 @import "./pages/adaptive";
@@ -102,3 +105,7 @@
 @import "./pages/policy/index";
 @import "./pages/fraud/index";
 @import "./pages/fraud-single/index";
+@import "./pages/hotline/index";
+@import "./pages/questions/index";
+@import "./pages/error/index";
+@import "./pages/success/index";

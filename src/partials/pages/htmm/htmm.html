@@ -1,25 +1,35 @@
-<section class="preview-image breadcrumbs-inv htmm-preview">
+<section class="preview breadcrumbs-inv htmm-preview">
   @include('../../templates/breadcrumbs.html')
-  <div class="preview-image__image htmm-preview__image">
-    <picture>
-      <source media="(min-width: 1367px)" srcset="img/jpg/backgr/htmm-backgr.jpg">
-      <source media="(min-width: 992px)" srcset="img/jpg/backgr/htmm-backgr-tablet.jpg">
-      <img src="">
-    </picture>
-  </div>
-  <div class="container">
-    <div class="preview-image__content htmm-preview__content">
-      <div class="htmm-preview__logo">
-        <img loading="lazy" src="img/png/icons/svetoprint-logo.png" class="image" width="" height="" alt="">
-      </div>
-      <h1 class="preview-image__title htmm-preview__title h1">Химико-термомеханическая древесная масса SvetoPulp</h1>
-      <div class="preview-image__text htmm-preview__text">
-        <p>Химико-термомеханическая древесная масса (ХТММ) – целлюлоза высокого выхода, первичное волокно, которое
-          производится методом размола древесной щепы в рафинерах (мельницах).</p>
-      </div>
-      <div class="preview-image__info htmm-preview__info">
-        <a href="#" class="button-doc preview-image__link htmm-preview__link" download="" target="_blank">Где
-          купить</a>
+  <div class="swiper preview__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="preview__item htmm-preview__item">
+          <div class="preview__image htmm-preview__image">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/jpg/backgr/preview-bg-green-mobile.jpg">
+              <source media="(max-width: 1366px)" srcset="img/jpg/backgr/htmm-bg-tablet.jpg">
+              <img src="img/jpg/backgr/htmm-bg.jpg" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="preview-image__content htmm-preview__content">
+              <div class="htmm-preview__logo">
+                <img loading="lazy" src="img/png/icons/svetoprint-logo.png" class="image" width="" height="" alt="">
+              </div>
+              <h1 class="preview-image__title htmm-preview__title h1">Химико-термомеханическая древесная масса SvetoPulp
+              </h1>
+              <div class="preview-image__text htmm-preview__text">
+                <p>Химико-термомеханическая древесная масса (ХТММ) – целлюлоза высокого выхода, первичное волокно,
+                  которое
+                  производится методом размола древесной щепы в рафинерах (мельницах).</p>
+              </div>
+              <div class="preview-image__info htmm-preview__info">
+                <a href="#" class="button-doc preview-image__link htmm-preview__link" download="" target="_blank">Где
+                  купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
