@@ -334,8 +334,27 @@ var imagesGallerySwiperThumbs = new Swiper('.images-gallery__swiper-thumbs', {
     clickable: true
   },
 });
-// imagesGallerySwiper.controller.control = imagesGallerySwiperThumbs;
-// imagesGallerySwiperThumbs.controller.control = imagesGallerySwiper;
+
+var modalСontent = new Swiper('.modal-content__swiper', {
+  slidesPerView: 1,
+  loop: false,
+  spaceBetween: 16,
+
+});
+var modalСontentSwiperThumbs = new Swiper('.modal-content__swiper-thumbs', {
+  spaceBetween: 16,
+  slideToClickedSlide: true,
+  loop: false,
+  slidesPerView: 8,
+  navigation: {
+    prevEl: ".modal-content__swiper-button-prev",
+    nextEl: ".modal-content__swiper-button-next",
+  },
+  pagination: {
+    el: ".modal-content__swiper-pagination",
+    clickable: true
+  },
+});
 
 const otherSwiper = new Swiper('.other__swiper', {
   slidesPerView: 3,

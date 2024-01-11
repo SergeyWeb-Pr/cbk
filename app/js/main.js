@@ -631,9 +631,25 @@ var imagesGallerySwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default
     clickable: true
   }
 });
-// imagesGallerySwiper.controller.control = imagesGallerySwiperThumbs;
-// imagesGallerySwiperThumbs.controller.control = imagesGallerySwiper;
-
+var modalСontent = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-content__swiper', {
+  slidesPerView: 1,
+  loop: false,
+  spaceBetween: 16
+});
+var modalСontentSwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-content__swiper-thumbs', {
+  spaceBetween: 16,
+  slideToClickedSlide: true,
+  loop: false,
+  slidesPerView: 8,
+  navigation: {
+    prevEl: ".modal-content__swiper-button-prev",
+    nextEl: ".modal-content__swiper-button-next"
+  },
+  pagination: {
+    el: ".modal-content__swiper-pagination",
+    clickable: true
+  }
+});
 const otherSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
