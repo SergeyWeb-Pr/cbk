@@ -22,6 +22,10 @@
       min-height: 364px;
     }
 
+    &__title {
+      margin-bottom: 16px;
+    }
+
     &__text {
       max-width: 958px;
     }
@@ -39,6 +43,8 @@
 }
 
 .forestry {
+  background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
+
   &__container {
     display: grid;
     grid-template-columns: auto 566px;
@@ -62,6 +68,65 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .forestry {
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__container {
+      grid-template-columns: auto 443px;
+      column-gap: 60px;
+      margin-bottom: 64px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .forestry {
+    &__container {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+    }
+
+    &__content {
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &__right {
+      justify-content: flex-start;
+    }
+
+    &__image {
+      width: 443px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .forestry {
+    &__container {
+      margin-bottom: 40px;
+    }
+
+    &__right {
+      justify-content: flex-start;
+    }
+
+    &__image {
+      width: 288px;
+      height: auto;
     }
   }
 }
@@ -97,11 +162,38 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .forestry-rational {
+    &__right {
+      padding: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .forestry-rational {
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .forestry-rational {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__right {
+      padding: 16px;
+    }
+
+    &__image {
+      order: 2;
+    }
+  }
+}
+
 .forestry-complex {
-  background: var(--6, linear-gradient(258deg, #FFF 18.23%, #EFF2F7 87.8%));
-  -webkit-box-shadow: 10px -10px 20px 0px rgba(170, 170, 204, 0.5) inset, 5px -5px 10px 0px rgba(170, 170, 204, 0.25) inset;
-  box-shadow: 10px -10px 20px 0px rgba(170, 170, 204, 0.5) inset, 5px -5px 10px 0px rgba(170, 170, 204, 0.25) inset;
-  background-image: url(../img/jpg/backgr/bg.jpg);
+  background-image: url(../img/jpg/backgr/forestry-complex-bg.jpg);
   position: relative;
   @include bgcover;
 
@@ -126,10 +218,67 @@
     overflow: hidden;
     box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
     padding: 12px 16px;
+    width: max-content;
+    height: auto;
 
-    &-inner {
-      @include imageCoverWidth;
-      height: 435px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__video {
+    .button-video__icon {
+      box-shadow: -8px -8px 32px 0px rgba(255, 255, 255, 0.20), 8px 8px 32px 0px rgba(170, 170, 204, 0.50), 4px 4px 16px 0px rgba(170, 170, 204, 0.25), -4px -4px 16px 0px rgba(255, 255, 255, 0.20);
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .forestry-complex {
+    background-image: url(../img/jpg/backgr/forestry-complex-bg-tablet.jpg);
+
+    &__container {
+      grid-template-columns: auto 576px;
+      column-gap: 40px;
+    }
+
+    &__image {
+      margin-left: 0;
+      padding: 10px 18px;
+    }
+
+    &__text {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .forestry-complex {
+
+    &__container {
+      grid-template-columns: 1fr;
+      row-gap: 16px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__image {
+      width: 567px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .forestry-complex {
+    background-image: url(../img/jpg/backgr/forestry-complex-bg-mobile.jpg);
+
+    &__image {
+      width: 100%;
+      padding: 5px 10px;
     }
   }
 }
@@ -137,13 +286,24 @@
 .forestry-slider {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
 
-  &__swiper {}
+  &__swiper {
+    overflow: inherit;
+  }
+
+  .swiper-slide {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+
+    &.swiper-slide-visible {
+      opacity: 1;
+    }
+  }
 
   &__item {
     overflow: hidden;
     border-radius: 20px;
     background-color: $white;
-    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.20);
+    box-shadow: -10px -10px 10px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.20);
 
     &-image {
       @include imageCoverWidth;

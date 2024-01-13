@@ -99,6 +99,7 @@
 
 .swiper-style {
   position: relative;
+  overflow: inherit;
 
   &__bottom {
     @include flexCCenter;

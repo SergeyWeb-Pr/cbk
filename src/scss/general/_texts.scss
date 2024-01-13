@@ -169,6 +169,10 @@
   font-weight: 400;
   line-height: 36px;
 
+  @media screen and (max-width: $laptop) {
+    font-size: 24px;
+  }
+
   @media screen and (max-width: $mob) {
     font-size: 18px;
     line-height: 26px;
@@ -255,9 +259,14 @@
   -moz-animation: animated_text 5s ease-in-out infinite;
   -webkit-animation: animated_text 5s ease-in-out infinite;
 
+  @media screen and (max-width: $laptop) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
   @media screen and (max-width: $mob) {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 

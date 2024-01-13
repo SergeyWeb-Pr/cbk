@@ -117,6 +117,7 @@ const block_news__swiper = new Swiper('.block_news__swiper', {
 const forestryslider__swiper = new Swiper('.forestry-slider__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".forestry-slider__swiper-button-prev",
     nextEl: ".forestry-slider__swiper-button-next",

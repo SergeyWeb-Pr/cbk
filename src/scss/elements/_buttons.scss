@@ -207,7 +207,6 @@
     background-image: url(../img/svg/video/play.svg);
     @include bgcover;
     box-shadow: 10px 10px 20px 0px rgba(24, 24, 24, 0.50), -5px -5px 10px 0px rgba(24, 24, 24, 0.50);
-    @include transition(background-image);
     border-radius: 50%;
 
     img {
@@ -218,7 +217,6 @@
 
   &__name {
     @extend %bold24;
-    @include transition(text-decoration-line);
     text-decoration-line: inherit;
   }
 }

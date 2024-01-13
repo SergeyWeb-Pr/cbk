@@ -422,6 +422,7 @@ const block_news__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.
 const forestryslider__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.forestry-slider__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".forestry-slider__swiper-button-prev",
     nextEl: ".forestry-slider__swiper-button-next"
@@ -14134,3 +14135,4 @@ accordions.forEach(accordion => {
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

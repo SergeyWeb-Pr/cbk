@@ -1,5 +1,4 @@
 .development-preview {
-
   &__item {
     padding-top: 144px;
     padding-bottom: 144px;
@@ -21,6 +20,10 @@
       padding-top: 92px;
       padding-bottom: 84px;
       min-height: 356px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
     }
   }
 }
@@ -44,5 +47,63 @@
   &__items {
     @include gridColumn(4);
     column-gap: 24px;
+  }
+
+  &__item {
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .development {
+    padding-bottom: 64px;
+
+    &__items {
+      column-gap: 20px;
+    }
+
+    &__item {
+      padding: 18px;
+
+      .card__image {
+        height: 280px;
+
+        &::before {
+          height: 65%;
+        }
+      }
+
+      .card__name {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .development {
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .development {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    &__item {
+      &:hover {
+        transform: inherit;
+      }
+    }
   }
 }

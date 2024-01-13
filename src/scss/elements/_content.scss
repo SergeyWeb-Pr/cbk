@@ -1,16 +1,12 @@
 .content {
   @extend %regular20;
 
-  // strong {
-  //   @extend %subheader;
-  //   margin-bottom: 20px;
-  // }
-
   p {
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
 
+    strong,
     b {
       font-weight: 700;
     }
@@ -42,6 +38,22 @@
         background-color: $green;
         left: 0;
         top: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .content {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 12px;
       }
     }
   }

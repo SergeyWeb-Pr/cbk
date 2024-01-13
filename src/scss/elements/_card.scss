@@ -1,7 +1,7 @@
 .card {
   display: inline-block;
   border-radius: 20px;
-  border: 20px solid $white;
+  padding: 20px;
   background-color: $white;
   transform: scale(1);
   @include transition(transform);
