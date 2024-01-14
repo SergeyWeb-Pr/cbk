@@ -124,23 +124,23 @@ const forestryslider__swiper = new Swiper('.forestry-slider__swiper', {
   },
   pagination: {
     el: ".forestry-slider__swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 4,
       spaceBetween: 24,
     },
-    769: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
     },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     },
   }
@@ -149,6 +149,7 @@ const forestryslider__swiper = new Swiper('.forestry-slider__swiper', {
 const protectionslider__swiper = new Swiper('.protection-slider__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".protection-slider__swiper-button-prev",
     nextEl: ".protection-slider__swiper-button-next",
@@ -158,20 +159,20 @@ const protectionslider__swiper = new Swiper('.protection-slider__swiper', {
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 4,
       spaceBetween: 24,
     },
-    769: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
     },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     },
   }
@@ -180,6 +181,7 @@ const protectionslider__swiper = new Swiper('.protection-slider__swiper', {
 const caringsociety__swiper = new Swiper('.caring-society__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".caring-society__swiper-button-prev",
     nextEl: ".caring-society__swiper-button-next",
@@ -189,20 +191,20 @@ const caringsociety__swiper = new Swiper('.caring-society__swiper', {
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
-    769: {
-      spaceBetween: 20,
-      slidesPerView: 4
-    },
-    577: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 3
     },
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
+    },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     },
   }
@@ -211,6 +213,7 @@ const caringsociety__swiper = new Swiper('.caring-society__swiper', {
 const offsetPartnersSwiper = new Swiper('.offset-partners__swiper', {
   slidesPerView: 5,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".offset-partners__swiper-button-prev",
     nextEl: ".offset-partners__swiper-button-next",
@@ -220,21 +223,21 @@ const offsetPartnersSwiper = new Swiper('.offset-partners__swiper', {
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 5,
       spaceBetween: 24,
     },
+    1201: {
+      spaceBetween: 16,
+      slidesPerView: 5
+    },
     769: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
-    },
     320: {
-      spaceBetween: 20,
-      slidesPerView: 1
+      spaceBetween: 8,
+      slidesPerView: 2
     },
   }
 });
@@ -242,6 +245,7 @@ const offsetPartnersSwiper = new Swiper('.offset-partners__swiper', {
 const offsetUseSwiper = new Swiper('.offset-use__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".offset-use__swiper-button-prev",
     nextEl: ".offset-use__swiper-button-next",
@@ -251,20 +255,20 @@ const offsetUseSwiper = new Swiper('.offset-use__swiper', {
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
-    769: {
-      spaceBetween: 20,
-      slidesPerView: 4
-    },
-    577: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 3
     },
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
+    },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     },
   }

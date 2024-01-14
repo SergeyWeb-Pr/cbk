@@ -305,6 +305,25 @@ console.log('2');
 
 /***/ }),
 
+/***/ "./src/js/scripts/scripts.js":
+/*!***********************************!*\
+  !*** ./src/js/scripts/scripts.js ***!
+  \***********************************/
+/***/ (() => {
+
+$(document).ready(function () {
+  $('.js-paper-line-button').on('click', function () {
+    $(this).addClass('hide');
+    $(this).siblings('.js-paper-line-content').addClass('show');
+  });
+  $('.js-cardboard-tech-button').on('click', function () {
+    $('.js-cardboard-tech-image').toggleClass('hide');
+    $('.js-cardboard-tech-text').toggleClass('show');
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/scripts/swiper.js":
 /*!**********************************!*\
   !*** ./src/js/scripts/swiper.js ***!
@@ -432,20 +451,20 @@ const forestryslider__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 4,
       spaceBetween: 24
     },
-    769: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
     },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     }
   }
@@ -453,6 +472,7 @@ const forestryslider__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"
 const protectionslider__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.protection-slider__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".protection-slider__swiper-button-prev",
     nextEl: ".protection-slider__swiper-button-next"
@@ -462,20 +482,20 @@ const protectionslider__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["defaul
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 4,
       spaceBetween: 24
     },
-    769: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
     },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     }
   }
@@ -483,6 +503,7 @@ const protectionslider__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["defaul
 const caringsociety__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.caring-society__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".caring-society__swiper-button-prev",
     nextEl: ".caring-society__swiper-button-next"
@@ -492,20 +513,20 @@ const caringsociety__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 3,
       spaceBetween: 24
     },
-    769: {
-      spaceBetween: 20,
-      slidesPerView: 4
-    },
-    577: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 3
     },
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
+    },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     }
   }
@@ -513,6 +534,7 @@ const caringsociety__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]
 const offsetPartnersSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.offset-partners__swiper', {
   slidesPerView: 5,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".offset-partners__swiper-button-prev",
     nextEl: ".offset-partners__swiper-button-next"
@@ -522,27 +544,28 @@ const offsetPartnersSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 5,
       spaceBetween: 24
     },
+    1201: {
+      spaceBetween: 16,
+      slidesPerView: 5
+    },
     769: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
-    },
     320: {
-      spaceBetween: 20,
-      slidesPerView: 1
+      spaceBetween: 8,
+      slidesPerView: 2
     }
   }
 });
 const offsetUseSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.offset-use__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".offset-use__swiper-button-prev",
     nextEl: ".offset-use__swiper-button-next"
@@ -552,20 +575,20 @@ const offsetUseSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.off
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 3,
       spaceBetween: 24
     },
-    769: {
-      spaceBetween: 20,
-      slidesPerView: 4
-    },
-    577: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 3
     },
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
+    },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     }
   }
@@ -14028,12 +14051,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_fancy_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scripts_fancy_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _scripts_tooltip_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/tooltip.js */ "./src/js/scripts/tooltip.js");
 /* harmony import */ var _scripts_tooltip_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_scripts_tooltip_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _scripts_scripts_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scripts/scripts.js */ "./src/js/scripts/scripts.js");
+/* harmony import */ var _scripts_scripts_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scripts_scripts_js__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
 
 
 //scripts
+
 
 
 
@@ -14135,4 +14161,3 @@ accordions.forEach(accordion => {
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map

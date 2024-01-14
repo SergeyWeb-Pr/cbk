@@ -218,7 +218,7 @@
     overflow: hidden;
     box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
     padding: 12px 16px;
-    width: max-content;
+    width: 100%;
     height: auto;
 
     img {
@@ -285,19 +285,6 @@
 
 .forestry-slider {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
-
-  &__swiper {
-    overflow: inherit;
-  }
-
-  .swiper-slide {
-    transition: opacity 0.2s ease-in-out;
-    opacity: 0;
-
-    &.swiper-slide-visible {
-      opacity: 1;
-    }
-  }
 
   &__item {
     overflow: hidden;
@@ -381,6 +368,47 @@
       flex-shrink: 0;
       background-image: url(../img/svg/arrow-link-dark.svg);
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .forestry-slider {
+    &__item {
+      &-image {
+        height: 200px;
+      }
+
+      &-name {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      &-text {
+        font-size: 14px;
+        line-height: 20px;
+        height: 120px;
+      }
+
+      &-content {
+        padding: 16px;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .forestry-slider {
+    &__item {
+      &-content {
+        min-height: auto;
+      }
+
+      &-button {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 }

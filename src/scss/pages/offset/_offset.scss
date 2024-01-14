@@ -1,5 +1,4 @@
 .offset-preview {
-
   &__item {
     padding-top: 83px;
     padding-bottom: 80px;
@@ -8,10 +7,6 @@
     &::before {
       display: none;
     }
-  }
-
-  &__content {
-    margin-top: 30px;
   }
 
   &__logo {
@@ -44,11 +39,66 @@
   }
 }
 
-@media screen and (max-width: $laptop) {}
+@media screen and (max-width: $laptop) {
+  .offset-preview {
+    &__item {
+      padding-top: 63px;
+      padding-bottom: 64px;
+      min-height: 422px;
+    }
 
-@media screen and (max-width: $tablet) {}
+    &__logo {
+      width: 95px;
+      height: 64px;
+    }
 
-@media screen and (max-width: $mob) {}
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      margin-bottom: 24px;
+    }
+
+    &__info {
+      column-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-preview {
+    &__item {
+      padding-top: 64px;
+      padding-bottom: 46px;
+      min-height: auto;
+    }
+
+    &__logo {
+      width: 120px;
+      height: 80px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__info {
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    &__link {
+      width: 100%;
+    }
+  }
+}
 
 .offset-tech {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 10.93%);
@@ -97,11 +147,104 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .offset-tech {
+    &__item {
+      &:nth-child(even) {
+        .offset-tech__item-content {
+          padding-right: 40px;
+        }
+      }
+
+      &-image {
+        height: 360px;
+      }
+
+      &-content {
+        padding-left: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .offset-tech {
+    &__item {
+      grid-template-columns: 1fr;
+      row-gap: 40px;
+
+      &:nth-child(even) {
+        grid-template-columns: 1fr;
+
+        .offset-tech__item-image {
+          order: 1;
+        }
+
+        .offset-tech__item-content {
+          order: 2;
+          padding-left: 0;
+          padding-right: 0px;
+        }
+      }
+
+      &-image {
+        width: 522px;
+      }
+
+      &-content {
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-tech {
+
+    &__container {
+      row-gap: 40px;
+    }
+
+    &__item {
+      row-gap: 16px;
+
+      &-image {
+        width: 100%;
+        height: auto;
+      }
+
+      &-name {
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        p {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
+
+        ul {
+          li {
+            @include mb(8px);
+
+            &:before {
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .offset-use {
-  background: var(--6, linear-gradient(258deg, #FFF 18.23%, #EFF2F7 87.8%));
   box-shadow: 0px 0px 30px 0px rgba(170, 170, 204, 0.50) inset, 0px 5px 20px 0px rgba(170, 170, 204, 0.25) inset, 0px 5px 10px 0px rgba(170, 170, 204, 0.25) inset;
-  background-image: url(../img/jpg/backgr/bg.jpg);
+  background-image: url(../img/jpg/backgr/forestry-complex-bg.jpg);
   @include bgcover;
 
   &__title {
@@ -120,6 +263,40 @@
     height: 300px;
     @include imageCoverWidth;
     flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .offset-use {
+    &__item {
+      height: 280px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-use {
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      height: 200px;
+    }
+
+    &__text {
+      margin-bottom: 16px;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+    }
   }
 }
 
@@ -174,6 +351,34 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .offset-advan {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-advan {
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 24px;
+    }
+
+    &__item {
+      &-image {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
 .offset-info {
   background-color: $blue;
 
@@ -207,6 +412,52 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .offset-doc {
+    padding: 40px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      row-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .offset-doc {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-doc {
+    padding: 16px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 8px;
+    }
+
+    .doc__icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .doc__name {
+      margin-bottom: 8px;
+    }
+  }
+}
+
 .offset-partners {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
 
@@ -221,6 +472,28 @@
     overflow: hidden;
     @include imageCoverWidth;
     height: 180px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .offset-partners {
+    &__image {
+      height: 160px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-partners {
+    &__title {
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -261,6 +534,74 @@
       a,
       span {
         color: $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .offset-buy {
+    padding: 40px;
+
+    &__block {
+      padding-bottom: 64px;
+    }
+
+    &__items {
+      column-gap: 40px;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 24px;
+    }
+
+    .social-link:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .offset-buy {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .offset-buy {
+    padding: 24px 16px;
+
+    &__block {
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 24px;
+    }
+
+    &__item {
+      &-name {
+        margin-bottom: 8px;
+      }
+    }
+
+    .social-link {
+      column-gap: 8px;
+
+      &__icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 20px;
       }
     }
   }

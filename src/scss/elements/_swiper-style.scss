@@ -101,6 +101,19 @@
   position: relative;
   overflow: inherit;
 
+  .swiper-slide {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    &.swiper-slide-visible {
+      opacity: 1;
+    }
+  }
+
   &__bottom {
     @include flexCCenter;
     column-gap: 30px;
@@ -122,6 +135,8 @@
     border-radius: 55px;
     box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
     margin-top: 0;
+    flex-shrink: 0;
+    @include bgcover;
 
     &:hover {
       box-shadow: none;
@@ -164,5 +179,20 @@
   .swiper-pagination-bullet-active {
     background: var(--Linear, linear-gradient(90deg, #004D43 1.97%, #02B45E 96.94%));
     box-shadow: none;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .swiper-style {
+    &__bottom {
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 40px;
+      height: 40px;
+    }
   }
 }

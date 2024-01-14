@@ -8,6 +8,7 @@ import './scripts/menu.js';
 import './scripts/swiper.js';
 import './scripts/fancy.js';
 import './scripts/tooltip.js';
+import './scripts/scripts.js';
 
 $('.js-button-tab').on('click', function() {
   $('.js-button-tab').removeClass('active');

@@ -1,13 +1,22 @@
 .caring-society {
   @include bgcover;
+  padding-top: 88px;
   padding-bottom: 100px;
+  position: relative;
+
+  .breadcrumbs__wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   &::before {
     display: none;
   }
 
-  &__content {
-    margin-top: 40px;
+  &__title {
     margin-bottom: 60px;
   }
 
@@ -74,7 +83,50 @@
       color: $txtDate;
     }
   }
+}
 
+@media screen and (max-width: $laptop) {
+  .caring-society {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .caring-society {
+    padding-bottom: 40px;
+
+    &__name {
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      margin-bottom: 24px;
+    }
+
+    &__item {
+      &-image {
+        height: 200px;
+      }
+
+      &-content {
+        padding: 16px;
+      }
+
+      &-date {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &-text {
+        margin-bottom: 24px;
+      }
+    }
+  }
 }
 
 .responsibility-projects {

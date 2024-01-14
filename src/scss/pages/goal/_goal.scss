@@ -198,8 +198,8 @@
 
     &-info {
 
-      strong,
-      b {
+      &>strong,
+      &>b {
         @extend %bold24;
         color: $green;
         display: inline-block;
