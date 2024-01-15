@@ -312,13 +312,20 @@ console.log('2');
 /***/ (() => {
 
 $(document).ready(function () {
+  //Офисная бумага - Линейка продукции
   $('.js-paper-line-button').on('click', function () {
     $(this).addClass('hide');
     $(this).siblings('.js-paper-line-content').addClass('show');
   });
+  //Картон - Структура картона
   $('.js-cardboard-tech-button').on('click', function () {
     $('.js-cardboard-tech-image').toggleClass('hide');
     $('.js-cardboard-tech-text').toggleClass('show');
+  });
+  //Прочие продукты - показать весь текст
+  $('.js-other-products-button').on('click', function () {
+    $(this).addClass('hide');
+    $(this).siblings('.js-other-products-list').removeClass('show');
   });
 });
 
@@ -596,6 +603,7 @@ const offsetUseSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.off
 const htmmUseSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.htmm-use__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".htmm-use__swiper-button-prev",
     nextEl: ".htmm-use__swiper-button-next"
@@ -605,20 +613,20 @@ const htmmUseSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.htmm-
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 4,
       spaceBetween: 24
     },
-    769: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
     },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     }
   }

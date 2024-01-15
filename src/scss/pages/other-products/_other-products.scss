@@ -45,5 +45,113 @@
         }
       }
     }
+
+    &-button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .other-products {
+    padding-bottom: 64px;
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      column-gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__item {
+      &-content {
+        padding: 20px;
+      }
+
+      &-name {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 12px;
+      }
+
+      &-text {
+        ul {
+          li {
+            &::before {
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .other-products {
+    &__items {
+      @include gridColumn(2);
+      row-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .other-products {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      @include gridColumn(1);
+      row-gap: 16px;
+    }
+
+    &__item {
+      &-image {
+        height: 200px;
+      }
+
+      &-content {
+        padding: 16px;
+      }
+
+      &-name {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        &.show {
+          ul {
+            li {
+              &:not(:nth-child(-n+2)) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      &-button {
+        font-size: 16px;
+        line-height: 24px;
+        color: $green;
+        margin-top: 8px;
+        border-bottom: 1px dotted $green;
+        cursor: pointer;
+        display: block;
+
+        &.hide {
+          display: none;
+        }
+      }
+    }
   }
 }

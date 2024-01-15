@@ -277,6 +277,7 @@ const offsetUseSwiper = new Swiper('.offset-use__swiper', {
 const htmmUseSwiper = new Swiper('.htmm-use__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".htmm-use__swiper-button-prev",
     nextEl: ".htmm-use__swiper-button-next",
@@ -286,20 +287,20 @@ const htmmUseSwiper = new Swiper('.htmm-use__swiper', {
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 4,
       spaceBetween: 24,
     },
-    769: {
-      spaceBetween: 20,
+    1201: {
+      spaceBetween: 16,
       slidesPerView: 4
     },
-    577: {
-      spaceBetween: 20,
-      slidesPerView: 3
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
     },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     },
   }

@@ -15,3 +15,52 @@
     row-gap: 40px;
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .block-documents {
+    padding: 40px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      row-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .block-documents {
+
+    &__items {
+      @include gridColumn(2);
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .block-documents {
+    padding: 16px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      @include gridColumn(1);
+      row-gap: 8px;
+    }
+
+    .doc {
+      &__icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      &__name {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
