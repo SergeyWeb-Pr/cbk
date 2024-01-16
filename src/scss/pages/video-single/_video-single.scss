@@ -36,6 +36,52 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .video-single {
+    padding-bottom: 64px;
+
+    &__head {
+      margin-top: 16px;
+    }
+
+    &__link-head {
+      margin-bottom: 8px;
+    }
+
+    &__date {
+      margin-bottom: 8px;
+    }
+
+    &__content {
+      .content-video {
+        height: 800px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .video-single {
+    padding-bottom: 40px;
+
+    &__head {
+      margin-bottom: 16px;
+    }
+
+    &__content {
+      .content-video {
+        height: 190px;
+
+        &::before {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    }
+
+  }
+}
+
 .news-other {
   .media__item {
     height: 100%;

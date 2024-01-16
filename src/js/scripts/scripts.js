@@ -14,4 +14,9 @@ $(document).ready(function () {
     $(this).addClass('hide');
     $(this).siblings('.js-other-products-list').removeClass('show');
   });
+  //Карьера - Смотреть подробнее
+  $('.js-career-work-button').on('click', function () {
+    $(this).addClass('hide');
+    $(this).siblings('.js-career-work-item').addClass('show');
+  });
 });

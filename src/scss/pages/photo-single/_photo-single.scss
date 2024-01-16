@@ -1,7 +1,6 @@
 .photo-single {
   padding-bottom: 100px;
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
-  box-shadow: -10px -10px 20px 0px #FFF, 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
 
   &__head {
     margin-top: 40px;
@@ -42,6 +41,57 @@
 
     .swiper-style__bottom {
       margin-top: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .photo-single {
+    padding-bottom: 64px;
+
+    &__head {
+      margin-top: 16px;
+    }
+
+    &__link-head {
+      margin-bottom: 8px;
+    }
+
+    &__date {
+      margin-bottom: 8px;
+    }
+
+    &__content {
+      .images-gallery__swiper {
+        .images-gallery__image {
+          height: 720px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .photo-single {
+    padding-bottom: 40px;
+
+    &__head {
+      margin-bottom: 16px;
+    }
+
+    &__content {
+      .images-gallery__swiper {
+
+        .images-gallery__image {
+          height: 190px;
+        }
+      }
+
+      .images-gallery__swiper-thumbs {
+        .images-gallery__image {
+          height: 48px;
+        }
+      }
     }
   }
 }

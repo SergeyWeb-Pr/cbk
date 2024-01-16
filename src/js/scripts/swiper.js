@@ -310,6 +310,7 @@ const interviewSwiper = new Swiper('.interview__swiper', {
   slidesPerView: 1.14,
   loop: false,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".interview__swiper-button-prev",
     nextEl: ".interview__swiper-button-next",
@@ -318,19 +319,38 @@ const interviewSwiper = new Swiper('.interview__swiper', {
     el: ".interview__swiper-pagination",
     clickable: true
   },
+  breakpoints: {
+    1367: {
+      spaceBetween: 24,
+      slidesPerView: 1.14
+    },
+    1201: {
+      spaceBetween: 24,
+      slidesPerView: 1.32
+    },
+    769: {
+      spaceBetween: 24,
+      slidesPerView: 1
+    },
+    320: {
+      spaceBetween: 16,
+      slidesPerView: 1
+    },
+  }
 });
 
 var imagesGallerySwiper = new Swiper('.images-gallery__swiper', {
   slidesPerView: 1,
   loop: false,
   spaceBetween: 16,
-
+  watchSlidesProgress: true,
 });
 var imagesGallerySwiperThumbs = new Swiper('.images-gallery__swiper-thumbs', {
   spaceBetween: 16,
   slideToClickedSlide: true,
   loop: false,
   slidesPerView: 6,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".images-gallery__swiper-button-prev",
     nextEl: ".images-gallery__swiper-button-next",
@@ -339,6 +359,16 @@ var imagesGallerySwiperThumbs = new Swiper('.images-gallery__swiper-thumbs', {
     el: ".images-gallery__swiper-pagination",
     clickable: true
   },
+  breakpoints: {
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 6
+    },
+    320: {
+      spaceBetween: 8,
+      slidesPerView: 4
+    },
+  }
 });
 
 var modalСontent = new Swiper('.modal-content__swiper', {
@@ -362,9 +392,10 @@ var modalСontentSwiperThumbs = new Swiper('.modal-content__swiper-thumbs', {
   },
 });
 
-const otherSwiper = new Swiper('.other__swiper', {
+var otherSwiper = new Swiper('.other__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".other__swiper-button-prev",
     nextEl: ".other__swiper-button-next",
@@ -374,20 +405,20 @@ const otherSwiper = new Swiper('.other__swiper', {
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
-    769: {
-      spaceBetween: 20,
-      slidesPerView: 4
-    },
-    577: {
+    1201: {
       spaceBetween: 20,
       slidesPerView: 3
     },
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
+    },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     },
   }

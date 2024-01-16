@@ -1,6 +1,5 @@
 .provision {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
-  box-shadow: -10px -10px 20px 0px #FFF, 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
   padding-bottom: 100px;
 
   &__title {
@@ -11,6 +10,40 @@
   &__subtitle {
     color: $green;
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .provision {
+    padding-bottom: 64px;
+
+    &__title {
+      margin-top: 12px;
+      margin-bottom: 24px;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .provision {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-top: 15px;
+      margin-bottom: 24px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -75,6 +108,45 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .provision-cooperation {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .provision-cooperation {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .provision-cooperation {
+    margin-bottom: 24px;
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+      row-gap: 12px;
+
+      &-image {
+        width: 80px;
+        height: 80px;
+      }
+
+      &-step {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
 .provision-info {
   border-radius: 20px;
   background-color: $white;
@@ -90,5 +162,49 @@
     @include gridColumn(2);
     column-gap: 60px;
     row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .provision-info {
+    padding: 40px;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .provision-info {
+    padding: 16px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    .doc-info {
+      align-items: flex-start;
+      column-gap: 12px;
+
+      &__icon {
+        width: 48px;
+        height: 48px;
+
+        &-inner {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &__name {
+        margin-bottom: 12px;
+      }
+    }
   }
 }

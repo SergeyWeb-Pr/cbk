@@ -10,3 +10,11 @@
     height: auto;
   }
 }
+
+@media screen and (max-width: $mob) {
+  .other {
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+}

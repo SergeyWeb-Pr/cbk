@@ -135,6 +135,11 @@
   font-weight: 400;
   line-height: 32px;
 
+  @media screen and (max-width: $laptop) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
   @media screen and (max-width: $mob) {
     font-size: 18px;
     line-height: 26px;
@@ -289,6 +294,11 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
+
+  @media screen and (max-width: $laptop) {
+    font-size: 28px;
+    line-height: 36px;
+  }
 
   @media screen and (max-width: $mob) {
     font-size: 24px;

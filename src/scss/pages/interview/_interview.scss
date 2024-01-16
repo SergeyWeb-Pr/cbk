@@ -8,11 +8,11 @@
   }
 
   &__text {
-    font-size: 24px;
-    line-height: 36px;
     margin-bottom: 64px;
 
     p {
+      font-size: 24px;
+      line-height: 36px;
 
       strong,
       b {
@@ -101,6 +101,108 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .interview {
+    padding-bottom: 64px;
+
+    &__swiper {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      padding: 40px;
+
+      &-image {
+        height: 564px;
+      }
+
+      &-exp {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          @include mb(8px);
+
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .interview {
+    padding-bottom: 40px;
+
+    &__text {
+      margin-bottom: 24px;
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    &__item {
+      padding: 16px;
+      flex-direction: column;
+      row-gap: 16px;
+
+      &-image {
+        width: 256px;
+        height: 288px;
+
+        img {
+          object-position: top;
+        }
+      }
+
+      &-name {
+        margin-bottom: 4px;
+      }
+
+      &-post {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 16px;
+      }
+
+      &-exp {
+        display: none;
+      }
+
+      &-text {
+        display: none;
+      }
+
+      &-video {
+        column-gap: 12px;
+
+        .button-video__name {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
 .interview-join {
   @include flexCBetween;
   border-radius: 20px;
@@ -133,6 +235,37 @@
           line-height: 28px;
           color: $green;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .interview-join {
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .interview-join {
+    padding: 16px;
+
+    &__name {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__link {
+      width: 100%;
+    }
+
+    .social-link {
+      a {
+        font-size: 16px;
+        line-height: 24px;
       }
     }
   }

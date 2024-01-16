@@ -16,6 +16,7 @@
   }
 
   &__text {
+    @extend %regular24-32;
     max-width: 757px;
     margin-bottom: 16px;
 
@@ -35,18 +36,57 @@
   }
 }
 
-@media screen and (max-width: $laptop) {}
+@media screen and (max-width: $laptop) {
+  .internship-preview {
 
-@media screen and (max-width: $tablet) {}
+    &__item {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      min-height: 448px;
+    }
+
+    &__text {
+      margin-bottom: 16px;
+    }
+  }
+}
 
 @media screen and (max-width: $mob) {
   .internship-preview {
+    .breadcrumbs {
+
+      a,
+      span {
+        color: $white;
+      }
+
+      &__separator {
+        background-image: url(../img/svg/arrows/arrow-right-grey.svg);
+      }
+    }
+
     &__item {
       background: linear-gradient(89deg, #004D43 0%, #02B45E 105.3%);
+      padding-top: 64px;
+      padding-bottom: 40px;
+      min-height: auto;
     }
 
     &__image {
-      display: none;  
+      display: none;
+    }
+
+    &__title {
+      color: $white;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+
+      p {
+        color: $white;
+      }
     }
   }
 }
@@ -57,6 +97,14 @@
   &__container {
     @include flexColumn;
     row-gap: 64px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .internship-block-light {
+    &__container {
+      row-gap: 40px;
+    }
   }
 }
 
@@ -94,6 +142,45 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .internship-application {
+    grid-template-columns: auto 493px;
+
+    &__content {
+      &-name {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .internship-application {
+    grid-template-columns: 1fr;
+
+    &__image {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .internship-application {
+    &__content {
+      &-name {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+}
+
 .internship-share {
   border-radius: 20px;
   background: linear-gradient(87deg, #004D43 -39.36%, #02B45E 95.64%);
@@ -109,6 +196,25 @@
   &__button {
     white-space: nowrap;
     box-shadow: none;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .internship-share {
+    padding: 40px;
+    column-gap: 40px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .internship-share {
+    padding: 16px;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &__button {
+      width: 100%;
+    }
   }
 }
 
@@ -137,6 +243,35 @@
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .internship-join {
+    padding: 40px;
+    column-gap: 40px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .internship-join {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .internship-join {
+    padding: 16px;
+    &__name {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__image-qr {
+      width: 142px;
+      height: 142px;
     }
   }
 }

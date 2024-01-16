@@ -1,6 +1,5 @@
 .materials {
   background: linear-gradient(180deg, #FFF 0%, #EFF2F7 99.96%);
-  box-shadow: -10px -10px 20px 0px #FFF, 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25);
   padding-bottom: 100px;
 
   &__title {
@@ -11,6 +10,35 @@
   &__subtitle {
     color: $green;
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .materials {
+    padding-bottom: 64px;
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .materials {
+    padding-bottom: 40px;
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
   }
 }
 
@@ -75,6 +103,45 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .materials-cooperation {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .materials-cooperation {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .materials-cooperation {
+    margin-bottom: 24px;
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+      row-gap: 16px;
+
+      &-image {
+        width: 80px;
+        height: 80px;
+      }
+
+      &-name {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
 .materials-info {
   border-radius: 20px;
   background-color: $white;
@@ -90,5 +157,49 @@
     @include gridColumn(2);
     column-gap: 60px;
     row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .materials-info {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .materials-info {
+    padding: 16px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 16px;
+    }
+
+    &__item {
+      column-gap: 12px;
+    }
+
+    .doc-info {
+      &__icon {
+        width: 48px;
+        height: 48px;
+
+        &-inner {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &__name {
+        margin-bottom: 12px;
+      }
+    }
+
   }
 }

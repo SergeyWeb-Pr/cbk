@@ -327,6 +327,11 @@ $(document).ready(function () {
     $(this).addClass('hide');
     $(this).siblings('.js-other-products-list').removeClass('show');
   });
+  //Карьера - Смотреть подробнее
+  $('.js-career-work-button').on('click', function () {
+    $(this).addClass('hide');
+    $(this).siblings('.js-career-work-item').addClass('show');
+  });
 });
 
 /***/ }),
@@ -635,6 +640,7 @@ const interviewSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.int
   slidesPerView: 1.14,
   loop: false,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".interview__swiper-button-prev",
     nextEl: ".interview__swiper-button-next"
@@ -642,18 +648,38 @@ const interviewSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.int
   pagination: {
     el: ".interview__swiper-pagination",
     clickable: true
+  },
+  breakpoints: {
+    1367: {
+      spaceBetween: 24,
+      slidesPerView: 1.14
+    },
+    1201: {
+      spaceBetween: 24,
+      slidesPerView: 1.32
+    },
+    769: {
+      spaceBetween: 24,
+      slidesPerView: 1
+    },
+    320: {
+      spaceBetween: 16,
+      slidesPerView: 1
+    }
   }
 });
 var imagesGallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.images-gallery__swiper', {
   slidesPerView: 1,
   loop: false,
-  spaceBetween: 16
+  spaceBetween: 16,
+  watchSlidesProgress: true
 });
 var imagesGallerySwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.images-gallery__swiper-thumbs', {
   spaceBetween: 16,
   slideToClickedSlide: true,
   loop: false,
   slidesPerView: 6,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".images-gallery__swiper-button-prev",
     nextEl: ".images-gallery__swiper-button-next"
@@ -661,6 +687,16 @@ var imagesGallerySwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default
   pagination: {
     el: ".images-gallery__swiper-pagination",
     clickable: true
+  },
+  breakpoints: {
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 6
+    },
+    320: {
+      spaceBetween: 8,
+      slidesPerView: 4
+    }
   }
 });
 var modalСontent = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-content__swiper', {
@@ -682,9 +718,10 @@ var modalСontentSwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default
     clickable: true
   }
 });
-const otherSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other__swiper', {
+var otherSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other__swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".other__swiper-button-prev",
     nextEl: ".other__swiper-button-next"
@@ -694,20 +731,20 @@ const otherSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other__
     clickable: true
   },
   breakpoints: {
-    1201: {
+    1367: {
       slidesPerView: 3,
       spaceBetween: 24
     },
-    769: {
-      spaceBetween: 20,
-      slidesPerView: 4
-    },
-    577: {
+    1201: {
       spaceBetween: 20,
       slidesPerView: 3
     },
+    769: {
+      spaceBetween: 16,
+      slidesPerView: 2
+    },
     320: {
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 1
     }
   }
