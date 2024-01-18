@@ -47,8 +47,8 @@
   .paper-preview {
     &__item {
       padding-top: 78px;
-      padding-bottom: 40px;
-      min-height: 314px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__title {
@@ -65,7 +65,6 @@
   .paper-preview {
     &__item {
       padding-top: 64px;
-      min-height: auto;
     }
 
     &__title {

@@ -43,8 +43,8 @@
   .offset-preview {
     &__item {
       padding-top: 63px;
-      padding-bottom: 64px;
-      min-height: 422px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__logo {
@@ -70,8 +70,6 @@
   .offset-preview {
     &__item {
       padding-top: 64px;
-      padding-bottom: 46px;
-      min-height: auto;
     }
 
     &__logo {

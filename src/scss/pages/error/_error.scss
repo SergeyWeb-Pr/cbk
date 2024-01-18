@@ -50,3 +50,70 @@
     }
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .error {
+    padding-bottom: 64px;
+
+    &__content {
+      padding-top: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__image {
+      width: 680px;
+      height: 400px;
+      right: 26px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .error {
+    &__container {
+      display: flex;
+      flex-direction: column-reverse;
+      row-gap: 10px;
+    }
+
+    &__content {
+      padding-top: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__image {
+      position: static;
+      width: 288px;
+      height: 149px;
+      transform: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .error {
+    padding-bottom: 56px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      margin-bottom: 24px;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &__button {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

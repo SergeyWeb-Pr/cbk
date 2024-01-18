@@ -40,8 +40,8 @@
   .htmm-preview {
     &__item {
       padding-top: 68px;
-      padding-bottom: 40px;
-      min-height: 472px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__logo {
@@ -66,7 +66,6 @@
   .htmm-preview {
     &__item {
       padding-top: 64px;
-      min-height: auto;
     }
 
     &__logo {

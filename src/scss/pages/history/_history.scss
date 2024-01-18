@@ -16,6 +16,25 @@
   }
 }
 
+@media screen and (max-width: $laptop) {
+  .history-hero {
+    padding-bottom: 32px;
+  
+    &__content {
+      margin-top: 16px;
+    }
+  
+    &__title {
+      margin-bottom: 16px;
+    }
+  
+    &__text {
+      max-width: 975px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {}
 
 .history {
   @include bgcover;

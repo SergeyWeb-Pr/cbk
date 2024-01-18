@@ -15,8 +15,8 @@
   .objects-preview {
     &__item {
       padding-top: 92px;
-      padding-bottom: 80px;
-      min-height: 324px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__text {
@@ -29,8 +29,6 @@
   .objects-preview {
     &__item {
       padding-top: 72px;
-      padding-bottom: 96px;
-      min-height: 360px;
     }
 
     &__title {

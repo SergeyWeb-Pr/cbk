@@ -18,8 +18,8 @@
   .development-preview {
     &__item {
       padding-top: 92px;
-      padding-bottom: 84px;
-      min-height: 356px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__title {
@@ -32,8 +32,6 @@
   .development-preview {
     &__item {
       padding-top: 83px;
-      padding-bottom: 83px;
-      min-height: 400px;
     }
   }
 }

@@ -21,9 +21,9 @@
 @media screen and (max-width: $laptop) {
   .company-hero {
     &__item {
-      min-height: 400px;
+      min-height: auto;
       padding-top: 76px;
-      padding-bottom: 48px;
+      padding-bottom: 32px;
     }
 
     &__text {
@@ -47,9 +47,8 @@
 @media screen and (max-width: $mob) {
   .company-hero {
     &__item {
-      min-height: 552px;
+      min-height: auto;
       padding-top: 72px;
-      padding-bottom: 40px;
     }
 
     &__title {

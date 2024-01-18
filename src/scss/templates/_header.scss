@@ -15,6 +15,7 @@
     display: inline-block;
     height: 64px;
     width: auto;
+    flex-shrink: 0;
 
     img {
       width: 100%;
@@ -112,10 +113,14 @@
   .header {
     padding-top: 16px;
     padding-bottom: 16px;
-  }
 
-  .header__logo {
-    height: 56px;
+    &__logo {
+      height: 40px;
+
+      img {
+        height: 100%;
+      }
+    }
   }
 }
 

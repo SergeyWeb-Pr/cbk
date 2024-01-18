@@ -69,7 +69,7 @@
 
 @media screen and (max-width: $laptop) {
   .search {
-    padding-bottom: 64px;
+    padding-bottom: 32px;
 
     &__content {
       margin-top: 16px;
@@ -93,7 +93,6 @@
 
 @media screen and (max-width: $mob) {
   .search {
-    padding-bottom: 40px;
 
     &__block {
       padding: 16px 24px;

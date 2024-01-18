@@ -77,8 +77,8 @@
   .career-preview {
     &__item {
       padding-top: 45px;
-      padding-bottom: 30px;
-      min-height: 308px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__title {
@@ -116,7 +116,6 @@
 @media screen and (max-width: $mob) {
   .career-preview {
     .breadcrumbs {
-
       a,
       span {
         color: $white;
@@ -130,8 +129,6 @@
     &__item {
       background: linear-gradient(89deg, #004D43 0%, #02B45E 105.3%);
       padding-top: 64px;
-      padding-bottom: 40px;
-      min-height: auto;
     }
 
     &__image {

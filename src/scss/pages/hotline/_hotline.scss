@@ -90,3 +90,94 @@
     }
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .hotline {
+    padding-bottom: 64px;
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hotline {
+    &__info {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .hotline {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+
+    &__info {
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .social-link {
+      align-items: flex-start;
+
+      &.tel {
+        a {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+
+      &.mail {
+        a {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    &__content {
+      p {
+        font-size: 18px;
+        line-height: 26px;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+
+      ul {
+        li {
+          font-size: 18px;
+          line-height: 26px;
+          @include mb(12px);
+        }
+      }
+
+      h4 {
+        margin-bottom: 16px;
+
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-.hotline {
+.questions {
   background-color: $blue;
   padding-bottom: 100px;
   position: relative;
@@ -29,63 +29,132 @@
 
 }
 
-.accordion__item {
-  border-radius: 20px;
-  background: $white;
-  box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-  @include mb(40px);
+.accordion {
+  &__item {
+    border-radius: 20px;
+    background: $white;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    @include mb(40px);
 
-  &.accordion__item_show {
-    .accordion__header {
+    &.accordion__item_show {
+      .accordion__header {
+        &::after {
+          background-image: url(../img/svg/arrows/icon-minus.svg);
+        }
+      }
+    }
+  }
+
+  &__header {
+    color: $green;
+    padding: 32px 88px 32px 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 40px;
+      top: 32px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background-image: url(../img/svg/arrows/icon-plus.svg);
+      @include bgcover;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__content {
+    p {
+      @extend %regular18;
+      @include mb(12px);
+
+      strong,
+      b {
+        font-weight: 700;
+      }
+    }
+
+    padding: 0px 88px 32px 40px;
+  }
+
+  &__item_show .accordion__header::after,
+  &__item_slidedown .accordion__header::after {
+    transform: rotate(-180deg);
+  }
+
+  &__item:not(.accordion__item_show) .accordion__body {
+    display: none
+  }
+}
+
+
+@media screen and (max-width: $laptop) {
+  .questions {
+    padding-bottom: 64px;
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .accordion {
+    &__item {
+      @include mb(24px);
+    }
+
+    &__header {
+      padding: 20px 72px 20px 24px;
+
       &::after {
-        background-image: url(../img/svg/arrows/icon-minus.svg);
+        top: 24px;
+      }
+    }
+
+    &__content {
+      padding: 0 72px 24px 20px;
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
       }
     }
   }
 }
 
-.accordion__header {
-  color: $green;
-  padding: 32px 88px 32px 40px;
-}
+@media screen and (max-width: $tablet) {}
 
-.accordion__header::after {
-  content: "";
-  position: absolute;
-  right: 40px;
-  top: 32px;
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  background-image: url(../img/svg/arrows/icon-plus.svg);
-  @include bgcover;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease-out;
-}
+@media screen and (max-width: $mob) {
+  .questions {
+    padding-bottom: 40px;
 
-.accordion__content {
-  p {
-    @extend %regular18;
-    @include mb(12px);
-
-    strong,
-    b {
-      font-weight: 700;
+    &__title {
+      margin-top: 8px;
     }
   }
 
-  padding: 0px 88px 32px 40px;
-}
+  .accordion {
+    &__item {
+      @include mb(12px);
+    }
 
+    &__header {
+      padding: 8px 48px 8px 16px;
+      font-size: 16px;
+      line-height: 24px;
 
-.accordion__item_show .accordion__header::after,
-.accordion__item_slidedown .accordion__header::after {
-  transform: rotate(-180deg);
-}
+      &::after {
+        right: 16px;
+        top: 14px;
+      }
+    }
 
-.accordion__item:not(.accordion__item_show) .accordion__body {
-  display: none
+    &__content {
+      padding: 0 16px 8px 16px;
+    }
+  }
 }

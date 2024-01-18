@@ -18,8 +18,8 @@
   .protection-preview {
     &__item {
       padding-top: 92px;
-      padding-bottom: 92px;
-      min-height: 364px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__title {
@@ -32,8 +32,6 @@
   .protection-preview {
     &__item {
       padding-top: 52px;
-      padding-bottom: 52px;
-      min-height: 400px;
     }
   }
 }

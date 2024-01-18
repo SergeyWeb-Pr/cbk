@@ -17,13 +17,9 @@
 @media screen and (max-width: $laptop) {
   .goal {
     &__item {
-      min-height: 336px;
+      min-height: auto;
       padding-top: 92px;
-      padding-bottom: 92px;
-    }
-
-    &__text {
-      font-size: 24px;
+      padding-bottom: 32px;
     }
   }
 }
@@ -31,9 +27,7 @@
 @media screen and (max-width: $mob) {
   .goal {
     &__item {
-      min-height: 360px;
       padding-top: 72px;
-      padding-bottom: 132px;
     }
 
     &__title {
@@ -48,7 +42,6 @@
 
 .our-missions {
   background: var(--6, linear-gradient(258deg, #FFF 18.23%, #EFF2F7 87.8%));
-  box-shadow: 10px -10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px -5px 10px 0px rgba(170, 170, 204, 0.25) inset;
   position: relative;
   @include bgcover;
 

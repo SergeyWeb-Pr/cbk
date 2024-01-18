@@ -18,8 +18,8 @@
   .safety-preview {
     &__item {
       padding-top: 92px;
-      padding-bottom: 92px;
-      min-height: 300px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
   }
 }
@@ -28,8 +28,6 @@
   .safety-preview {
     &__item {
       padding-top: 148px;
-      padding-bottom: 148px;
-      min-height: 400px;
     }
 
     &__title {

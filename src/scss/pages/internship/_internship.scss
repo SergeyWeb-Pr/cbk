@@ -41,8 +41,8 @@
 
     &__item {
       padding-top: 60px;
-      padding-bottom: 40px;
-      min-height: 448px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__text {
@@ -54,7 +54,6 @@
 @media screen and (max-width: $mob) {
   .internship-preview {
     .breadcrumbs {
-
       a,
       span {
         color: $white;
@@ -68,8 +67,6 @@
     &__item {
       background: linear-gradient(89deg, #004D43 0%, #02B45E 105.3%);
       padding-top: 64px;
-      padding-bottom: 40px;
-      min-height: auto;
     }
 
     &__image {

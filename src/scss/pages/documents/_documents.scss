@@ -17,7 +17,7 @@
 
 @media screen and (max-width: $laptop) {
   .documents-head {
-    padding-bottom: 40px;
+    padding-bottom: 32px;
 
     &__title {
       margin-top: 24px;
@@ -34,7 +34,6 @@
 
 @media screen and (max-width: $tablet) {
   .documents-head {
-    padding-bottom: 40px;
 
     &__title {
       margin-top: 24px;

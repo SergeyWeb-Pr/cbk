@@ -26,8 +26,8 @@
   .cardboard-preview {
     &__item {
       padding-top: 68px;
-      padding-bottom: 40px;
-      min-height: 364px;
+      padding-bottom: 32px;
+      min-height: auto;
     }
 
     &__title {
@@ -46,7 +46,6 @@
   .cardboard-preview {
     &__item {
       padding-top: 64px;
-      min-height: auto;
     }
 
     &__title {

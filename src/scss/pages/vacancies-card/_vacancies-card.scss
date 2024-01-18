@@ -9,7 +9,7 @@
 
 @media screen and (max-width: $laptop) {
   .vacancies-card-preview {
-    padding-bottom: 64px;
+    padding-bottom: 32px;
 
     &__title {
       margin-top: 16px;
@@ -19,7 +19,6 @@
 
 @media screen and (max-width: $mob) {
   .vacancies-card-preview {
-    padding-bottom: 40px;
 
     &__title {
       font-size: 24px;

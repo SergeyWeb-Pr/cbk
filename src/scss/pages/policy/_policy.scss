@@ -44,3 +44,35 @@
     }
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .policy {
+    padding-bottom: 64px;
+
+    &__title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .policy {
+    padding-bottom: 40px;
+
+    &__title {
+      margin-top: 8px;
+    }
+
+    &__text {
+      h6 {
+        font-size: 20px;
+        line-height: 28px;
+
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
