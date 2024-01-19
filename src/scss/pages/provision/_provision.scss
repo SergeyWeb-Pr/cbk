@@ -23,9 +23,9 @@
     }
 
     &__subtitle {
-      font-size: 32px;
-      line-height: 40px;
-      margin-bottom: 24px;
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -103,6 +103,7 @@
         font-weight: 700;
         text-decoration: underline;
         color: $green;
+        cursor: pointer;
       }
     }
   }
@@ -111,6 +112,13 @@
 @media screen and (max-width: $laptop) {
   .provision-cooperation {
     margin-bottom: 48px;
+
+    &__item {
+      &-info {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
   }
 }
 

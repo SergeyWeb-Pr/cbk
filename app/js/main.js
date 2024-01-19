@@ -702,13 +702,15 @@ var imagesGallerySwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default
 var modalСontent = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-content__swiper', {
   slidesPerView: 1,
   loop: false,
-  spaceBetween: 16
+  spaceBetween: 16,
+  watchSlidesProgress: true
 });
 var modalСontentSwiperThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.modal-content__swiper-thumbs', {
   spaceBetween: 16,
   slideToClickedSlide: true,
   loop: false,
   slidesPerView: 8,
+  watchSlidesProgress: true,
   navigation: {
     prevEl: ".modal-content__swiper-button-prev",
     nextEl: ".modal-content__swiper-button-next"
