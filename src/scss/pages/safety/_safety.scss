@@ -222,6 +222,10 @@
     column-gap: 40px;
     row-gap: 40px;
   }
+
+  &__link {
+    grid-column: 1/4;
+  }
 }
 
 @media screen and (max-width: $laptop) {

@@ -1,7 +1,7 @@
 .contacts-preview {
   background: linear-gradient(110deg, #E8EEF2 3.93%, #FBFDFF 100%);
   box-shadow: -10px -10px 20px 0px #FFF inset, -10px -10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, 5px 5px 10px 0px rgba(255, 255, 255, 0.50) inset;
-  padding-bottom: 100px;
+  padding-bottom: 32px;
 
   &__content {
     margin-top: 40px;
@@ -99,6 +99,7 @@
 
 .contacts {
   background-color: $blue;
+  padding-top: 50px;
 
   &__container {
     @include flexColumn;
@@ -209,6 +210,13 @@
   &__anchors {
     @include flexCStart;
     column-gap: 24px;
+
+    .contacts-preview__button {
+      &:hover {
+        background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
+        box-shadow: none;
+      }
+    }
   }
 }
 
@@ -284,6 +292,20 @@
     a {
       white-space: nowrap;
     }
+
+    .social-link {
+      &__icon {
+        width: 24px;
+        height: 24px;
+        padding: 2px 1px;
+      }
+
+      a {
+        color: $green;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
   }
 
   &__link {
@@ -340,6 +362,14 @@
       a {
         font-size: 32px;
         line-height: 40px;
+      }
+
+      .social-link {
+        a {
+          color: $green;
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
 

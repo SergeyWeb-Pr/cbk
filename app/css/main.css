@@ -9246,6 +9246,11 @@ body, a, p {
   column-gap: 40px;
   row-gap: 40px;
 }
+.safety-doc__link {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
 
 @media screen and (max-width: 1366px) {
   .safety-doc__block {
@@ -12430,6 +12435,7 @@ body, a, p {
 }
 .career-job__content-text p a {
   color: #004D43;
+  font-weight: 700;
 }
 .career-job__image {
   position: absolute;
@@ -15067,7 +15073,7 @@ body, a, p {
   background: linear-gradient(110deg, #E8EEF2 3.93%, #FBFDFF 100%);
   -webkit-box-shadow: -10px -10px 20px 0px #FFF inset, -10px -10px 20px 0px rgba(170, 170, 204, 0.5) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, 5px 5px 10px 0px rgba(255, 255, 255, 0.5) inset;
   box-shadow: -10px -10px 20px 0px #FFF inset, -10px -10px 20px 0px rgba(170, 170, 204, 0.5) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, 5px 5px 10px 0px rgba(255, 255, 255, 0.5) inset;
-  padding-bottom: 100px;
+  padding-bottom: 32px;
 }
 .contacts-preview__content {
   margin-top: 40px;
@@ -15174,6 +15180,7 @@ body, a, p {
 }
 .contacts {
   background-color: #EFF2F7;
+  padding-top: 50px;
 }
 .contacts__container {
   display: -webkit-box;
@@ -15293,6 +15300,11 @@ body, a, p {
   -moz-column-gap: 24px;
   column-gap: 24px;
 }
+.contacts-buy__anchors .contacts-preview__button:hover {
+  background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 @media screen and (max-width: 1200px) {
   .contacts-buy {
@@ -15380,6 +15392,16 @@ body, a, p {
 .contacts-line__tel a {
   white-space: nowrap;
 }
+.contacts-line__tel .social-link__icon {
+  width: 24px;
+  height: 24px;
+  padding: 2px 1px;
+}
+.contacts-line__tel .social-link a {
+  color: #004D43;
+  font-size: 20px;
+  line-height: 28px;
+}
 .contacts-line__link {
   white-space: nowrap;
 }
@@ -15435,6 +15457,11 @@ body, a, p {
   .contacts-line__tel a {
     font-size: 32px;
     line-height: 40px;
+  }
+  .contacts-line__tel .social-link a {
+    color: #004D43;
+    font-size: 16px;
+    line-height: 24px;
   }
   .contacts-line__link {
     width: 100%;
