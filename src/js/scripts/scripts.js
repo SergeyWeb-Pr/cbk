@@ -19,4 +19,9 @@ $(document).ready(function () {
     $(this).addClass('hide');
     $(this).siblings('.js-career-work-item').addClass('show');
   });
+  //Исторические вехи
+  $(".js-history-item-image").on("click", function () {
+    var imgSrc = $(this).children('img').attr("src");
+    $("#js-history-image").attr("src", imgSrc);
+  });
 });

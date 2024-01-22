@@ -5082,6 +5082,11 @@ body, a, p {
   -o-object-fit: cover;
   object-fit: cover;
 }
+.modal-content.modal-image-full .modal-content__image {
+  height: auto;
+  margin-bottom: 0;
+}
+
 .burger {
   display: none;
 }
@@ -7398,6 +7403,7 @@ body, a, p {
   position: absolute;
   top: 0;
   left: -136px;
+  cursor: pointer;
 }
 .history__item-image img {
   width: 100%;
@@ -9724,6 +9730,7 @@ body, a, p {
   background-color: #EFF2F7;
   -webkit-box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.5);
   box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.5);
+  padding-top: 0;
 }
 
 .products {
@@ -16162,6 +16169,7 @@ body, a, p {
   height: 24px;
 }
 .hotline__info .social-link.mail a {
+  color: #004D43;
   font-size: 24px;
   line-height: 36px;
 }

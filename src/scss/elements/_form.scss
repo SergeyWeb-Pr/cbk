@@ -298,3 +298,12 @@
     }
   }
 }
+
+.modal-content {
+  &.modal-image-full {
+    .modal-content__image {
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+}
