@@ -84,7 +84,6 @@
 
     &-text {
       @extend %regular16;
-      margin-bottom: 32px;
 
       p {
         @include mb(12px);
@@ -95,11 +94,11 @@
       background-color: $greyLine;
       width: 100%;
       height: 1px;
+      margin-top: 32px;
+      margin-bottom: 32px;
     }
 
     &-socials {
-      margin-top: 32px;
-
       .social-link {
         @include mb(12px);
       }
@@ -194,21 +193,20 @@
         p {
           @include mb(8px);
         }
-
-        margin-bottom: 8px;
       }
 
       &-content {
         order: 2;
       }
 
+      &-line {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
       &-image {
         width: 100%;
         height: 180px;
-      }
-
-      &-socials {
-        margin-top: 8px;
       }
 
       .social-link {

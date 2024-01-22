@@ -121,7 +121,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: $laptop) {
   .hero__swiper .hero_image .hero__swiper_image {
     width: 504px;
   }
@@ -471,7 +471,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mob) {
   .block_facts__icon_items {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1024,6 +1024,10 @@
   background-color: #FFF;
   box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
 
+  &__wrapper {
+    padding-bottom: 100px;
+  }
+
   &__inner {
     padding-left: 88px;
     display: flex;
@@ -1056,10 +1060,7 @@
   }
 
   &__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 16px;
+    display: contents;
   }
 
   &__contact {
@@ -1074,94 +1075,131 @@
       display: inline-block;
     }
 
-    a {
-      color: var(--181818, #181818);
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 48px;
-      display: inline-block;
+    .social-link {
+      &__icon {
+        width: 24px;
+        height: 24px;
+        padding: 2px 1px;
+      }
+
+      a {
+        font-size: 20px;
+        line-height: 28px;
+        color: $green;
+      }
     }
   }
 
-
+  &__tel {
+    color: var(--181818, #181818);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    display: inline-block;
+  }
 }
 
-@media screen and (max-width: 1440px) {
-  .banner__inner {
-    flex-direction: column;
-    row-gap: 24px;
-    align-items: flex-start;
-  }
+@media screen and (max-width: $laptop) {
+  .banner {
+    &__wrapper {
+      padding-bottom: 80px;
+    }
 
-  .banner__info {
-    column-gap: 40px;
-    align-items: center;
-  }
+    &__info {
+      column-gap: 40px;
+      align-items: center;
+    }
 
-  .banner__contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
 @media screen and (max-width: 992px) {
-  .banner__title {
-    margin-bottom: 24px;
-  }
+  .banner {
+    &__wrapper {
+      padding-bottom: 64px;
+    }
 
-  .banner__text {
-    font-size: 18px;
-    line-height: 26px;
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mob) {
+  .banner {
+    padding-bottom: 40px;
 
+    &__info {
+      flex-direction: column;
+      row-gap: 16px;
+      align-items: flex-start;
+      width: 100%;
+    }
 
-  .banner__info {
-    flex-direction: column;
-    row-gap: 16px;
-    align-items: flex-start;
+    &__button {
+      width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 576px) {
   .banner {
     padding: 16px;
-  }
 
-  .banner__inner {
-    padding-left: 0;
-  }
+    &__wrapper {
+      padding-bottom: 40px;
+    }
 
-  .banner__inner::before {
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-  }
+    &__inner {
+      padding-left: 0;
+      row-gap: 16px;
 
-  .banner__title {
-    padding-left: 56px;
-  }
+      &::before {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+      }
+    }
 
-  .banner__title {
-    margin-bottom: 16px;
-  }
+    &__title {
+      padding-left: 56px;
+      margin-bottom: 16px;
+    }
 
-  .banner__text {
-    font-size: 16px;
-    line-height: 24px;
-  }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
 
-  .banner__inner {
-    row-gap: 16px;
-  }
-
-  .banner__contact a {
-    font-size: 32px;
-    line-height: 40px;
+    &__contact {
+      a {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
   }
 }
