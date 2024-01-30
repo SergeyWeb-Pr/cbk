@@ -337,6 +337,11 @@ $(document).ready(function () {
     var imgSrc = $(this).children('img').attr("src");
     $("#js-history-image").attr("src", imgSrc);
   });
+  //О компании
+  $(".js-tabs-title").on("click", function () {
+    $(this).toggleClass('active');
+    $(this).siblings('.company-info__items').toggleClass('show');
+  });
 });
 
 /***/ }),

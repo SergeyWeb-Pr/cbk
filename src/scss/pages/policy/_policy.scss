@@ -42,6 +42,23 @@
       @include mb(12px);
       @extend %regular16;
     }
+
+    ul {
+      @include mb(12px);
+
+      li {
+        @extend %regular16;
+        @include mb(12px);
+      }
+    }
+
+    table {
+      @include mb(12px);
+
+      tbody tr:nth-child(even) {
+        background-color: $white;
+      }
+    }
   }
 }
 

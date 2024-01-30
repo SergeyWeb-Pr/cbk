@@ -140,7 +140,7 @@
             <div class="preview__content company-hero__content">
               <h1 class="preview__title company-hero__title h1">НПАО «Светогорский ЦБК»</h1>
               <div class="preview__text company-hero__text">
-                <p>Системообразуещее предприятие России и Ленинградской области, на котором трудится более 2000
+                <p>Системообразуещее предприятие России и Ленинградской области, на котором трудятся более 2000
                   сотрудников</p>
               </div>
               <div class="company-hero__items">
@@ -186,7 +186,7 @@
       <p>Наш комбинат основан в 1887 году и расположен в городе Светогорске, Ленинградская область. У нас есть филиалы в
         Санкт-Петербурге и Москве, а также дочерние компании: ЗАО «Тихвинский КЛПХ», управляющее собственными лесными
         арендами, и НПАО «СветоТехСервис», оказывающее услуги по управлению надежностью оборудования и техническому
-        обслуживанию. Всего на Светогорском ЦБК трудится более 2000 человек.</p>
+        обслуживанию. Всего на Светогорском ЦБК трудятся более 2000 человек.</p>
       <p>Как ответственный производитель мы придерживаемся концепции устойчивого развития: заботимся об окружающей
         среде,
         восстанавливаем и сохраняем лесные экосистемы, поддерживаем местные сообщества и вносим значительный вклад в
@@ -299,7 +299,14 @@
   </div>
 </section>
 
-<section class="company-info" style="background-image: url(img/jpg/backgr/company-info.jpg);">
+<section class="company-info">
+  <div class="company-info__image">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/jpg/backgr/company-info-bg-mobile.jpg">
+      <source media="(max-width: 1366px)" srcset="img/jpg/backgr/company-info-bg-tablet.jpg">
+      <img src="img/jpg/backgr/company-info-bg.jpg" alt="">
+    </picture>
+  </div>
   <div class="container company-info__container">
     <div class="tabs" data-tabs="tab">
       <ul class="list-reset tabs__nav">
@@ -313,6 +320,7 @@
       </ul>
       <div class="tabs__content">
         <div class="tabs__panel">
+          <div class="tabs__panel-title js-tabs-title">География продаж</div>
           <div class="company-info__items">
             <div class="company-info__item item5">
               <div class="company-info__item-name">Республика Беларусь</div>
@@ -377,8 +385,9 @@
           </div>
         </div>
         <div class="tabs__panel">
+          <div class="tabs__panel-title js-tabs-title">Наши офисы</div>
           <div class="company-info__items">
-            <div class="company-info__item item1 js-company-info-item">
+            <div class="company-info__item company-info__item-mobile item1 js-company-info-item">
               <div class="company-info__item-name">Светогорск</div>
               <div class="company-info__item-inner">
                 <div class="company-info__item-tooltip">
@@ -386,13 +395,13 @@
                     <div class="social-link__icon">
                       <img loading="lazy" src="img/svg/location.svg" class="image" width="" height="" alt="">
                     </div>
-                    <span>197101 Санкт-Петербург, ул. Кропоткина, д. 1, литера И, БЦ «Сенатор», 6 этаж</span>
+                    <span>Адрес: Светогорск, Спортивная ул., 1</span>
                   </div>
                   <div class="social-link tel">
                     <div class="social-link__icon">
                       <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
                     </div>
-                    <a href="tel:+7 (812) 334 57 30">+7 (812) 334-57-30</a>
+                    <a href="tel:+7 (81378) 4-11-11">+7 (813-78) 4-11-11</a>
                   </div>
                   <div class="social-link mail">
                     <div class="social-link__icon">
@@ -400,16 +409,16 @@
                     </div>
                     <a href="mailto:otvet@svetopaper.com">otvet@svetopaper.com</a>
                   </div>
-                  <div class="time-work">
+                  <!-- <div class="time-work">
                     <div class="time-work__name">Часы работы: </div>
                     <div class="time-work__info">
-                      <span>Будни:</span> с 9.00. до 20.00
+                      <span>Будни:</span> с 9.00. до 20.00
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
-            <div class="company-info__item item2 js-company-info-item active">
+            <div class="company-info__item company-info__item-mobile item2 js-company-info-item active">
               <div class="company-info__item-name">Санкт-Петербург</div>
               <div class="company-info__item-inner">
                 <div class="company-info__item-tooltip">
@@ -440,7 +449,7 @@
                 </div>
               </div>
             </div>
-            <div class="company-info__item item3 js-company-info-item">
+            <div class="company-info__item company-info__item-mobile item3 js-company-info-item">
               <div class="company-info__item-name">Тихвин</div>
               <div class="company-info__item-inner">
                 <div class="company-info__item-tooltip">
@@ -448,13 +457,13 @@
                     <div class="social-link__icon">
                       <img loading="lazy" src="img/svg/location.svg" class="image" width="" height="" alt="">
                     </div>
-                    <span>197101 Санкт-Петербург, ул. Кропоткина, д. 1, литера И, БЦ «Сенатор», 6 этаж</span>
+                    <span>187552 Тихвин, Социалистическая ул., 10</span>
                   </div>
                   <div class="social-link tel">
                     <div class="social-link__icon">
                       <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
                     </div>
-                    <a href="tel:+7 (812) 334 57 30">+7 (812) 334-57-30</a>
+                    <a href="tel:+7 (81367) 5-13-37">+7 (813-67) 5-13-37</a>
                   </div>
                   <div class="social-link mail">
                     <div class="social-link__icon">
@@ -462,16 +471,16 @@
                     </div>
                     <a href="mailto:otvet@svetopaper.com">otvet@svetopaper.com</a>
                   </div>
-                  <div class="time-work">
+                  <!-- <div class="time-work">
                     <div class="time-work__name">Часы работы: </div>
                     <div class="time-work__info">
-                      <span>Будни:</span> с 9.00. до 20.00
+                      <span>Будни:</span> с 9.00. до 20.00
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
-            <div class="company-info__item item4 js-company-info-item">
+            <div class="company-info__item company-info__item-mobile item4 js-company-info-item">
               <div class="company-info__item-name">Москва</div>
               <div class="company-info__item-inner">
                 <div class="company-info__item-tooltip">
@@ -479,13 +488,13 @@
                     <div class="social-link__icon">
                       <img loading="lazy" src="img/svg/location.svg" class="image" width="" height="" alt="">
                     </div>
-                    <span>197101 Санкт-Петербург, ул. Кропоткина, д. 1, литера И, БЦ «Сенатор», 6 этаж</span>
+                    <span>125047 Москва, ул. Гашека, д. 6, БЦ «Дукат Плейс III»</span>
                   </div>
                   <div class="social-link tel">
                     <div class="social-link__icon">
                       <img loading="lazy" src="img/svg/social/tel-filled.svg" class="image" width="" height="" alt="">
                     </div>
-                    <a href="tel:+7 (812) 334 57 30">+7 (812) 334-57-30</a>
+                    <a href="tel:+7 (495) 647-40-20">+7 495 647-40-20</a>
                   </div>
                   <div class="social-link mail">
                     <div class="social-link__icon">
@@ -493,12 +502,12 @@
                     </div>
                     <a href="mailto:otvet@svetopaper.com">otvet@svetopaper.com</a>
                   </div>
-                  <div class="time-work">
+                  <!-- <div class="time-work">
                     <div class="time-work__name">Часы работы: </div>
                     <div class="time-work__info">
-                      <span>Будни:</span> с 9.00. до 20.00
+                      <span>Будни:</span> с 9.00. до 20.00
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

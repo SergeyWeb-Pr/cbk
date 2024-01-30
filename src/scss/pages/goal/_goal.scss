@@ -60,8 +60,8 @@
     box-shadow: -10px -10px 20px 0px #FFF inset, 10px 10px 20px 0px rgba(170, 170, 204, 0.50) inset, 5px 5px 10px 0px rgba(170, 170, 204, 0.25) inset, -5px -5px 10px 0px rgba(255, 255, 255, 0.50) inset;
 
     img {
-      width: 210px;
-      height: 184px;
+      width: 160px;
+      height: 140px;
       flex-shrink: 0;
     }
   }
@@ -202,6 +202,7 @@
       p {
         @extend %regular16;
         color: $grey;
+        display: inline;
       }
     }
   }

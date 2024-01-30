@@ -115,6 +115,10 @@
       @extend %regular24;
       line-height: 32px;
 
+      p {
+        display: inline;
+      }
+
       strong,
       b {
         color: $green;
@@ -405,6 +409,8 @@
     &__item {
       &-image {
         width: 272px;
+        height: auto;
+        max-height: 280px;
       }
     }
 
