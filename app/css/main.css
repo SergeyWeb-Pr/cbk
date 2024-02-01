@@ -5122,6 +5122,17 @@ body, a, p {
   background-color: #EFF2F7;
   position: relative;
 }
+.hero__swiper_image_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero__swiper_image_bg img {
+  width: 100%;
+  height: 100%;
+}
 .hero__swiper_logo {
   position: absolute;
   top: 40px;
