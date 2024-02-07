@@ -51,8 +51,14 @@
   background-color: $white;
   box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.20), 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
   padding: 40px;
-  @include flexCStart;
-  column-gap: 80px;
+
+
+  &__item {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    column-gap: 80px;
+    @include mb(16px);
+  }
 
   &__title {
     color: $green;

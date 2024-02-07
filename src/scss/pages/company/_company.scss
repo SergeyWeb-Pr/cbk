@@ -138,6 +138,10 @@
 
     &__panel {
       position: relative;
+
+      &-title {
+        display: none;
+      }
     }
   }
 
@@ -423,6 +427,12 @@
       top: 63%;
       transform: translateY(-50%);
     }
+
+    &.item25 {
+      right: 0%;
+      bottom: 20%;
+      transform: translateY(-50%);
+    }
   }
 }
 
@@ -451,6 +461,7 @@
     }
 
     .tabs__panel-title {
+      display: flex;
       color: $green;
       font-size: 14px;
       font-weight: 700;

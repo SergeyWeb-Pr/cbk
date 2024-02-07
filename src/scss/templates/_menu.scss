@@ -6,7 +6,8 @@
     padding-bottom: 20px;
 
     &.menu-products,
-    &.menu-career {
+    &.menu-career,
+    &.menu-info {
       .menu__list {
         justify-content: flex-start;
         column-gap: 64px;

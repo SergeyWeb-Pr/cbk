@@ -41,6 +41,13 @@
     p {
       @include mb(12px);
       @extend %regular16;
+
+      strong,
+      b {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+      }
     }
 
     ul {
@@ -57,6 +64,27 @@
 
       tbody tr:nth-child(even) {
         background-color: $white;
+      }
+
+      tbody tr td {
+        text-align: left;
+        border-right: 1px solid #E0E0E0;
+      }
+
+      &.table1 {
+        tbody tr th {
+          width: 200px;
+        }
+      }
+
+      &.table2 {
+        tbody tr th {
+          width: auto;
+        }
+
+        thead tr td:nth-child(3) {
+          width: 400px;
+        }
       }
     }
   }
