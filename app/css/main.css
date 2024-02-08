@@ -15500,6 +15500,8 @@ tbody tr td:not(:last-child) {
 }
 
 .contacts-buy .social-link.mail a {
+      font-size: 20px;
+    line-height: 28px;
   color: #fff;
 }
 
