@@ -15499,6 +15499,10 @@ tbody tr td:not(:last-child) {
   box-shadow: none;
 }
 
+.contacts-buy .social-link.mail a {
+  color: #fff;
+}
+
 @media screen and (max-width: 1200px) {
   .contacts-buy {
     padding: 40px;
