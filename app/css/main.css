@@ -9277,8 +9277,8 @@ body, a, p {
   grid-template-columns: repeat(2, 1fr);
 }
 .safety-info__content {
-  margin-top: 100px;
-  margin-bottom: 100px;
+/*   margin-top: 100px;
+  margin-bottom: 100px; */
 }
 .safety-info__title {
   color: #004D43;
