@@ -7241,7 +7241,7 @@ body, a, p {
 .management__right::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 0;
   background-image: url(../img/svg/icons/quote.svg);
   background-position: center;
@@ -7321,11 +7321,8 @@ body, a, p {
     height: 547px;
   }
   .management__right {
-    padding-left: 20px;
+    padding-left: 100px;
     padding-top: 0;
-  }
-  .management__right::before {
-    left: -60px;
   }
 }
 @media screen and (max-width: 1200px) {
