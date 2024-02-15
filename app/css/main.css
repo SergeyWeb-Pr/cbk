@@ -2359,13 +2359,13 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
   line-height: 24px;
 }
 
-.accordion__content p, .vacancies__item-descr, .caring-people__block-text, .philosophy-banner__content p, .management__author, .company-info__item-tooltip .time-work__info, .pagination__item, .doc__name {
+.accordion__content p, .vacancies__item-descr, .caring-people__block-text, .philosophy-banner__content p, .company-info__item-tooltip .time-work__info, .pagination__item, .doc__name {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
 }
 @media screen and (max-width: 768px) {
-  .accordion__content p, .vacancies__item-descr, .caring-people__block-text, .philosophy-banner__content p, .management__author, .company-info__item-tooltip .time-work__info, .pagination__item, .doc__name {
+  .accordion__content p, .vacancies__item-descr, .caring-people__block-text, .philosophy-banner__content p, .company-info__item-tooltip .time-work__info, .pagination__item, .doc__name {
     font-size: 16px;
     line-height: 24px;
   }
@@ -2383,13 +2383,13 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
   }
 }
 
-.search__block-results, .career-work__item-button, .career-work__item-text, .offset-advan__item-text, .content-text p, .content, .link-download__name {
+.search__block-results, .career-work__item-button, .career-work__item-text, .offset-advan__item-text, .management__author, .content-text ul li, .content-text p, .content, .link-download__name {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
 }
 @media screen and (max-width: 768px) {
-  .search__block-results, .career-work__item-button, .career-work__item-text, .offset-advan__item-text, .content-text p, .content, .link-download__name {
+  .search__block-results, .career-work__item-button, .career-work__item-text, .offset-advan__item-text, .management__author, .content-text ul li, .content-text p, .content, .link-download__name {
     font-size: 16px;
     line-height: 24px;
   }
@@ -3987,6 +3987,23 @@ body, a, p {
 .content-text img:not(:last-child) {
   margin-bottom: 40px;
 }
+.content-text ul li {
+  padding-left: 17px;
+  position: relative;
+}
+.content-text ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.content-text ul li::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #004D43;
+  left: 0;
+  top: 12px;
+}
 
 .images-slider:not(:first-child) {
   margin-top: 40px;
@@ -4772,7 +4789,17 @@ body, a, p {
 .graph-modal__container.modal-container2 {
   max-width: 980px;
   padding: 52px;
-  text-align: left;
+  height: 80vh;
+}
+.graph-modal__container.modal-container2 .graph-modal__content {
+  width: 100%;
+  height: 100%;
+}
+.graph-modal__container.modal-container2 .graph-modal__content .modal-content__image {
+  height: 100%;
+}
+.graph-modal__container.modal-container2 .graph-modal__content .modal-content__image img {
+  width: auto;
 }
 .graph-modal__container.modal-container3 {
   max-width: 600px;
@@ -7242,7 +7269,6 @@ body, a, p {
   content: "";
   position: absolute;
   left: 15px;
-  left: 15px;
   top: 0;
   background-image: url(../img/svg/icons/quote.svg);
   background-position: center;
@@ -9256,12 +9282,13 @@ body, a, p {
   .safety-preview__item {
     padding-top: 92px;
     padding-bottom: 32px;
-    min-height: auto;
+    min-height: 300px;
   }
 }
 @media screen and (max-width: 768px) {
   .safety-preview__item {
     padding-top: 148px;
+    min-height: 400px;
   }
   .safety-preview__title {
     margin-bottom: 16px;
@@ -10386,6 +10413,10 @@ body, a, p {
     height: auto;
     max-height: 280px;
   }
+  .paper-line__item-text p:first-child {
+    font-size: 18px;
+    line-height: 26px;
+  }
   .paper-line__doc {
     padding: 40px;
   }
@@ -10462,6 +10493,10 @@ body, a, p {
   .paper-line__item-video .button-video__icon {
     width: 40px;
     height: 40px;
+  }
+  .paper-line__item-text p:first-child {
+    font-size: 16px;
+    line-height: 24px;
   }
   .paper-line__doc {
     padding: 16px;
@@ -11162,6 +11197,15 @@ tbody tr td:not(:last-child) {
   box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.2), 10px 10px 20px 0px rgba(170, 170, 204, 0.5), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.5);
   padding: 60px 64px;
 }
+.offset-buy .social-link.mail a {
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+}
+.offset-buy .social-link.mail .social-link__icon {
+  width: 24px;
+  height: 24px;
+}
 .offset-buy__block {
   background-color: #EFF2F7;
   padding-bottom: 100px;
@@ -11784,6 +11828,7 @@ tbody tr td:not(:last-child) {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 24px;
+    max-width: 700px;
   }
 }
 @media screen and (max-width: 768px) {

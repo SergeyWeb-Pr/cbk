@@ -19,7 +19,7 @@
     &__item {
       padding-top: 92px;
       padding-bottom: 32px;
-      min-height: auto;
+      min-height: 300px;
     }
   }
 }
@@ -28,6 +28,7 @@
   .safety-preview {
     &__item {
       padding-top: 148px;
+      min-height: 400px;
     }
 
     &__title {

@@ -81,6 +81,26 @@
       margin-bottom: 40px;
     }
   }
+
+  ul {
+    li {
+      @include mb(16px);
+      padding-left: 17px;
+      position: relative;
+      @extend %regular20;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #004D43;
+        left: 0;
+        top: 12px;
+      }
+    }
+  }
 }
 
 .images-slider {

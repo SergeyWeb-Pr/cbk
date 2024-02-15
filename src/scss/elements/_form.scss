@@ -27,7 +27,21 @@
     &.modal-container2 {
       max-width: 980px;
       padding: 52px;
-      text-align: left;
+      // text-align: left;
+      height: 80vh;
+
+      .graph-modal__content {
+        width: 100%;
+        height: 100%;
+
+        .modal-content__image {
+          height: 100%;
+
+          img {
+            width: auto;
+          }
+        }
+      }
     }
 
     &.modal-container3 {
