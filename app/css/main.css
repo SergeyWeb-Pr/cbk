@@ -7241,7 +7241,7 @@ body, a, p {
 .management__right::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 0;
   background-image: url(../img/svg/icons/quote.svg);
   background-position: center;
@@ -7321,11 +7321,8 @@ body, a, p {
     height: 547px;
   }
   .management__right {
-    padding-left: 20px;
+    padding-left: 100px;
     padding-top: 0;
-  }
-  .management__right::before {
-    left: -60px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -9279,10 +9276,6 @@ body, a, p {
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
 }
-.safety-info__content {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
 .safety-info__title {
   color: #004D43;
   margin-bottom: 24px;
@@ -9312,10 +9305,6 @@ body, a, p {
     -webkit-column-gap: 84px;
     -moz-column-gap: 84px;
     column-gap: 84px;
-  }
-  .safety-info__content {
-    margin-top: 64px;
-    margin-bottom: 64px;
   }
   .safety-info__image {
     margin-right: 0;
@@ -15500,6 +15489,11 @@ tbody tr td:not(:last-child) {
   background: var(--5, linear-gradient(90deg, #FFC700 1.97%, #FBE38E 96.94%));
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.contacts-buy .social-link.mail a {
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
 }
 
 @media screen and (max-width: 1200px) {

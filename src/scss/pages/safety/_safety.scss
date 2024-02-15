@@ -43,11 +43,6 @@
     @include gridColumn(2);
   }
 
-  &__content {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-
   &__title {
     color: $green;
     margin-bottom: 24px;
@@ -80,11 +75,6 @@
       grid-template-columns: auto 465px;
       padding-right: 20px;
       column-gap: 84px;
-    }
-
-    &__content {
-      margin-top: 64px;
-      margin-bottom: 64px;
     }
 
     &__image {
