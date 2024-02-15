@@ -7242,6 +7242,7 @@ body, a, p {
   content: "";
   position: absolute;
   left: 15px;
+  left: 15px;
   top: 0;
   background-image: url(../img/svg/icons/quote.svg);
   background-position: center;
