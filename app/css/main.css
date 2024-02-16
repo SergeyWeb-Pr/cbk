@@ -6576,6 +6576,9 @@ body, a, p {
   display: inline-block;
   color: #666;
 }
+.company-info__item.active {
+  z-index: 2;
+}
 .company-info__item.active .company-info__item-tooltip {
   display: block;
 }
@@ -6626,6 +6629,9 @@ body, a, p {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.company-info__item.item1 .company-info__item-tooltip {
+  left: 80%;
+}
 .company-info__item.item2 {
   left: 34%;
   top: 47%;
@@ -6646,6 +6652,9 @@ body, a, p {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.company-info__item.item4 .company-info__item-tooltip {
+  left: 4%;
 }
 .company-info__item.item5 {
   left: 18%;
@@ -6793,6 +6802,9 @@ body, a, p {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.company-info__item.item25 .company-info__item-tooltip {
+  left: -167%;
 }
 
 @media screen and (max-width: 768px) {

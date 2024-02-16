@@ -240,6 +240,8 @@
     }
 
     &.active {
+      z-index: 2;
+
       .company-info__item-tooltip {
         display: block;
       }
@@ -288,6 +290,10 @@
       left: 13%;
       top: 36%;
       transform: translateY(-50%);
+
+      .company-info__item-tooltip {
+        left: 80%;
+      }
     }
 
     &.item2 {
@@ -306,6 +312,10 @@
       left: 79%;
       top: 46%;
       transform: translateY(-50%);
+
+      .company-info__item-tooltip {
+        left: 4%;
+      }
     }
 
     &.item5 {
@@ -432,6 +442,10 @@
       right: 0%;
       bottom: 20%;
       transform: translateY(-50%);
+
+      .company-info__item-tooltip {
+        left: -167%;
+      }
     }
   }
 }
