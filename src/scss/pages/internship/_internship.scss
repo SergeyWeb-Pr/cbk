@@ -108,6 +108,7 @@
   display: grid;
   grid-template-columns: auto 500px;
   column-gap: 60px;
+  align-items: center;
 
   &__content {
     &-name {

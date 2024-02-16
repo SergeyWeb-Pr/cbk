@@ -6508,7 +6508,7 @@ body, a, p {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  top: 40px;
+  top: 80px;
   display: none;
   border-radius: 20px;
   background-color: #ffffff;
@@ -6634,7 +6634,7 @@ body, a, p {
 }
 .company-info__item.item2 {
   left: 34%;
-  top: 47%;
+  top: 42%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -6648,7 +6648,7 @@ body, a, p {
 }
 .company-info__item.item4 {
   left: 79%;
-  top: 46%;
+  top: 26%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -6798,7 +6798,7 @@ body, a, p {
 }
 .company-info__item.item25 {
   right: 0%;
-  bottom: 20%;
+  bottom: 22%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -13233,6 +13233,9 @@ tbody tr td:not(:last-child) {
   -webkit-column-gap: 60px;
   -moz-column-gap: 60px;
   column-gap: 60px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .internship-application__content-name {
   color: #004D43;
