@@ -239,6 +239,12 @@
       }
     }
 
+    &-title {
+      color: $green;
+      @extend %bold20;
+      margin-bottom: 10px;
+    }
+
     &.active {
       z-index: 2;
 

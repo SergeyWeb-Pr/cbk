@@ -77,18 +77,27 @@
       li {
         @extend %regular24;
         @include mb(12px);
-        padding-left: 40px;
+        // padding-left: 40px;
+        padding-left: 17px;
         position: relative;
 
         &::before {
           content: '';
+          // position: absolute;
+          // left: 0;
+          // top: 6px;
+          // width: 24px;
+          // height: 24px;
+          // flex-shrink: 0;
+          // background-image: url(../img/svg/icons/check.svg);
+          content: "";
           position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: $green;
           left: 0;
-          top: 6px;
-          width: 24px;
-          height: 24px;
-          flex-shrink: 0;
-          background-image: url(../img/svg/icons/check.svg);
+          top: 15px;
         }
       }
     }
@@ -136,7 +145,10 @@
 
       ul {
         li {
-          padding-left: 36px;
+          // padding-left: 36px;
+          &::before {
+            top: 10px;
+          }
         }
       }
     }

@@ -50,6 +50,13 @@
       display: none;
     }
   }
+
+  &__text {
+    a {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (max-width: $laptop) {

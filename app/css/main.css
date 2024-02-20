@@ -2414,14 +2414,14 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
 }
 
 .presskit__contacts .social-link.mail a, .presskit__item-name, .newspaper__item-name, .career-control .mail a, .protection-slider__item-content strong,
-.protection-slider__item-content b, .forestry-slider__item-name, .form__subtitle, .doc-info__name {
+.protection-slider__item-content b, .forestry-slider__item-name, .company-info__item-title, .form__subtitle, .doc-info__name {
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
 }
 @media screen and (max-width: 768px) {
   .presskit__contacts .social-link.mail a, .presskit__item-name, .newspaper__item-name, .career-control .mail a, .protection-slider__item-content strong,
-  .protection-slider__item-content b, .forestry-slider__item-name, .form__subtitle, .doc-info__name {
+  .protection-slider__item-content b, .forestry-slider__item-name, .company-info__item-title, .form__subtitle, .doc-info__name {
     font-size: 16px;
     line-height: 24px;
   }
@@ -3987,6 +3987,9 @@ body, a, p {
 .content-text img:not(:last-child) {
   margin-bottom: 40px;
 }
+.content-text ul:not(:last-child) {
+  margin-bottom: 20px;
+}
 .content-text ul li {
   padding-left: 17px;
   position: relative;
@@ -4003,6 +4006,9 @@ body, a, p {
   background-color: #004D43;
   left: 0;
   top: 12px;
+}
+.content-text strong, .content-text b {
+  font-weight: 700;
 }
 
 .images-slider:not(:first-child) {
@@ -6576,6 +6582,10 @@ body, a, p {
   display: inline-block;
   color: #666;
 }
+.company-info__item-title {
+  color: #004D43;
+  margin-bottom: 10px;
+}
 .company-info__item.active {
   z-index: 2;
 }
@@ -7010,7 +7020,7 @@ body, a, p {
   margin-bottom: 40px;
 }
 .our-missions__row ul li {
-  padding-left: 40px;
+  padding-left: 17px;
   position: relative;
 }
 .our-missions__row ul li:not(:last-child) {
@@ -7018,14 +7028,14 @@ body, a, p {
 }
 .our-missions__row ul li::before {
   content: "";
+  content: "";
   position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #004D43;
   left: 0;
-  top: 6px;
-  width: 24px;
-  height: 24px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-image: url(../img/svg/icons/check.svg);
+  top: 15px;
 }
 .our-missions__name {
   color: #004D43;
@@ -7061,8 +7071,8 @@ body, a, p {
   .our-missions__row:not(:last-child) {
     margin-bottom: 24px;
   }
-  .our-missions__row ul li {
-    padding-left: 36px;
+  .our-missions__row ul li::before {
+    top: 10px;
   }
 }
 .values {
@@ -7362,6 +7372,9 @@ body, a, p {
   .management__right {
     padding-left: 100px;
     padding-top: 0;
+  }
+  .management__content {
+    padding-top: 10px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -8903,7 +8916,7 @@ body, a, p {
 }
 .forestry-slider__item-content {
   padding: 24px 24px 32px 24px;
-  min-height: 316px;
+  min-height: 335px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
@@ -8927,12 +8940,12 @@ body, a, p {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-bottom: 8px;
+  height: 175px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 .forestry-slider__item-text p:not(:last-child) {
   margin-bottom: 12px;
-}
-.forestry-slider__item-text p:not(:first-child) {
-  display: none;
 }
 .forestry-slider__item-text.active {
   height: 100%;
@@ -8989,7 +9002,7 @@ body, a, p {
   .forestry-slider__item-text {
     font-size: 14px;
     line-height: 20px;
-    height: 120px;
+    height: 168px;
   }
   .forestry-slider__item-content {
     padding: 16px;
@@ -9886,9 +9899,6 @@ body, a, p {
 .caring-society__item-name:hover {
   color: #FFC700;
 }
-.caring-society__item-text {
-  margin-bottom: 32px;
-}
 .caring-society__item-text p {
   color: #444;
 }
@@ -9930,9 +9940,6 @@ body, a, p {
   .caring-society__item-date {
     font-size: 14px;
     line-height: 20px;
-  }
-  .caring-society__item-text {
-    margin-bottom: 24px;
   }
 }
 .responsibility-projects {
@@ -12204,6 +12211,10 @@ tbody tr td:not(:last-child) {
 .other-products__item-button {
   display: none;
 }
+.other-products__text a {
+  color: #004D43;
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 1366px) {
   .other-products {
@@ -13176,6 +13187,7 @@ tbody tr td:not(:last-child) {
     min-height: auto;
   }
   .internship-preview__text {
+    max-width: 650px;
     margin-bottom: 16px;
   }
 }
@@ -16195,6 +16207,7 @@ tbody tr td:not(:last-child) {
   height: 32px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 .fraud__item-link img {
   width: 100%;

@@ -83,6 +83,8 @@
   }
 
   ul {
+    @include mb(20px);
+
     li {
       @include mb(16px);
       padding-left: 17px;
@@ -100,6 +102,10 @@
         top: 12px;
       }
     }
+  }
+
+  strong, b {
+    font-weight: 700;
   }
 }
 
