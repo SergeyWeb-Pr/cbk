@@ -13,6 +13,10 @@
     row-gap: 16px;
     flex-wrap: wrap;
   }
+  
+  .tabs__nav-btn {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: $laptop) {

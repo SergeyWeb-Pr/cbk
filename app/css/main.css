@@ -5305,8 +5305,6 @@ body, a, p {
   .hero__swiper .hero_image .hero__swiper_image {
     width: 504px;
   }
-}
-@media screen and (max-width: 1366px) {
   .hero__swiper_logo {
     width: 120px;
   }
@@ -5342,6 +5340,14 @@ body, a, p {
   }
   .hero__swiper_logo {
     right: 60px;
+  }
+  .hero_image .hero__swiper_image_bg {
+    display: none;
+  }
+  .hero_image .hero__swiper_image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media screen and (max-width: 576px) {
@@ -5414,6 +5420,25 @@ body, a, p {
     right: 20px;
     width: 80px;
     top: 20px;
+  }
+  .hero__swiper_image_bg {
+    display: none;
+  }
+  .hero__swiper .hero_image .hero__swiper_image {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .hero__swiper .hero_image .hero__swiper_image img {
+    width: 100%;
+    height: auto;
   }
 }
 @media screen and (max-width: 500px) {
@@ -7304,6 +7329,7 @@ body, a, p {
 .management__content {
   position: relative;
   margin-bottom: 40px;
+  z-index: 1;
 }
 .management__content::after {
   content: "";
@@ -7318,6 +7344,7 @@ body, a, p {
   height: 60px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  z-index: -1;
 }
 .management__bottom {
   display: -webkit-box;
@@ -7630,6 +7657,7 @@ body, a, p {
   top: 0;
   left: -136px;
   cursor: pointer;
+  z-index: 1;
 }
 .history__item-image img {
   width: 100%;
@@ -8044,6 +8072,9 @@ body, a, p {
   row-gap: 16px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.documents-head .tabs__nav-btn {
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1366px) {
@@ -16605,8 +16636,8 @@ tbody tr td:not(:last-child) {
   top: 32px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   background-image: url(../img/svg/arrows/icon-plus.svg);
   background-position: center;
   background-size: cover;
@@ -16680,7 +16711,7 @@ tbody tr td:not(:last-child) {
   }
   .accordion__header::after {
     right: 16px;
-    top: 14px;
+    top: 6px;
   }
   .accordion__content {
     padding: 0 16px 8px 16px;

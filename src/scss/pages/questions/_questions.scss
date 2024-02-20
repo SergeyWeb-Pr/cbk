@@ -58,8 +58,8 @@
       right: 40px;
       top: 32px;
       flex-shrink: 0;
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       background-image: url(../img/svg/arrows/icon-plus.svg);
       @include bgcover;
       transform: rotate(0deg);
@@ -149,7 +149,7 @@
 
       &::after {
         right: 16px;
-        top: 14px;
+        top: 6px;
       }
     }
 

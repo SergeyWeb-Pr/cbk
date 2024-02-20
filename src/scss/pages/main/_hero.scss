@@ -138,9 +138,7 @@
   .hero__swiper .hero_image .hero__swiper_image {
     width: 504px;
   }
-}
 
-@media screen and (max-width: $laptop) {
   .hero__swiper_logo {
     width: 120px;
   }
@@ -185,6 +183,14 @@
 
   .hero__swiper_logo {
     right: 60px;
+  }
+
+  .hero_image .hero__swiper_image_bg {
+    display: none;
+  }
+
+  .hero_image .hero__swiper_image {
+    display: flex;
   }
 }
 
@@ -267,6 +273,21 @@
     right: 20px;
     width: 80px;
     top: 20px;
+  }
+
+  .hero__swiper_image_bg {
+    display: none;
+  }
+
+  .hero__swiper .hero_image .hero__swiper_image {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
