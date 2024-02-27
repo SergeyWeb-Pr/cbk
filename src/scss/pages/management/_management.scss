@@ -147,13 +147,18 @@
       padding-left: 0;
 
       &::before {
-        left: -26px;
+        // left: -26px;
+        display: none;
       }
     }
 
     &__content {
       position: relative;
       z-index: 1;
+
+      &::after {
+        display: none;
+      }
     }
   }
 }

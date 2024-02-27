@@ -2688,7 +2688,7 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
   -webkit-box-shadow: 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.5);
   box-shadow: 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.5);
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .header__container {
   display: -webkit-box;
@@ -2837,7 +2837,7 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
     display: block;
     position: absolute;
     left: 0;
-    top: 96px;
+    top: 88px;
     width: 100%;
     height: 100%;
     border-bottom: 1px solid var(--E0E0E0, #E0E0E0);
@@ -2938,6 +2938,9 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
   font-weight: 400;
   line-height: 24px;
 }
+.footer__column-mob-show {
+  display: none;
+}
 
 .block_shadow {
   position: relative;
@@ -2972,6 +2975,9 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
   }
   .footer__row:not(:last-child) {
     margin-bottom: 0;
+  }
+  .footer__column-mob-show {
+    display: block;
   }
 }
 @media screen and (max-width: 576px) {
@@ -5120,6 +5126,12 @@ body, a, p {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .graph-modal__container.modal-container2 {
+    padding: 30px;
+    height: auto;
+  }
+}
 .burger {
   display: none;
 }
@@ -5774,7 +5786,7 @@ body, a, p {
 }
 .block_products__slide_product_logo {
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 0;
   width: auto;
   height: 56px;
@@ -6940,7 +6952,7 @@ body, a, p {
     width: 24px;
     height: 24px;
     right: 0;
-    top: 10px;
+    top: 8px;
     background-image: url(../img/svg/arrows/arrow-green-down.svg);
     background-position: center;
     background-size: cover;
@@ -7417,11 +7429,14 @@ body, a, p {
     padding-left: 0;
   }
   .management__right::before {
-    left: -26px;
+    display: none;
   }
   .management__content {
     position: relative;
     z-index: 1;
+  }
+  .management__content::after {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {

@@ -340,7 +340,7 @@ $(document).ready(function () {
   //О компании
   $(".js-tabs-title").on("click", function () {
     $(this).toggleClass('active');
-    $(this).siblings('.company-info__items').toggleClass('show');
+    $(this).siblings('no-typography').find('.company-info__items').toggleClass('show');
   });
 });
 
@@ -368,12 +368,13 @@ const hero__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero__
 });
 const preview__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.preview__swiper', {
   slidesPerView: 1,
-  loop: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: true
-  }
+  loop: false
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: true,
+  // },
 });
+
 const block_products__swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.block_products__swiper', {
   slidesPerView: 4,
   spaceBetween: 24,

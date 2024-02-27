@@ -27,6 +27,6 @@ $(document).ready(function () {
   //О компании
   $(".js-tabs-title").on("click", function () {
     $(this).toggleClass('active');
-    $(this).siblings('.company-info__items').toggleClass('show');
+    $(this).siblings('no-typography').find('.company-info__items').toggleClass('show');
   });
 });

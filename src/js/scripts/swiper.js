@@ -18,11 +18,11 @@ const hero__swiper = new Swiper('.hero__swiper', {
 
 const preview__swiper = new Swiper('.preview__swiper', {
   slidesPerView: 1,
-  loop: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: true,
-  },
+  loop: false,
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: true,
+  // },
 });
 
 const block_products__swiper = new Swiper('.block_products__swiper', {

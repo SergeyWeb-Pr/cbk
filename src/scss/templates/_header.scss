@@ -2,7 +2,7 @@
   background: var(--FFFFFF, #FFF);
   box-shadow: 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   &__container {
     display: flex;
@@ -157,7 +157,7 @@
       display: block;
       position: absolute;
       left: 0;
-      top: 96px;
+      top: 88px;
       width: 100%;
       height: 100%;
       border-bottom: 1px solid var(--E0E0E0, #E0E0E0);

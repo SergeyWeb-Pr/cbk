@@ -27,7 +27,6 @@
     &.modal-container2 {
       max-width: 980px;
       padding: 52px;
-      // text-align: left;
       height: 80vh;
 
       .graph-modal__content {
@@ -319,5 +318,12 @@
       height: auto;
       margin-bottom: 0;
     }
+  }
+}
+
+@media screen and (max-width: $mob) {
+  .graph-modal__container.modal-container2 {
+    padding: 30px;
+    height: auto;
   }
 }
