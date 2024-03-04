@@ -90,8 +90,13 @@
       <section class="menu-section menu-career">
   <div class="head-container">
     <nav class="menu" title="">
-      <ul class="list-reset menu__list">
-        <li class="menu__item"><a href="/career.html" class="menu__link">Карьера</a></li>
+      <div class="menu__title js-menu-button">
+        <!-- выводится текущее название страницы -->
+        <div class="menu__title-name">Карьера</div>
+        <button class="btn-reset menu__title-button"></button>
+      </div>
+      <ul class="list-reset menu__list js-menu-list">
+        <li class="menu__item tablet-none"><a href="/career.html" class="menu__link">Карьера</a></li>
         <div class="menu__separator"></div>
         <li class="menu__item"><a data-graph-path="modal1" class="menu__link">Вакансии</a></li>
         <div class="menu__separator"></div>
@@ -130,7 +135,7 @@
               <div class="preview-image__text internship-preview__text">
                 <p><strong>Преемственность поколений, привлечение молодых талантливых сотрудников, свежий взгляд и
                     инновационный подход — наши приоритеты</strong></p>
-                <p>Мы предлагаем программы стажировок для выпускников и старшекурсников. Мы создаем в атмосферу доверия
+                <p>Мы предлагаем программы стажировок для выпускников и старшекурсников. Мы создаем атмосферу доверия
                   и уважения, где молодые таланты работают как равноправные члены команды и приобретают ценные навыки
                   для развития карьеры
                 </p>
@@ -156,7 +161,7 @@
           Заполнить заявку на участие
         </div> -->
         <div class="internship-application__content-text content">
-          <p>С 2009 года у нас успешно работает программа привлечения молодых талантов под названием «ВЗЛЁТ».</p>
+          <p>С 2009 года у нас успешно работает программа привлечения молодых талантов под названием «ВЗЛЁТ».</p>
           <p>Ежегодно мы привлекаем выпускников высших учебных заведений и помогаем им погрузиться в профессиональную
             жизнь
             крупной производственной компании под руководством опытных наставников.</p>
@@ -591,6 +596,9 @@
           </div>
           <div class="footer__column footer__column-mob-show">
             <a href="/policy.html" class="footer__name">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__column footer__column-mob-show">
+            <a href="/fraud.html" class="footer__name">Противодействие мошенничеству</a>
           </div>
           <div class="footer__column">
             <div class="tel social-link">

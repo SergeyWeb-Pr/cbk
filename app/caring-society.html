@@ -90,8 +90,13 @@
       <section class="menu-section">
   <div class="head-container">
     <nav class="menu" title="">
-      <ul class="list-reset menu__list">
-        <li class="menu__item"><a href="/development.html" class="menu__link">Устойчивое развитие</a></li>
+      <div class="menu__title js-menu-button">
+        <!-- выводится текущее название страницы -->
+        <div class="menu__title-name">Устойчивое развитие</div>
+        <button class="btn-reset menu__title-button"></button>
+      </div>
+      <ul class="list-reset menu__list js-menu-list">
+        <li class="menu__item tablet-none"><a href="/development.html" class="menu__link">Устойчивое развитие</a></li>
         <div class="menu__separator"></div>
         <li class="menu__item"><a href="/forestry.html" class="menu__link">Устойчивое лесопользование</a></li>
         <div class="menu__separator"></div>
@@ -104,7 +109,6 @@
     </nav>
   </div>
 </section>
-
 <section class="caring-society" style=" background-image: url(img/jpg/backgr/responsibility-backgr.jpg);">
   <div class="breadcrumbs__wrapper">
   <div class="head-container">
@@ -144,7 +148,7 @@
                 <img loading="lazy" src="img/jpg/image/image30.jpg" class="image" width="" height="" alt="">
               </div>
               <div class="caring-society__item-content">
-                <a href="#" class="caring-society__item-name h6">
+                <a data-graph-path="modal1" class="caring-society__item-name h6">
                   Строительство универсальной спортивной площадки для Политехнического колледжа в Светогорске
                 </a>
                 <div class="caring-society__item-text">
@@ -162,7 +166,7 @@
                 <img loading="lazy" src="img/jpg/image/image31.jpg" class="image" width="" height="" alt="">
               </div>
               <div class="caring-society__item-content">
-                <a href="#" class="caring-society__item-name h6">
+                <a data-graph-path="modal1" class="caring-society__item-name h6">
                   Ремонт слесарной и столярной мастерских в Светогорской СОШ
                 </a>
                 <div class="caring-society__item-text">
@@ -179,7 +183,7 @@
                 <img loading="lazy" src="img/jpg/image/image32.jpg" class="image" width="" height="" alt="">
               </div>
               <div class="caring-society__item-content">
-                <a href="#" class="caring-society__item-name h6">
+                <a data-graph-path="modal1" class="caring-society__item-name h6">
                   Ремонт входной группы в Светогорской СОШ
                 </a>
                 <div class="caring-society__item-text">
@@ -225,7 +229,7 @@
                 <img loading="lazy" src="img/jpg/image/image81.jpg" class="image" width="" height="" alt="">
               </div>
               <div class="caring-society__item-content">
-                <a href="#" class="caring-society__item-name h6">
+                <a data-graph-path="modal1" class="caring-society__item-name h6">
                   Предоставление ИТ оборудования Политехническому колледжу в Светогорске
                 </a>
                 <div class="caring-society__item-text">
@@ -238,10 +242,10 @@
           <div class="swiper-slide caring-society__slide">
             <div class="caring-society__item">
               <div class="caring-society__item-image">
-                <img loading="lazy" src="img/jpg/image/image34.jpg" class="image" width="" height="" alt="">
+                <img loading="lazy" src="img/jpg/image/image83.jpg" class="image" width="" height="" alt="">
               </div>
               <div class="caring-society__item-content">
-                <a href="#" class="caring-society__item-name h6">
+                <a data-graph-path="modal1" class="caring-society__item-name h6">
                   Покупка новой хоккейной формы для светогорской детской хоккейной команды «Фаворит»
                 </a>
                 <div class="caring-society__item-text">
@@ -257,7 +261,7 @@
                 <img loading="lazy" src="img/jpg/image/image35.jpg" class="image" width="" height="" alt="">
               </div>
               <div class="caring-society__item-content">
-                <a href="#" class="caring-society__item-name h6">
+                <a data-graph-path="modal1" class="caring-society__item-name h6">
                   Подарки на 1 сентября всем первоклассникам Светогорска
                 </a>
                 <div class="caring-society__item-text">
@@ -676,6 +680,9 @@
           </div>
           <div class="footer__column footer__column-mob-show">
             <a href="/policy.html" class="footer__name">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__column footer__column-mob-show">
+            <a href="/fraud.html" class="footer__name">Противодействие мошенничеству</a>
           </div>
           <div class="footer__column">
             <div class="tel social-link">

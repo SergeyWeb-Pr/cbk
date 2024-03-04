@@ -90,8 +90,13 @@
       <section class="menu-section">
   <div class="head-container">
     <nav class="menu" title="">
-      <ul class="list-reset menu__list">
-        <li class="menu__item"><a href="/development.html" class="menu__link">Устойчивое развитие</a></li>
+      <div class="menu__title js-menu-button">
+        <!-- выводится текущее название страницы -->
+        <div class="menu__title-name">Устойчивое развитие</div>
+        <button class="btn-reset menu__title-button"></button>
+      </div>
+      <ul class="list-reset menu__list js-menu-list">
+        <li class="menu__item tablet-none"><a href="/development.html" class="menu__link">Устойчивое развитие</a></li>
         <div class="menu__separator"></div>
         <li class="menu__item"><a href="/forestry.html" class="menu__link">Устойчивое лесопользование</a></li>
         <div class="menu__separator"></div>
@@ -104,7 +109,6 @@
     </nav>
   </div>
 </section>
-
 <section class="preview breadcrumbs-inv protection-preview">
   <div class="breadcrumbs__wrapper">
   <div class="head-container">
@@ -975,6 +979,9 @@
           </div>
           <div class="footer__column footer__column-mob-show">
             <a href="/policy.html" class="footer__name">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__column footer__column-mob-show">
+            <a href="/fraud.html" class="footer__name">Противодействие мошенничеству</a>
           </div>
           <div class="footer__column">
             <div class="tel social-link">

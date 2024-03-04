@@ -53,14 +53,23 @@
   .products {
     &__items {
       grid-template-columns: repeat(1, 1fr);
+
       .block_products__slide_image {
         width: auto;
         height: 100%;
         margin: 0 auto;
+        position: static;
+
         img {
           height: 100%;
         }
       }
+
+      .block_products__slide_product_logo {
+        right: 16px;
+        top: 16px;
+      }
+
     }
   }
 }

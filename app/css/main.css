@@ -3163,6 +3163,9 @@ table thead tr td, .paper-line__item-specif .link-download__name, .link-head__na
   .menu-section .menu__separator {
     display: none;
   }
+  .tablet-none {
+    display: none;
+  }
 }
 .page__body {
   padding-right: 0 !important;
@@ -5786,7 +5789,7 @@ body, a, p {
 }
 .block_products__slide_product_logo {
   position: absolute;
-  right: -20px;
+  right: 0px;
   top: 0;
   width: auto;
   height: 56px;
@@ -7324,39 +7327,10 @@ body, a, p {
   padding-left: 80px;
   position: relative;
 }
-.management__right::before {
-  content: "";
-  position: absolute;
-  left: 15px;
-  top: 0;
-  background-image: url(../img/svg/icons/quote.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
 .management__content {
   position: relative;
   margin-bottom: 40px;
   z-index: 1;
-}
-.management__content::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -30px;
-  background-image: url(../img/svg/icons/quote.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  z-index: -1;
 }
 .management__bottom {
   display: -webkit-box;
@@ -7428,15 +7402,9 @@ body, a, p {
   .management__right {
     padding-left: 0;
   }
-  .management__right::before {
-    display: none;
-  }
   .management__content {
     position: relative;
     z-index: 1;
-  }
-  .management__content::after {
-    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -7460,9 +7428,6 @@ body, a, p {
   .management__image::before {
     height: 12px;
     background-position: center right;
-  }
-  .management__right::before {
-    left: -16px;
   }
   .management__content {
     position: relative;
@@ -9355,6 +9320,9 @@ body, a, p {
     padding-bottom: 32px;
     min-height: 300px;
   }
+  .safety-preview__item::before {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .safety-preview__item {
@@ -10054,9 +10022,14 @@ body, a, p {
     width: auto;
     height: 100%;
     margin: 0 auto;
+    position: static;
   }
   .products__items .block_products__slide_image img {
     height: 100%;
+  }
+  .products__items .block_products__slide_product_logo {
+    right: 16px;
+    top: 16px;
   }
 }
 .paper-preview__item {

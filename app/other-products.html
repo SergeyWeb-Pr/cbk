@@ -90,8 +90,13 @@
       <section class="menu-section menu-products">
   <div class="head-container">
     <nav class="menu" title="">
-      <ul class="list-reset menu__list">
-        <li class="menu__item"><a href="/paper.html" class="menu__link">Офисная бумага</a></li>
+      <div class="menu__title js-menu-button">
+        <!-- выводится текущее название страницы -->
+        <div class="menu__title-name">Офисная бумага</div>
+        <button class="btn-reset menu__title-button"></button>
+      </div>
+      <ul class="list-reset menu__list js-menu-list">
+        <li class="menu__item tablet-none"><a href="/paper.html" class="menu__link">Офисная бумага</a></li>
         <div class="menu__separator"></div>
         <li class="menu__item"><a href="/offset.html" class="menu__link">Офсетная бумага</a></li>
         <div class="menu__separator"></div>
@@ -624,6 +629,9 @@
           </div>
           <div class="footer__column footer__column-mob-show">
             <a href="/policy.html" class="footer__name">Политика конфиденциальности</a>
+          </div>
+          <div class="footer__column footer__column-mob-show">
+            <a href="/fraud.html" class="footer__name">Противодействие мошенничеству</a>
           </div>
           <div class="footer__column">
             <div class="tel social-link">
