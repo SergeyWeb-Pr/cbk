@@ -338,7 +338,10 @@ const interviewSwiper = new Swiper('.interview__swiper', {
     },
   }
 });
-
+interviewSwiper.on('slideChange', function () {
+  // Ваш код для выполнения действия при смене слайда
+  $(".js-interview-item-image").siblings('.interview__item-content').find('.interview__item-text').removeClass('active');
+});
 var imagesGallerySwiper = new Swiper('.images-gallery__swiper', {
   slidesPerView: 1,
   loop: false,

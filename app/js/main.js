@@ -342,6 +342,9 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     $(this).siblings('no-typography').find('.company-info__items').toggleClass('show');
   });
+  $(".js-interview-item-image").on("click", function () {
+    $(this).siblings('.interview__item-content').find('.interview__item-text').toggleClass('active');
+  });
 });
 
 /***/ }),
@@ -678,6 +681,10 @@ const interviewSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.int
       slidesPerView: 1
     }
   }
+});
+interviewSwiper.on('slideChange', function () {
+  // Ваш код для выполнения действия при смене слайда
+  $(".js-interview-item-image").siblings('.interview__item-content').find('.interview__item-text').removeClass('active');
 });
 var imagesGallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.images-gallery__swiper', {
   slidesPerView: 1,

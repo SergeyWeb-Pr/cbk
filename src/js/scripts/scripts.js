@@ -29,4 +29,7 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     $(this).siblings('no-typography').find('.company-info__items').toggleClass('show');
   });
+  $(".js-interview-item-image").on("click", function () {
+    $(this).siblings('.interview__item-content').find('.interview__item-text').toggleClass('active');
+  });
 });

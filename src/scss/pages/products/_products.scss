@@ -19,6 +19,7 @@
   &__items {
     @include gridColumn(4);
     column-gap: 24px;
+    row-gap: 24px;
   }
 }
 
