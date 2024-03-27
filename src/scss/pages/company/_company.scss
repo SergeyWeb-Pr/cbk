@@ -2,6 +2,10 @@
   &__item {
     padding-top: 114px;
     padding-bottom: 68px;
+
+    &::before {
+      display: none;
+    }
   }
 
   &__text {
